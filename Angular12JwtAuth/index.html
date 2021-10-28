@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="zxx"> 
+    <head>
+        <!-- Basic Page Needs -->
+        <meta charset="utf-8" />
+        <!-- Page Title -->
+        <title>Trezix</title>
+        <!-- SEO Meta -->
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="author" content="keyconcepts" />
+        <meta name="Language" content="zxx" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />        
+        <!-- Mobile Specific Metas --> 
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="assets/images/favicon.ico" type="image/x-icon" />
+        <!-- CSS -->
+        <!-- Global CSS Compulsory (Do not remove) -->         
+        <!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="assets/css/all.min.css" />
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />                
+        <!-- Page CSS Implementing Plugins (Remove the plugin CSS here if site does not use that feature) --> 
+        <!-- mobile code --> 
+        <link rel="stylesheet" href="assets/plugins/mobilecode/intlTelInput.css">
+        <!-- Datatable CSS -->
+        <link rel="stylesheet" href="assets/css/DataTables/dataTables.bootstrap4.min.css" />
+        <!-- datepicker -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+        <!-- Select 2 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" />
+        <!-- Template Style --> 
+        <link rel="stylesheet" href="assets/css/custom.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="stylesheet" href="assets/css/responsive.css" />
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+    		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->         
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]--> 
+        <div class="main-left">
+            <!-- start preloader area -->
+            <!-- <div id="preloader" class="preloader"> 
+                <div class="preloader-box">
+                    <div class="preloader-object"></div>
+                </div>
+            </div> -->
+            <!-- end preloader area -->  
+
+            <!-- start Mobile header area -->
+            <div class="mob-header">
+                <button class="toggler-menu">
+                    <div class="close-icons">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+            </div>
+            <!-- End Mobile header area -->           
+
+            <!-- start header area -->
+            <header class="header header-left">
+                <div class="main-sidebar">
+                    <div class="sidebar-brand">
+                        <a href="index.html" class="">   
+                            <div class="web-logo">
+                                <img src="assets/images/logo_icons.png" class="logo-icons" alt="Logo icons">
+                                <img src="assets/images/logo.png" class="logo-text" alt="Logo">                                
+                            </div>                          
+                        </a>
+                    </div>
+                    <div class="sidebar-menu">
+                        <ul class="menu-list m-0 list-inline"> 
+                            <li> 
+                                <div class="sub-Catagorys">  
+                                    <a class="sub-drop collapsed" href="#first" data-toggle="collapse" data-target="#first" aria-expanded="true">
+                                        <img src="assets/images/icons/import.svg" class="img-fluid" alt="Import"  />
+                                        <span>Import</span>
+                                    </a>
+                                    <div class=""> 
+                                        <div class="collapse" id="first" aria-expanded="false">
+                                            <ul class="flex-column nav menu-content">
+                                                <li class="nav-item">
+                                                    <a href="index.html" class="active" >
+                                                        <img src="assets/images/icons/planning.svg" class="img-fluid" alt="Home"  />
+                                                        <span>Planning</span>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="vendor.html">
+                                                        <img src="assets/images/icons/vendor.svg" class="img-fluid" alt="Home"  />
+                                                        <span>vendor</span>
+                                                    </a>
+                                                </li> 
+                                                <li class="nav-item">
+                                                    <a href="generatepo.html">
+                                                        <img src="assets/images/icons/generate_po.svg" class="img-fluid" alt="Home"  />
+                                                        <span>Generate PO</span>
+                                                    </a>
+                                                </li> 
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="" > 
+                                    <img src="assets/images/icons/export.svg" class="img-fluid" alt="export"  />
+                                    <span>Export</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" > 
+                                    <img src="assets/images/icons/shipping_agent.svg" class="img-fluid" alt="export"  />
+                                    <span>Shipping Agent</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" > 
+                                    <img src="assets/images/icons/freight_forwarder.svg" class="img-fluid" alt="export"  />
+                                    <span>Freight Forwarder</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" > 
+                                    <img src="assets/images/icons/custom_duty.svg" class="img-fluid" alt="export"  />
+                                    <span>Custom</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" > 
+                                    <img src="assets/images/icons/transport.svg" class="img-fluid" alt="export"  />
+                                    <span>Transporter</span>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <!-- end  header area -->   
+
+            <!--  header-main area-->
+            <section class="header-main-fix">
+                <nav class="navbar navbar-static-top navbar-expand-lg">
+
+                    <!-- User Account -->
+                    <div class="navbar-right ml-auto">
+                        <ul class="list-inline m-0 account-right-login">
+                            <!-- -header-notification -->
+                            <li class="list-inline-item dropdown header-notification">
+                                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <img src="assets/images/notification.png" class="img-fluid" width="24px">
+                                    <span class="massage-number">2</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right p-0">
+                                    <li class="dropdown-menu-header ">
+                                        <h6 class="m-2">
+                                            <span class="grey darken-2">Notification</span>
+                                        </h6>
+                                        <hr class="m-0">
+                                    </li>
+                                    <li class="dropdown-menu-header scrollable-container ps">
+                                        <a href="javascript:void(0)">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <span class="avatar avatar-sm avatar-online rounded-circle">
+                                                        <img src="https://dummyimage.com/50x50" class="img-circle" alt="User Image">
+                                                    </span>
+                                                </div>
+                                                <div class="media-body ml-3">
+                                                    <p class="media-heading m-0">Margaret Govan</p>
+                                                    <p class="notification-text m-0">I like your portfolio, let's start.</p><small>
+                                                    <time class="media-meta text-muted m-0"  datetime="2015-06-11T18:29:20+08:00">Today</time></small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <span class="avatar avatar-sm avatar-online rounded-circle">
+                                                        <img src="https://dummyimage.com/50x50" class="img-circle" alt="User Image">
+                                                    </span>
+                                                </div>
+                                                <div class="media-body ml-3">
+                                                    <p class="media-heading m-0">Margaret Govan</p>
+                                                    <p class="notification-text m-0">I like your portfolio, let's start.</p><small>
+                                                    <time class="media-meta text-muted m-0"  datetime="2015-06-11T18:29:20+08:00">Today</time></small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <span class="avatar avatar-sm avatar-online rounded-circle">
+                                                        <img src="https://dummyimage.com/50x50" class="img-circle" alt="User Image">
+                                                    </span>
+                                                </div>
+                                                <div class="media-body ml-3">
+                                                    <p class="media-heading m-0">Margaret Govan</p>
+                                                    <p class="notification-text m-0">I like your portfolio, let's start.</p><small>
+                                                    <time class="media-meta text-muted m-0"  datetime="2015-06-11T18:29:20+08:00">Today</time></small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu-footer">
+                                        <hr class="m-0">    
+                                        <a class="dropdown-item text-muted text-center" href="javascript:void(0)">Read all Notification</a>
+                                    </li>
+                                </ul>
+                            </li>  
+                            <!-- -massage -->
+                            <li class="list-inline-item dropdown header-massage">
+                                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <img src="assets/images/massage.png" class="img-fluid" width="30px">
+                                    <span class="massage-number">2</span>
+                                </a>
+                                 
+
+                                <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right p-0">
+                                    <li class="dropdown-menu-header ">
+                                        <h6 class="m-2">
+                                            <span class="grey darken-2">Messages</span>
+                                        </h6>
+                                        <hr class="m-0">
+                                    </li>
+                                    <li class="dropdown-menu-header scrollable-container ps">
+                                        <a href="javascript:void(0)">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <span class="avatar avatar-sm avatar-online rounded-circle">
+                                                        <img src="https://dummyimage.com/50x50" class="img-circle" alt="User Image">
+                                                    </span>
+                                                </div>
+                                                <div class="media-body ml-3">
+                                                    <p class="media-heading m-0">Margaret Govan</p>
+                                                    <p class="notification-text m-0">I like your portfolio, let's start.</p><small>
+                                                    <time class="media-meta text-muted m-0"  datetime="2015-06-11T18:29:20+08:00">Today</time></small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <span class="avatar avatar-sm avatar-online rounded-circle">
+                                                        <img src="https://dummyimage.com/50x50" class="img-circle" alt="User Image">
+                                                    </span>
+                                                </div>
+                                                <div class="media-body ml-3">
+                                                    <p class="media-heading m-0">Margaret Govan</p>
+                                                    <p class="notification-text m-0">I like your portfolio, let's start.</p><small>
+                                                    <time class="media-meta text-muted m-0"  datetime="2015-06-11T18:29:20+08:00">Today</time></small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <span class="avatar avatar-sm avatar-online rounded-circle">
+                                                        <img src="https://dummyimage.com/50x50" class="img-circle" alt="User Image">
+                                                    </span>
+                                                </div>
+                                                <div class="media-body ml-3">
+                                                    <p class="media-heading m-0">Margaret Govan</p>
+                                                    <p class="notification-text m-0">I like your portfolio, let's start.</p><small>
+                                                    <time class="media-meta text-muted m-0"  datetime="2015-06-11T18:29:20+08:00">Today</time></small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu-footer">
+                                        <hr class="m-0">    
+                                        <a class="dropdown-item text-muted text-center" href="javascript:void(0)">Read all Messages</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- User Account -->
+                            <li class="list-inline-item dropdown user-menu ">
+                                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <span class="login-name fw_6">John Doe</span>
+                                    <img src="https://dummyimage.com/30x30" class="user-image ml-2" alt="User Image">
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right p-0">                                     
+                                    <li class="">
+                                        <a href="#" class="d-flex">
+                                            <span>
+                                                <img src="assets/images/icons/user.svg" class="img-fluid" alt="">
+                                            </span>
+                                            <span class="ml-2">Profile </span>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="d-flex">
+                                            <span>
+                                                <img src="assets/images/icons/change_password.svg" class="img-fluid" alt="">
+                                            </span>
+                                            <span class="ml-2">Change Password </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="login.html" class="d-flex">
+                                            <span>
+                                                <img src="assets/images/icons/logout.svg" class="img-fluid" alt="">
+                                            </span>
+                                            <span class="ml-2">Log Out</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </section>
+            <!--  header-main area--> 
+
+            <!-- page data area start -->
+            <div class="mt-3">
+                <div class="container-fluid ">
+                    <div class="page-navigation">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="d-flex align-items-center text-center  ">
+                                    <div class="page-name">
+                                        <h6>Planning</h6>
+                                    </div>
+                                    <div class="ml-auto box-breadcrumb"> 
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item">
+                                                <a href="" class="mr-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">
+                                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                                                    </svg>
+                                                </a>
+                                            </li> 
+                                            <li class="breadcrumb-item">
+                                                <a href="" class="mr-2">
+                                                    Import
+                                                </a>
+                                            </li> 
+                                            <li class="breadcrumb-item active">Planning</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- Customer Planning  -->
+                            <div class="pus-card ">
+                                <div class="pus-card-header d-flex align-items-center text-center justify-content-between">
+                                    <div class="pus-card-title">
+                                        <h6>Customer Planning</h6>
+                                    </div>
+                                    <div class="pus-card-heading-elements">
+                                        <ul class="list-inline mb-0"> 
+                                            <li class="list-inline-item">
+                                                <a href="javascript:void(0);" class="table-button-white-hover" data-toggle="tooltip" data-placement="top" title="Reset">
+                                                    <img src="assets/images/table-icons/reset.svg" class="img-fluid" alt="">
+                                                </a>
+                                            </li>
+                                            <!-- <li class="list-inline-item">
+                                                <a href="javascript:void(0);" class="table-button-white-hover" data-toggle="tooltip" data-placement="top" title="Save">
+                                                    <img src="assets/images/table-icons/save.svg" class="img-fluid" alt="">
+                                                </a>
+                                            </li>  -->
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="pus-card-content collapse show"> 
+                                    <div class="row mb-1">  
+                                        <div class="col-md-12">
+                                            
+                                            <div class="grid-4 form-grid-4">
+                                                <div class="form-grid-list">
+                                                    <fieldset class="form-group Fild-box-Error">
+                                                        <label class="form-lbl">Select Category  <span class="text-danger">*</span></label>
+                                                        <select name="" class="form-control">
+                                                            <option value="" selected="">Select Category</option>
+                                                            <option value="">Food</option>
+                                                            <option value="">Electronic</option>
+                                                            <option value="">Cloth</option> 
+                                                        </select>
+                                                        <span class="Fild-Error">Error message here</span>
+                                                    </fieldset> 
+                                                </div> 
+                                                <div class="form-grid-list">
+                                                    <fieldset class="form-group">
+                                                        <label class="form-lbl">Select Sub Category  <span class="text-danger">*</span></label>
+                                                        <select name="" class="form-control">
+                                                            <option value="">Select Sub Category</option>
+                                                            <option value="">Mango </option>
+                                                            <option value="">Orange</option>
+                                                            <option value="">Grapes</option> 
+                                                        </select>
+                                                    </fieldset> 
+                                                </div> 
+                                                <div class="form-grid-list">
+                                                    <div class="form-group">
+                                                        <label class="form-lbl" for=""> Product Name <span class="text-danger">*</span></label>
+                                                        <input type="text" class="form-control" placeholder="Name">
+                                                        
+                                                    </div>
+                                                </div> 
+                                                <div class="form-grid-list">
+                                                    <fieldset class="form-group ">
+                                                        <label class="form-lbl">Select Vendor  <span class="text-danger">*</span></label>
+                                                        <div class="select-vendors">
+                                                            <select name="" class="form-control select-select2">
+                                                                <option value="">Select Vendor</option>
+                                                                <option value="">Vendor Name One </option>
+                                                                <option value="">Vendor Name Two</option>
+                                                                <option value="">Vendor Name Three</option> 
+                                                            </select>
+                                                            <div class="toolbar-filter">
+                                                                <a href="javascript:void(0);" class="add-vendors toolbar-link-filter" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add Vendor">
+                                                                    <img src="assets/images/table-icons/add.svg" class="img-fluid" alt="">
+                                                                </a>
+                                                            </div>                                    
+                                                        </div>
+                                                    </fieldset> 
+                                                </div> 
+                                                <div class="form-grid-list">
+                                                    <div class="form-group">
+                                                        <label class="form-lbl" for=""> Vendor Country <span class="text-danger">*</span></label>
+                                                        <input type="text" class="form-control" placeholder="Country ">                                                        
+                                                    </div>
+                                                </div> 
+                                                <div class="form-grid-list">
+                                                    <div class="form-group">
+                                                        <label class="form-lbl" for=""> Vendor State <span class="text-danger">*</span></label>
+                                                        <input type="text" class="form-control" placeholder="State">                                                        
+                                                    </div>
+                                                </div> 
+                                                <div class="form-grid-list">
+                                                    <div class="form-group">
+                                                        <label class="form-lbl" for=""> Vendor City <span class="text-danger">*</span></label>
+                                                        <input type="text" class="form-control" placeholder="City">                                                        
+                                                    </div>
+                                                </div> 
+                                                <div class="form-grid-list">
+                                                    <div class="form-group">
+                                                        <label class="form-lbl" for=""> Vendor Zip/Postal Code <span class="text-danger">*</span></label>
+                                                        <input type="text" class="form-control" placeholder="City">                                                        
+                                                    </div>
+                                                </div> 
+                                                <div class="form-grid-list">
+                                                    <div class="form-group">
+                                                        <label class="form-lbl" for=""> Currency <span class="text-danger">*</span></label>
+                                                        <select name="" class="form-control select-select2">
+                                                            <option value="">Select Currency</option>
+                                                            <option value="">INR </option>
+                                                            <option value="">Dollar</option>
+                                                            <option value="">Pound</option> 
+                                                        </select>
+                                                    </div>
+                                                </div> 
+                                                <div class="form-grid-list">
+                                                    <div class="form-group">
+                                                        <label class="form-lbl" for=""> Quantity <span class="text-danger">*</span></label>
+                                                        <input type="Number" class="form-control" placeholder="Quantity">                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="form-grid-list">
+                                                    <fieldset class="form-group">
+                                                        <label class="form-lbl">Approx Date  <span class="text-danger">*</span></label>
+                                                        <div class="headersearch">
+                                                            <input type="text" id=" " value="01-12-2020" name="StartDate" class="form-control datepicker mr-2" data-date-format="mm/dd/yyyy">
+                                                            <i class="far fa-calendar"></i>
+                                                        </div>
+                                                    </fieldset> 
+                                                </div> 
+                                                    
+                                            </div> 
+                                            
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="text-center mt-3">
+                                                <a href="index.html" class="button-style ">Send</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <!-- page data area End -->
+
+        </div> 
+
+        <!-- start back to top area -->
+        <div id="back-to-top" class="back-to-top">
+            <a href="#"> 
+                <span class="arrow topfirst"></span>
+                <span class="arrow topsecond"></span>
+            </a>
+        </div> 
+        <!-- end back to top area --> 
+
+
+        <!-- Right Panel filter -->
+        <div class="right-panel-filter right-panel-wrapper">
+            <div class="panel-overlay"></div>
+            <div class="right-panel w-40">
+                <div class="right-panel-head">
+                    <h6 class="text-color">Add Vendor</h6>
+                    <a class="close-panel flags-panel" href="javascript:void(0);">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="iconify" data-icon="feather:chevron-right" style="vertical-align: -0.125em; transform: rotate(360deg);">
+                            <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 18l6-6l-6-6"></path>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+                <div class="right-panel-body">
+                    <div class="right-filters">
+                        <div class="row"> 
+                            <div class="col-md-12"> 
+                                <div class="filters-scroll">
+                                    <div class="companydetails filters-details">
+                                        <div class="filters-details-title border-bottom  pl-3 pr-3 pt-2 pb-2 ">
+                                            <p class="text-color">Company Details</p>
+                                        </div>
+                                        <div class="grid-2 form-grid-2 p-3">
+                                            <div class="form-grid-list grid-column1">
+                                                <fieldset class="form-group">
+                                                    <label class="form-lbl">Company Name <span class="text-danger">*</span></label>
+                                                    <div class="headersearch"> 
+                                                        <input type="text" class="form-control" placeholder="Company Name" required="required"> 
+                                                    </div> 
+                                                </fieldset> 
+                                            </div>
+                                            <div class="form-grid-list">
+                                                <fieldset class="form-group">
+                                                    <label class="form-lbl">Compnay Email <span class="text-danger">*</span></label>
+                                                    <div class="headersearch"> 
+                                                        <input type="text" class="form-control" placeholder="Enter compnay email" required="required"> 
+                                                    </div>
+                                                </fieldset> 
+                                            </div> 
+                                            <div class="form-grid-list"> 
+                                                <fieldset class="form-group">
+                                                    <label class="form-lbl">Mobile Number <span class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control phone-code" id="" >
+                                                </fieldset>
+                                            </div> 
+                                            <div class="form-grid-list grid-column1">
+                                                <fieldset class="form-group ">
+                                                    <label class="form-lbl">Compnay Website <span class="text-danger">*</span></label>
+                                                    <div class="headersearch"> 
+                                                        <input type="text" class="form-control" placeholder="Enter compnay website" required="required"> 
+                                                    </div>
+                                                </fieldset> 
+                                            </div> 
+                                            
+                                            <div class="form-grid-list grid-column1">
+                                                <fieldset class="form-group">
+                                                    <label class="form-lbl">Address Line 1 <span class="text-danger">*</span></label>
+                                                    <div class="headersearch"> 
+                                                        <input type="text" class="form-control" placeholder="Enter address line 1" required="required"> 
+                                                    </div>
+                                                </fieldset> 
+                                            </div>
+                                            <div class="form-grid-list grid-column1">
+                                                <fieldset class="form-group">
+                                                    <label class="form-lbl">Address Line 2 </label>
+                                                    <div class="headersearch"> 
+                                                        <input type="text" class="form-control" placeholder="Enter address line 2" required="required"> 
+                                                    </div>
+                                                </fieldset> 
+                                            </div>
+                                            <div class="form-grid-list">
+                                                <fieldset class="form-group">
+                                                    <label class="form-lbl">Country <span class="text-danger">*</span></label>
+                                                    <div class="headersearch"> 
+                                                        <input type="text" class="form-control" placeholder="Enter Country" required="required"> 
+                                                    </div>
+                                                </fieldset> 
+                                            </div>
+                                            <div class="form-grid-list">
+                                                <fieldset class="form-group">
+                                                    <label class="form-lbl">State <span class="text-danger">*</span></label>
+                                                    <div class="headersearch"> 
+                                                        <input type="text" class="form-control" placeholder="Enter State" required="required"> 
+                                                    </div>
+                                                </fieldset> 
+                                            </div>
+                                            <div class="form-grid-list">
+                                                <fieldset class="form-group">
+                                                    <label class="form-lbl">City <span class="text-danger">*</span></label>
+                                                    <div class="headersearch"> 
+                                                        <input type="text" class="form-control" placeholder="Enter City" required="required"> 
+                                                    </div>
+                                                </fieldset> 
+                                            </div>
+                                            <div class="form-grid-list">
+                                                <fieldset class="form-group">
+                                                    <label class="form-lbl">Zip/Postal Code <span class="text-danger">*</span></label>
+                                                    <div class="headersearch"> 
+                                                        <input type="text" class="form-control" placeholder="Enter Zip/Postal Code" required="required"> 
+                                                    </div>
+                                                </fieldset> 
+                                            </div> 
+                                        </div>                                       
+                                    </div>
+                                    <div class="contactdetails filters-details">
+                                        <div class="filters-details-title border-bottom  pl-3 pr-3 pt-2 pb-2 ">
+                                            <p class="text-color">Person Details</p>
+                                        </div>
+                                        <div class="grid-2 form-grid-2 p-3">
+                                            <div class="form-grid-list grid-column1">
+                                                <fieldset class="form-group">
+                                                    <label class="form-lbl">Name <span class="text-danger">*</span></label>
+                                                    <div class="headersearch"> 
+                                                        <input type="text" class="form-control" placeholder="Enter name" required="required"> 
+                                                    </div> 
+                                                </fieldset> 
+                                            </div>
+                                            <div class="form-grid-list">
+                                                <fieldset class="form-group">
+                                                    <label class="form-lbl">Email <span class="text-danger">*</span></label>
+                                                    <div class="headersearch"> 
+                                                        <input type="text" class="form-control" placeholder="Enter Email" required="required"> 
+                                                    </div> 
+                                                </fieldset> 
+                                            </div>
+                                            <div class="form-grid-list"> 
+                                                <fieldset class="form-group">
+                                                    <label class="form-lbl">Mobile Number <span class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control phone-code" id="" >
+                                                </fieldset>
+                                            </div> 
+                                            
+                                        </div>                                       
+                                    </div> 
+                                    <div class="companydocumnets filters-details">
+                                        <div class="filters-details-title border-bottom  pl-3 pr-3 pt-2 pb-2 ">
+                                            <p class="text-color">Upload Documnets</p>
+                                        </div>
+                                        <div class="grid-2 form-grid-2 p-3">
+                                            <div class="form-grid-list grid-column1">
+                                                <fieldset class="form-group">
+                                                    <label class="form-lbl">GST <span class="text-danger">*</span></label> 
+                                                    <div class="headersearch custom-file"> 
+                                                        <input class="custom-file-input" id="inputGroupFile04" type="file">
+                                                        <label class="custom-file-label" for="inputGroupFile04">Select Documents</label> 
+                                                    </div>
+                                                </fieldset> 
+                                            </div>                                             
+                                        </div>                                       
+                                    </div>  
+                                </div>
+                            </div>
+                            <div class="col-md-12 text-center mt-3"> 
+                                <div class="d-flex justify-content-center align-items-center"> 
+                                    <a class="button-style ml-2" href=""> <img src="assets/images/table-icons/add.svg" class="img-fluid icon-filter-white mr-2" width="14px" alt=""> Add Vendor</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                
+                </div>
+            </div>
+        </div>  
+
+
+
+
+        <!-- JS Files  -->
+        <!-- Global JS Compulsory (Do not remove) -->
+        <!-- Jquery, Proper & Bootstrap JS  -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature) -->
+        <!-- mobile code -->
+        <script src="assets/plugins/mobilecode/intlTelInput.js"></script>
+        <script src="assets/plugins/mobilecode/intlTelInput.min.js"></script>
+        <script src="assets/plugins/mobilecode/utils.js"></script>    
+        <!-- Datatable js -->
+        <script src="assets/js/DataTables/jquery.dataTables.min.js"></script>
+        <script src="assets/js/DataTables/dataTables.bootstrap4.min.js"></script>
+        <!-- datepicker -->
+        <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+        <!-- Select 2 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+        <!-- Template Scripts (Do not remove) -->
+        <script src="assets/js/custom.js"></script> 
+    </body>
+</html>

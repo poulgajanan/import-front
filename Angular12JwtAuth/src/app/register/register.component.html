@@ -1,0 +1,265 @@
+<div class="main-bg-color"> 
+  <div class="container">
+      <div class="row justify-content-center min-vh-100 align-items-center pt-5 pb-5"> 
+          <div class="col-md-6">
+              <div class="">
+                <form
+                *ngIf="!isSuccessful"
+                name="form"
+                (ngSubmit)="f.form.valid && onSubmit()"
+                #f="ngForm"
+                novalidate
+              >
+                      <div class="white-box form-login p-40">
+                          <div class="row">
+                              <div  class="col-md-12 text-center">
+                                  <a class="navbar-brand" href="#">
+                                      <img src="assets/images/logo.png" class="img-fluid" alt="logo" width="180">
+                                  </a>
+                              </div>
+                          </div>
+                          <div class="box-login">
+                              <div class="row">
+                                  <div class="col-md-12">
+                                      <div class="text-center mb-4">
+                                          <h4 class="mt-30 text-capitalize"><strong>Let’s Create your account</strong></h4>
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <div class="row">                                         
+                                  <div class="col-md-12">
+                                      <fieldset class="form-group">
+                                          <label class="form-lbl">Company Name <span class="required">*</span></label>
+                                          <input
+                                            type="text"
+                                            class="form-control"
+                                            name="companyName"
+                                            [(ngModel)]="form.companyName"
+                                            required 
+                                            minlength="3"
+                                            maxlength="100"                     
+                                            #companyName="ngModel"
+                                            />
+                                            <div class="alert-danger" *ngIf="companyName.errors && f.submitted">
+                                                <div *ngIf="companyName.errors.required">Company name is required</div>
+                                                <div *ngIf="companyName.errors.minlength">
+                                                  company Name must be at least 3 characters
+                                                </div>
+                                                <div *ngIf="companyName.errors.maxlength">
+                                                  company Name must be at most 20 characters
+                                                </div>
+                                              </div> 
+                                      </fieldset> 
+                                  </div>  
+                              </div>
+
+                              <div class="row">                                         
+                                  <div class="col-md-12">
+                                      <fieldset class="form-group">
+                                          <label class="form-lbl">Company Designation <span class="required">*</span></label>
+                                          <input
+                    type="text"
+                    class="form-control"
+                    name="companyDesignation"
+                    [(ngModel)]="form.companyDesignation"
+                    required                      
+                    #companyDesignation="ngModel"
+                  /> 
+                  <div class="alert-danger" *ngIf="companyDesignation.errors && f.submitted">
+                  <span *ngIf="companyDesignation.errors.required">Designation is required</span>
+                  </div> 
+                                      </fieldset> 
+                                  </div>  
+                              </div>
+
+                              <div class="row">                                         
+                                  <div class="col-md-6">
+                                      <fieldset class="form-group">
+                                          <label class="form-lbl">First Name <span class="required">*</span></label>
+                                          <input
+                    type="text"
+                    class="form-control"
+                    name="firstName"
+                    [(ngModel)]="form.firstName"
+                    required                      
+                    #firstName="ngModel"
+                  /> 
+                  <div class="alert-danger" *ngIf="firstName.errors && f.submitted">
+                    <span *ngIf="firstName.errors.required">First Name is required</span>
+                  </div> 
+                                      </fieldset> 
+                                  </div>  
+                                  <div class="col-md-6">
+                                      <fieldset class="form-group">
+                                          <label class="form-lbl">Last Name <span class="required">*</span></label>
+                                          <input
+                    type="text"
+                    class="form-control"
+                    name="lastName"
+                    [(ngModel)]="form.lastName"
+                    required                      
+                    #lastName="ngModel"
+                  />
+                  <div class="alert-danger" *ngIf="lastName.errors && f.submitted">
+                    <span *ngIf="lastName.errors.required">Last Name is required</span>
+                  </div> 
+                                      </fieldset> 
+                                  </div>  
+                              </div>
+                              <div class="row">                                         
+                                  <div class="col-md-12"> 
+                                      <fieldset class="form-group">
+                                          <label class="form-lbl">Date Of Birth</label>
+                                          <div class="headersearch">
+                                            <input
+                                            type="text"
+                                            mwlFlatpickr
+                                            class="form-control"
+                                            name="dateOfBirth"                
+                                            [(ngModel)]="form.dateOfBirth"
+                                            required
+                                            [altInput]="true" 
+                                            [convertModelValue]="true"                      
+                                            #dateOfBirth="ngModel"
+                                          />   
+                                          <div class="alert-danger" *ngIf="dateOfBirth.errors && f.submitted">
+                                            <span *ngIf="dateOfBirth.errors.required">DOB is required</span>
+                                          </div>                                         
+                                              
+                                          </div>
+                                      </fieldset>
+                                  </div>  
+                              </div>
+
+                              <div class="row">                                         
+                                  <div class="col-md-12">
+                                      <fieldset class="form-group ">
+                                          <label class="form-lbl">Email <span class="required">*</span></label>
+                                          <input
+                                          type="text"
+                                          class="form-control"
+                                          name="email"
+                                          [(ngModel)]="form.email"
+                                          required
+                                          email                      
+                                          #email="ngModel"
+                                        />
+                                        <div class="alert-danger" *ngIf="email.errors && f.submitted">
+                                          <div *ngIf="email.errors.required">Email is required</div>
+                                          <div *ngIf="email.errors.email">
+                                            Email must be a valid email address
+                                          </div>
+                                        </div>
+                                      </fieldset> 
+                                  </div>  
+                              </div>
+
+                              <div class="row">                                         
+                                  <div class="col-md-12">
+                                      <fieldset class="form-group">
+                                          <label class="form-lbl">Mobile Number <span class="required">*</span></label>
+                                          <input               
+                                          class="form-control"
+                                          name="mobile"
+                                          [(ngModel)]="form.mobile"
+                                          required                      
+                                          #mobile="ngModel"
+                                        />
+                                        <div class="alert-danger" *ngIf="mobile.errors && f.submitted">
+                                          <div *ngIf="mobile.errors.required">mobile Number is required</div>
+                                          <div *ngIf="mobile.errors.minlength">
+                                            mobile Number must be at least 10 characters
+                                          </div>
+                                          <div *ngIf="mobile.errors.maxlength">
+                                            mobile Number must be at most 12 characters
+                                          </div>
+                                        </div>
+                                      </fieldset>
+                                  </div>  
+                              </div>
+                              
+                              <div class="row">                                         
+                                  <div class="col-md-12"> 
+                                      <fieldset class="form-group view-password">  
+                                          <label class="form-lbl">Password <span class="required">*</span></label> 
+                                          <input
+                type="password"
+                class="form-control"
+                name="password"
+                [(ngModel)]="form.password"
+                required   
+                minlength="6"                   
+                #password="ngModel"
+              />
+              <div class="alert-danger" *ngIf="password.errors && f.submitted">
+              <div *ngIf="password.errors.required">Password is required</div>
+              <div *ngIf="password.errors.minlength">
+              Password must be at least 6 characters
+            </div>
+          </div> 
+                                              <a href="JavaScript:void(0);" class="icon-view">
+                                                  <i class="fa fa-eye"></i>
+                                              </a>
+                                           
+                                      </fieldset> 
+                                  </div>  
+                              </div>
+                              <div class="row">                                         
+                                  <div class="col-md-12"> 
+                                      <fieldset class="form-group view-password">  
+                                          <label class="form-lbl">Confirm Password <span class="required">*</span></label> 
+                                          <div class="password_eye">
+                                            <input
+                                            type="password"
+                                            class="form-control"
+                                            name="confirmPassword"
+                                            [(ngModel)]="form.confirmPassword"
+                                            required                      
+                                            #confirmPassword="ngModel"
+                                          />   
+                                              <a href="JavaScript:void(0);" class="icon-view">
+                                                  <i class="fa fa-eye"></i>
+                                              </a>
+                                          </div> 
+                                      </fieldset>  
+                                  </div>  
+                              </div>
+                              <div class="row mt-5 form-group">
+                                  <div class="col-md-6">
+                                      <div class="">
+                                          <p class="m-0">Have an account?</p>
+                                          <a href="login.html" class="text-color">Login</a>                                                
+                                      </div>
+                                  </div> 
+                                  <div class="col-md-6 form-group">
+                                      <div class="login-btn text-center">
+                                          <button class="button-style d-block">CREATE ACCOUNT</button> 
+                                      </div>
+                                      <div class="alert alert-success" *ngIf="isSuccessful">
+                                        Your registration is successful!
+                                      </div>
+                                      <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+                                        Signup failed!<br />{{ errorMessage }}
+                                      </div> 
+                                  </div> 
+                              </div> 
+                          </div>
+
+
+                      </div> 
+                  </form>
+              </div>
+          </div> 
+      </div> 
+  </div> 
+</div> 
+
+<!-- start back to top area -->
+<div id="back-to-top" class="back-to-top">
+  <a href="#"> 
+      <span class="arrow topfirst"></span>
+      <span class="arrow topsecond"></span>
+  </a>
+</div> 
+<!-- end back to top area -->  

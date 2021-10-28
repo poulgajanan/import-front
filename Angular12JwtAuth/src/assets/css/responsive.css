@@ -1,0 +1,173 @@
+/*
+--------------------------------------------------------------------------------------------------------
+* Project    : Trezix                                                                                  *
+* Author     : Keyconcepts (https://www.keyconcepts.co.in)                                             *  
+*------------------------------------------------------------------------------------------------------- 
+NOTE: This is main stylesheet of template, This file contains the styling for the actual Template.
+
+=================================================
+[  Table of contents  ]
+================================================== 
+
+01: extra extra large (xxl)
+02: extra large (xl)
+03: large (lg)
+04: medium (md)
+05: small (sm)
+06: extra small (xs)
+07: Responsive Media Query (greater than 1400px)
+08: Responsive Media Query (less than 1600px)
+09: Responsive Media Query (less than 1600px)
+10: Responsive Media Query (less than 1400px)
+11: Responsive Media Query (less than 991px)
+12: Responsive Media Query (less than 767px)
+13: Responsive Media Query (less than 575px)
+14: Responsive Media Query (less than 480px)
+15: Responsive Media Query (less than 320px)
+
+==================================================
+[ End table content ]
+==================================================
+*/
+
+/*=================================================
+01: extra extra large (xxl)
+==================================================*/
+@media(min-width: 1400px) and (max-width: 1550px){}
+
+/*=================================================
+02: extra large (xl)
+==================================================*/
+@media only screen and (min-width: 1200px) and (max-width: 1399px){
+}
+
+/*=================================================
+03: large (lg)
+==================================================*/
+@media(min-width: 992px) and (max-width: 1199px){  
+}
+
+/*=================================================
+04: medium (md)
+==================================================*/
+@media(min-width: 768px) and (max-width: 991px){  
+}
+
+/*=================================================
+05: small (sm)
+==================================================*/
+@media(min-width: 576px) and (max-width: 767px){  
+}
+
+/*=================================================
+06: extra small (xs)
+==================================================*/
+@media(min-width: 320px) and (max-width: 575px){ 
+}
+
+/*=================================================
+07: Responsive Media Query (greater than 1400px)
+==================================================*/
+@media only screen and (min-width: 1400px){ 
+}
+
+/*=================================================
+08: Responsive Media Query (less than 1600px)
+==================================================*/ 
+@media only screen and (max-width:1600px) {}
+
+/*=================================================
+09: Responsive Media Query (less than 1600px)
+==================================================*/  
+@media only screen and (max-width:1500px) {}
+
+/*=================================================
+10: Responsive Media Query (less than 1400px)
+==================================================*/  
+@media only screen and (max-width:1400px) {}
+
+/*=================================================
+11: Responsive Media Query (less than 991px)
+==================================================*/   
+@media only screen and (max-width: 991px) {
+    .mtb-90 {margin-top: 40px !important;margin-bottom: 40px !important;}
+    .mtb-100{margin-top: 50px !important;margin-bottom: 50px !important;}
+    .mtb-110{margin-top: 60px !important;margin-bottom: 60px !important;}
+    .mtb-120{margin-top: 70px !important;margin-bottom: 70px !important;}
+    .mtb-130{margin-top: 80px !important;margin-bottom: 80px !important;}
+    .mtb-140{margin-top: 90px !important;margin-bottom: 90px !important;}
+    .mtb-150{margin-top: 100px !important;margin-bottom: 100px !important;} 
+    .ptb-90 {padding-top: 40px !important;padding-bottom: 40px !important;}
+    .ptb-100{padding-top: 50px !important;padding-bottom: 50px !important;}
+    .ptb-110{padding-top: 60px !important;padding-bottom: 60px !important;}
+    .ptb-120{padding-top: 70px !important;padding-bottom: 70px !important;}
+    .ptb-130{padding-top: 80px !important;padding-bottom: 80px !important;}
+    .ptb-140{padding-top: 90px !important;padding-bottom: 90px !important;}
+    .ptb-150{padding-top: 100px !important;padding-bottom: 100px !important;}
+    /* helper classes */ 
+    .grid-1 {display: grid; grid-template-columns: repeat(1, 1fr); }
+    .grid-2 {display: grid; grid-template-columns: repeat(2, 1fr); }
+    .grid-3 {display: grid; grid-template-columns: repeat(3, 1fr); }
+    .grid-4 {display: grid; grid-template-columns: repeat(2, 1fr); }
+    .grid-5 {display: grid; grid-template-columns: repeat(3, 1fr); }
+    .grid-6 {display: grid; grid-template-columns: repeat(3, 1fr); }     
+    /* menubar */
+
+   .header-left{display: none; z-index: 99999; }
+   .mob-header {display: block; z-index: 999999;}
+   .home-banner .pus-top-fixed, .fixed-block, .back-to-top{display: none !important;} 
+}
+
+/*=================================================
+12: Responsive Media Query (less than 767px)
+==================================================*/ 
+@media only screen and (max-width: 767px) {     
+    .mtb-90{margin-top: 30px !important;margin-bottom: 30px !important;}
+    .mtb-100{margin-top: 40px !important;margin-bottom: 40px !important;}
+    .mtb-110{margin-top: 40px !important;margin-bottom: 40px !important;}
+    .mtb-120{margin-top: 50px !important;margin-bottom: 50px !important;}
+    .mtb-130{margin-top: 60px !important;margin-bottom: 60px !important;}
+    .mtb-140{margin-top: 70px !important;margin-bottom: 70px !important;}
+    .mtb-150{margin-top: 80px !important;margin-bottom: 80px !important;}  
+    .ptb-90 {padding-top: 30px !important;padding-bottom: 30px !important;}
+    .ptb-100{padding-top: 40px !important;padding-bottom: 40px !important;}
+    .ptb-110{padding-top: 40px !important;padding-bottom: 40px !important;}
+    .ptb-120{padding-top: 50px !important;padding-bottom: 50px !important;}
+    .ptb-130{padding-top: 60px !important;padding-bottom: 60px !important;}
+    .ptb-140{padding-top: 70px !important;padding-bottom: 70px !important;}
+    .ptb-150{padding-top: 80px !important;padding-bottom: 80px !important;}  
+    /* helper classes */ 
+    .grid-2 {display: grid; grid-template-columns: repeat(1, 1fr); }
+    .grid-3 {display: grid; grid-template-columns: repeat(1, 1fr); }
+    .grid-4 {display: grid; grid-template-columns: repeat(1, 1fr); }
+    .grid-5 {display: grid; grid-template-columns: repeat(1, 1fr); }
+    .grid-6 {display: grid; grid-template-columns: repeat(1, 1fr); }  
+} 
+/*=================================================
+13: Responsive Media Query (less than 575px)
+==================================================*/ 
+@media (max-width:575px) {
+   .content-follow {margin-left: 00px; margin-top: 30px; }
+}
+
+/*=================================================
+14: Responsive Media Query (less than 480px)
+==================================================*/ 
+@media (max-width:400px) {}
+
+/*=================================================
+15: Responsive Media Query (less than 320px)
+==================================================*/ 
+@media (max-width:320px) {} 
+
+
+
+/*=================================================
+16: Responsive Media Query (greater than 992px)
+==================================================*/ 
+@media (min-width:992px) {
+    .main-left {padding-left: 60px; }
+}
+
+
+
