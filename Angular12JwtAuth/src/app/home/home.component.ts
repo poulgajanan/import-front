@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../_services/user.service';
 
+import * as $ from "jquery";
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -21,4 +23,10 @@ export class HomeComponent implements OnInit {
       }
     );
   }
+
+  Testing(){
+    var name = $("txtname").val();
+    alert(name);
+  }
+
 }

@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+// import { MatSliderModule } from '@angular/material/slider';
 
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
@@ -15,6 +16,8 @@ import { VerifyMobileComponent } from './verify-mobile/verify-mobile.component';
 import { authInterceptorProviders } from 'src/_helpers/auth.interceptor';
 import { BoardUserComponent } from './board-user/board-user.component';
 // import { SignupComponent } from  './signup/signup.component';
+
+
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
@@ -76,6 +79,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     FormsModule,
     HttpClientModule,  
     BrowserAnimationsModule,
+   
     NgxIntlTelInputModule,
     FlatpickrModule.forRoot(),
     ReactiveFormsModule,

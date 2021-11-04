@@ -44,7 +44,8 @@
               "src/assets/js/popper.min.js",
               "src/assets/plugins/mobilecode/intlTelInput.js",
               "src/assets/plugins/mobilecode/intlTelInput.min.js",
-              "src/assets/plugins/mobilecode/utils.js"
+              "src/assets/plugins/mobilecode/utils.js",
+              "node_modules/jquery/dist/jquery.min.js"
             ]
           },
           "configurations": {
@@ -82,6 +83,7 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+
           "configurations": {
             "production": {
               "browserTarget": "Angular12JwtAuth:build:production"

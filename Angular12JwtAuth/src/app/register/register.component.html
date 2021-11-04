@@ -8,102 +8,100 @@
                 name="form"
                 (ngSubmit)="f.form.valid && onSubmit()"
                 #f="ngForm"
-                novalidate
-              >
-                      <div class="white-box form-login p-40">
-                          <div class="row">
-                              <div  class="col-md-12 text-center">
-                                  <a class="navbar-brand" href="#">
-                                      <img src="assets/images/logo.png" class="img-fluid" alt="logo" width="180">
-                                  </a>
-                              </div>
+                novalidate>
+                  <div class="white-box form-login p-40">
+                      <div class="row">
+                          <div  class="col-md-12 text-center">
+                              <a class="navbar-brand" href="#">
+                                  <img src="assets/images/logo.png" class="img-fluid" alt="logo" width="180">
+                              </a>
                           </div>
-                          <div class="box-login">
-                              <div class="row">
-                                  <div class="col-md-12">
-                                      <div class="text-center mb-4">
-                                          <h4 class="mt-30 text-capitalize"><strong>Let’s Create your account</strong></h4>
-                                      </div>
+                      </div>
+                      <div class="box-login">
+                          <div class="row">
+                              <div class="col-md-12">
+                                  <div class="text-center mb-4">
+                                      <h4 class="mt-30 text-capitalize"><strong>Let’s Create your account</strong></h4>
                                   </div>
                               </div>
+                          </div>
 
-                              <div class="row">                                         
-                                  <div class="col-md-12">
-                                      <fieldset class="form-group">
-                                          <label class="form-lbl">Company Name <span class="required">*</span></label>
-                                          <input
-                                            type="text"
-                                            class="form-control"
-                                            name="companyName"
-                                            [(ngModel)]="form.companyName"
-                                            required 
-                                            minlength="3"
-                                            maxlength="100"                     
-                                            #companyName="ngModel"
-                                            />
-                                            <div class="alert-danger" *ngIf="companyName.errors && f.submitted">
-                                                <div *ngIf="companyName.errors.required">Company name is required</div>
-                                                <div *ngIf="companyName.errors.minlength">
-                                                  company Name must be at least 3 characters
-                                                </div>
-                                                <div *ngIf="companyName.errors.maxlength">
-                                                  company Name must be at most 20 characters
-                                                </div>
-                                              </div> 
-                                      </fieldset> 
+                          <div class="row">                                         
+                              <div class="col-md-12">
+                                  <fieldset class="form-group">
+                                      <label class="form-lbl">Company Name <span class="required">*</span></label>
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        name="companyName"
+                                        [(ngModel)]="form.companyName"
+                                        required 
+                                        minlength="3"
+                                        maxlength="100"                     
+                                        #companyName="ngModel"
+                                        />
+                                        <div class="alert-danger" *ngIf="companyName.errors && f.submitted">
+                                            <div *ngIf="companyName.errors.required">Company name is required</div>
+                                            <div *ngIf="companyName.errors.minlength">
+                                              company Name must be at least 3 characters
+                                            </div>
+                                            <div *ngIf="companyName.errors.maxlength">
+                                              company Name must be at most 20 characters
+                                            </div>
+                                          </div> 
+                                  </fieldset> 
+                              </div>  
+                          </div>
+
+                          <div class="row">                                         
+                              <div class="col-md-12">
+                                  <fieldset class="form-group">
+                                      <label class="form-lbl">Company Designation <span class="required">*</span></label>
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        name="companyDesignation"
+                                        [(ngModel)]="form.companyDesignation"
+                                        required                      
+                                        #companyDesignation="ngModel"
+                                      /> 
+                                      <div class="alert-danger" *ngIf="companyDesignation.errors && f.submitted">
+                                      <span *ngIf="companyDesignation.errors.required">Designation is required</span>
+                                      </div> 
+                                    </fieldset> 
                                   </div>  
-                              </div>
-
-                              <div class="row">                                         
-                                  <div class="col-md-12">
-                                      <fieldset class="form-group">
-                                          <label class="form-lbl">Company Designation <span class="required">*</span></label>
-                                          <input
-                    type="text"
-                    class="form-control"
-                    name="companyDesignation"
-                    [(ngModel)]="form.companyDesignation"
-                    required                      
-                    #companyDesignation="ngModel"
-                  /> 
-                  <div class="alert-danger" *ngIf="companyDesignation.errors && f.submitted">
-                  <span *ngIf="companyDesignation.errors.required">Designation is required</span>
-                  </div> 
-                                      </fieldset> 
-                                  </div>  
-                              </div>
-
-                              <div class="row">                                         
-                                  <div class="col-md-6">
-                                      <fieldset class="form-group">
-                                          <label class="form-lbl">First Name <span class="required">*</span></label>
-                                          <input
-                    type="text"
-                    class="form-control"
-                    name="firstName"
-                    [(ngModel)]="form.firstName"
-                    required                      
-                    #firstName="ngModel"
-                  /> 
-                  <div class="alert-danger" *ngIf="firstName.errors && f.submitted">
-                    <span *ngIf="firstName.errors.required">First Name is required</span>
-                  </div> 
+                                </div>
+                                <div class="row">                                         
+                                    <div class="col-md-6">
+                                        <fieldset class="form-group">
+                                            <label class="form-lbl">First Name <span class="required">*</span></label>
+                                            <input
+                                        type="text"
+                                        class="form-control"
+                                        name="firstName"
+                                        [(ngModel)]="form.firstName"
+                                        required                      
+                                        #firstName="ngModel"
+                                      /> 
+                                      <div class="alert-danger" *ngIf="firstName.errors && f.submitted">
+                                        <span *ngIf="firstName.errors.required">First Name is required</span>
+                                      </div> 
                                       </fieldset> 
                                   </div>  
                                   <div class="col-md-6">
                                       <fieldset class="form-group">
                                           <label class="form-lbl">Last Name <span class="required">*</span></label>
                                           <input
-                    type="text"
-                    class="form-control"
-                    name="lastName"
-                    [(ngModel)]="form.lastName"
-                    required                      
-                    #lastName="ngModel"
-                  />
-                  <div class="alert-danger" *ngIf="lastName.errors && f.submitted">
-                    <span *ngIf="lastName.errors.required">Last Name is required</span>
-                  </div> 
+                                            type="text"
+                                            class="form-control"
+                                            name="lastName"
+                                            [(ngModel)]="form.lastName"
+                                            required                      
+                                            #lastName="ngModel"
+                                          />
+                                          <div class="alert-danger" *ngIf="lastName.errors && f.submitted">
+                                            <span *ngIf="lastName.errors.required">Last Name is required</span>
+                                          </div> 
                                       </fieldset> 
                                   </div>  
                               </div>
@@ -182,47 +180,50 @@
                               <div class="row">                                         
                                   <div class="col-md-12"> 
                                       <fieldset class="form-group view-password">  
-                                          <label class="form-lbl">Password <span class="required">*</span></label> 
-                                          <input
-                type="password"
-                class="form-control"
-                name="password"
-                [(ngModel)]="form.password"
-                required   
-                minlength="6"                   
-                #password="ngModel"
-              />
-              <div class="alert-danger" *ngIf="password.errors && f.submitted">
-              <div *ngIf="password.errors.required">Password is required</div>
-              <div *ngIf="password.errors.minlength">
-              Password must be at least 6 characters
-            </div>
-          </div> 
-                                              <a href="JavaScript:void(0);" class="icon-view">
-                                                  <i class="fa fa-eye"></i>
-                                              </a>
-                                           
+                                        <label class="form-lbl">Password <span class="required">*</span></label> 
+                                        <input
+                                          type="password"
+                                          class="form-control"
+                                          name="password"
+                                          [(ngModel)]="form.password"
+                                          required   
+                                          minlength="6"                   
+                                          #password="ngModel"
+                                        />
+                                        <div class="alert-danger" *ngIf="password.errors && f.submitted">
+                                          <div *ngIf="password.errors.required">Password is required</div>
+                                          <div *ngIf="password.errors.minlength">
+                                            Password must be at least 6 characters
+                                          </div>
+                                        </div>
+                                        <a href="JavaScript:void(0);" class="icon-view">
+                                          <i class="fa fa-eye"></i>
+                                        </a>                                           
                                       </fieldset> 
                                   </div>  
                               </div>
-                              <div class="row">                                         
+                              <div class="row">
                                   <div class="col-md-12"> 
                                       <fieldset class="form-group view-password">  
                                           <label class="form-lbl">Confirm Password <span class="required">*</span></label> 
                                           <div class="password_eye">
                                             <input
-                                            type="password"
-                                            class="form-control"
-                                            name="confirmPassword"
-                                            [(ngModel)]="form.confirmPassword"
-                                            required                      
-                                            #confirmPassword="ngModel"
-                                          />   
-                                              <a href="JavaScript:void(0);" class="icon-view">
-                                                  <i class="fa fa-eye"></i>
-                                              </a>
+                                              type="password"
+                                              class="form-control"
+                                              name="confirmPassword"
+                                              [(ngModel)]="form.confirmPassword"
+                                              #confirmPassword="ngModel"
+                                              required                      
+                                              aria-label="confirmpassword"
+                                            />
+                                           
+                                            <a href="JavaScript:void(0);" class="icon-view">
+                                                <i class="fa fa-eye"></i>
+                                            </a>
+                                              <span class="error" *ngIf="(confirmPassword.touched || f.submitted) && confirmPassword.errors?.required">Confirm Password is required.</span>
+                                              <span class="error" *ngIf="(confirmPassword.touched || f.submitted) && form.password !== form.confirmPassword">Password and Confirm Password is not matching.</span>
                                           </div> 
-                                      </fieldset>  
+                                      </fieldset>
                                   </div>  
                               </div>
                               <div class="row mt-5 form-group">

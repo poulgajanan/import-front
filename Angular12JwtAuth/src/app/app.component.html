@@ -1,6 +1,7 @@
 <app-navbar></app-navbar>
+<!-- <mat-slider min="1" max="100" step="1" value="50"></mat-slider> -->
 <div id="app">
-  <!-- <nav class="navbar navbar-expand navbar-dark bg-dark">
+  <nav class="navbar navbar-expand navbar-dark bg-dark leftmargin">
     <a href="#" class="navbar-brand">Import-Export</a>
     <ul class="navbar-nav mr-auto" routerLinkActive="active">
       <li class="nav-item">
@@ -34,9 +35,9 @@
         <a href class="nav-link" (click)="logout()">LogOut</a>
       </li>
     </ul>
-  </nav> -->
+  </nav>
 
-  <div class="container">
+  <div class="container-fluid">
     <router-outlet></router-outlet>
   </div>
 </div>
