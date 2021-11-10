@@ -30,7 +30,7 @@ export class VerifyEmailComponent implements OnInit {
   onSubmit(): void{          
       this.sendOtp.verifyEmail(this.value).subscribe(
        data => {
-         console.log(data);
+        //  console.log(data);
          this.isSuccessful = true;         
          this.isVerificationFailed = false;        
        },
