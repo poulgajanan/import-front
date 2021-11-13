@@ -3,10 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-// import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 
 // import { MatSliderModule } from '@angular/material/slider';
 import { AppComponent } from './app.component';
+
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { LoginwithotpComponent } from './loginwithotp/loginwithotp.component';
@@ -58,8 +59,7 @@ import { PieChartComponent } from './pie-chart/pie-chart.component';
     VerifyEmailComponent,      // verifying email address of user 
     VerifyMobileComponent,     // Mobile OTP Verifation Component
     VerifyotpComponent,        
-    LoginwithotpComponent,     //Login with OTP component
-    // RegisterComponent,         
+    LoginwithotpComponent,     //Login with OTP component    
     MembershipcomponentComponent,
     AddformComponent,          //Form for Import
     GeneratepoComponent,       //Generate PO Page Component
@@ -74,7 +74,7 @@ import { PieChartComponent } from './pie-chart/pie-chart.component';
   ],
   imports: [
     BrowserModule,
-    // AppRoutingModule,
+    AppRoutingModule,
     FormsModule,    //Exports the required providers and directives for template-driven forms, making them available for import by NgModules that import this module               
     HttpClientModule,  //Configures the dependency injector for HttpClient with supporting services for XSRF. Automatically imported by HttpClientModule.
     BrowserAnimationsModule,  //Exports BrowserModule with additional dependency-injection providers for use with animations.
@@ -83,35 +83,7 @@ import { PieChartComponent } from './pie-chart/pie-chart.component';
     ReactiveFormsModule, //Exports the required infrastructure and directives for reactive forms, making them available for import by NgModules that import this module.
     NgOtpInputModule,    //Adds directives and providers for in-app navigation among views defined in an application. Use the Angular Router service to declaratively specify application states and manage state transitions.
     // PieChartComponent,
-    // ChartsModule,
-    
-    //The component to instantiate when the path matches. Can be empty if child routes specify components.
-    RouterModule.forRoot([
-      {path: '', redirectTo: '/index', pathMatch: 'full'},
-      {path: 'index', component: HomeComponent},
-      // {path: 'otp', component: OtpComponent},
-      // {path: 'otpmail', component: OtpmailComponent},
-      // {path: 'signup', component: SignupComponent},
-      {path: 'login', component: LoginComponent},
-      {path: 'register' , component: RegisterComponent},
-      {path: 'planning', component: PlanningComponent},     
-      {path: 'addform', component: AddformComponent},
-      {path:'editvendor',component: EditvendorComponent},
-      {path: 'generatepo', component: GeneratepoComponent},
-      {path: 'table', component: TableComponent},
-      {path: 'vendor', component: VendorComponent},
-      {path: 'plans', component: PlansComponent},
-      {path: 'master/companysetup', component: CompanysetupComponent},
-      {path: 'master/port',component: PortComponent},
-      {path: 'master/license',component: LicenseComponent},
-      {path: 'master/curency', component:CurrencysettingsComponent},
-      {path: 'master/busineespartner',component: BusineespartnerComponent},
-      {path: 'master/bank', component: BankComponent},
-      {path: 'master/license',component: LicenseComponent},
-      {path: 'master/curency', component:CurrencysettingsComponent},
-      {path: 'master/busineespartner',component: BusineespartnerComponent},
-      {path : 'pie-chart',component: PieChartComponent}
-    ]),
+    // ChartsModule,      //The component to instantiate when the path matches. Can be empty if child routes specify components.    
   ],
   providers: [authInterceptorProviders], //Dependencies whose providers are listed here become available for injection into any component, directive, pipe or service that is a child of this injector. The NgModule used for bootstrapping uses the root injector, and can provide dependencies to any part of the app.
   bootstrap: [AppComponent] //The set of components that are bootstrapped when this module is bootstrapped. The components listed here are automatically added to entryComponents.
