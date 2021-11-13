@@ -61,9 +61,6 @@ const routes: Routes = [
     {path: 'master/curency', component:CurrencysettingsComponent},
     {path: 'master/busineespartner',component: BusineespartnerComponent},
     {path: 'master/bank', component: BankComponent},
-    {path: 'master/license',component: LicenseComponent},
-    {path: 'master/curency', component:CurrencysettingsComponent},
-    {path: 'master/busineespartner',component: BusineespartnerComponent},
     {path : 'pie-chart',component: PieChartComponent}
 ];
 
