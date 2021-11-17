@@ -11,6 +11,15 @@ import { OtpverifyService } from '../_services/otpverify.service';
 })
 export class RegisterComponent implements OnInit {
 
+  // passwordPtn ="/^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/";
+  // passwordPtn = "/^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{8,16}$";
+  // passwordPtn = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$/";
+  // passwordPtn = "/^\+?(?:[1-9]\d*(?:\.\d{1,2})?|0\.(?:[1-9]\d?|\d[1-9]))$/";
+  // passwordPtn "(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$";
+  // passwordPtn = "^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{3, }$";
+  passwordPtn = "/^[0-9]{1,6}$/";
+
+
   form: any = {
     companyName: null,
     companyDesignation:null,

@@ -41,7 +41,7 @@ export class VerifyMobileComponent implements OnInit {
     const {companyName,companyDesignation,firstName,lastName,dateOfBirth,email,mobile,password,} = this.form;         
       this.sendOtp.verifyMobile(this.value).subscribe(
        data => {
-         console.log(data);
+        //  console.log(data);
          this.isSuccessful = true;         
          this.isVerificationFailed = false; 
          this.router.navigateByUrl('/verifyEmail')       

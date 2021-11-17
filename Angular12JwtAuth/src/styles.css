@@ -15,3 +15,17 @@
 @import "~assets/css/style.css";
 
 @import "~assets/plugins/mobilecode/intlTelInput.css";
+
+@media only screen and (min-width: 992px){
+/* @media (min-width: 992px){ */
+    .leftmargin{
+        margin-left:  60px;
+    }
+    body{
+        width: 100%;
+    }
+}
+
+body{
+    overflow:auto;
+}

@@ -1,0 +1,26 @@
+/* pricing css Style */ 
+.pricing-area {position: relative; } 
+.pricing-area .pricing-table {-webkit-transition: all 0.3s linear; -moz-transition: all 0.3s linear; -o-transition: all 0.3s linear; -ms-transition: all 0.3s linear; transition: all 0.3s linear;  box-shadow: 8px 8px 30px 0px rgba(42, 67, 113, 0.1); -webkit-box-shadow: 8px 8px 30px 0px rgba(42, 67, 113, 0.1); -moz-box-shadow: 8px 8px 30px 0px rgba(42, 67, 113, 0.1); padding: 30px 40px; position: relative; overflow: hidden; background: #fff; border: 3px solid transparent;border-radius: 5px;}
+.pricing-area .pricing-table:hover {border-color:#8fcc14; transform: translateY(-10px); box-shadow: 0px 0px 25px 0px rgb(0 0 0 / 10%); }
+.pricing-area .pricing-inner-table h2 {color: var(--main-background_active); margin-bottom: 3px; font-weight: 600; } 
+.pricing-area .pricing-details {margin-top: 35px; padding-top: 28px; padding-bottom: 30px; border-top: 1px solid #e5e5e5; text-align: left; }
+.pricing-area .pricing-details ul li {padding: 5px 0 5px 30px; position: relative; color: #606060;}
+.pricing-area .pricing-details ul li:after {content: ""; position: absolute; height: 5px; width: 5px; background: var(--main-background_active); left: 10px; top: 0; bottom: 0; margin: auto; } 
+.pricing-area .pricing-inner-table .button {box-shadow: 8px 8px 30px 0px  rgba(97, 135, 204, 0.1); -webkit-box-shadow: 8px 8px 30px 0px  rgba(97, 135, 204, 0.1); -moz-box-shadow: 8px 8px 30px 0px rgba(97, 135, 204, 0.1); } 
+/* .pricing-area .pricing-inner-table .button {background: #0561d9; -webkit-box-shadow: 0 0 2px rgb(0 0 0 / 14%); -moz-box-shadow: 0 0 2px rgba(0,0,0,0.14); box-shadow: 0 0 2px rgb(0 0 0 / 14%); -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; color: #fff !important; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; -ms-transition: all 0.3s; -o-transition: all 0.3s; transition: all 0.3s; font-size: 14px; font-weight: 500; cursor: pointer; margin: 0 2px;} */
+.pricing-area .Packages {display: none; }
+.pricing-area .showpackages {display: block; }
+.pricing-area .main-pricing {position: relative; }
+.pricing-area .main-pricing .selectpricing {display: inline-block; margin: 0 auto; background: #12192a; border-radius: 50px; padding: 5px 5px; }
+.pricing-area .selectpricing li {float: left; margin: 0 !important; padding: 0; }
+.pricing-area .selectpricing a {display: inline-block; padding: 10px 20px; position: relative; z-index: 9; color: #fff; }
+.pricing-area .selectpricing a.selectpricing_active:hover, .pricing-area .selectpricing a.selectpricing_active:active, .pricing-area .selectpricing a.selectpricing_active:focus {color: #fff; }
+.pricing-area .selectpricing_active:after {background: -webkit-linear-gradient(to right, #0561d9 0%, #F09819  100%);    background: -moz-linear-gradient(to right, #0561d9 0%, #F09819  100%);    background: -ms-linear-gradient(to right, #FF512F 0%, #F09819  100%);    background: -o-linear-gradient(to right, #FF512F 0%, #F09819  100%);    background: linear-gradient(to right, #FF512F 0%, #F09819  100%); height: 100%; display: inline-block; content: ""; position: absolute; left: 0; right: 0; top: 0; border-radius: 50px; z-index: -1; }
+.pricing-area .selectpricing_active {color: #fff; }
+.pricing-area .pricing_arrow {position: absolute; left: 0; right: 0; margin: auto; top: -70px; width: 80px; transform: translate(130px, 40px) rotate(-15deg); }
+.pricing-area .pricing-active {background: #12192a; color: #ffffff; }
+.pricing-area .layer {left: 0; object-fit: contain; position: absolute; top: 0; width: auto; } 
+ 
+.textcolor{
+    color: #8fcc14;
+}

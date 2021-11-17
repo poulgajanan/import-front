@@ -142,6 +142,7 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
     .grid-4 {display: grid; grid-template-columns: repeat(1, 1fr); }
     .grid-5 {display: grid; grid-template-columns: repeat(1, 1fr); }
     .grid-6 {display: grid; grid-template-columns: repeat(1, 1fr); }  
+
 } 
 /*=================================================
 13: Responsive Media Query (less than 575px)

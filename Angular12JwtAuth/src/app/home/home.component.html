@@ -1,5 +1,350 @@
-<div class="container">
+<!-- <div class="container">
     <header class="jumbotron">
       <p>{{ content }}</p>
     </header>
   </div>
+ -->
+
+<!-- index.html -->
+
+<div class="pt-80 leftmargin">
+  <div class="container-fluid ">
+      <!-- <app-pie-chart></app-pie-chart> -->
+      <div class="row">
+          <div class="col-md-6">
+              <div class="pus-card ">
+                  <div class="text-center p-3 bg_green">
+                      <h6 class="text-white">Total Document</h6>
+                      <h3 class="mt-20 text-center text-white fw_6">20</h3>
+                  </div>
+              </div>
+          </div> 
+          <div class="col-md-6">
+              <div class="pus-card ">
+                  <div class="text-center p-3 bg_green">
+                      <h6 class="text-white">Open Transition</h6>
+                      <h3 class="mt-20 text-center text-white fw_6">25</h3>
+                  </div>
+              </div>
+          </div> 
+      </div>
+
+      <div class="row mt-30">
+          <div class="col-md-8">
+              <div class="pus-card ">
+                  <div class="pus-card-header d-flex align-items-center text-center justify-content-between">
+                      <div class="pus-card-title">
+                          <h6>Total Transition</h6>
+                      </div>
+                      <div class="pus-card-heading-elements">
+                          <ul class="list-inline mb-0"> 
+                              <li class="list-inline-item">
+                                  <a href="javascript:void(0);" class="table-button-white-hover" data-toggle="tooltip" data-placement="top" title="Reset">
+                                      <img src="assets/images/table-icons/reset.svg" class="img-fluid" alt="">
+                                  </a>
+                              </li> 
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="pus-card-content collapse show"> 
+                      <div class="row mb-1">  
+                          <div class="col-md-12"> 
+                              <div class="table-responsive table-view dashboardtable">
+                                  <table id="TableFeatures" class="table table-hovermb-0 datatable" style="width:100%">
+                                      <thead>
+                                          <tr> 
+                                              <th>Id</th>
+                                              <th>Product Name</th>
+                                              <th>Country</th>
+                                              <th>Status</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <tr>
+                                              <td>2001</td>
+                                              <td>Mango</td>
+                                              <td>USA</td>
+                                              <td class="">
+                                                  <a href="#" class="text-green">In LC Prcoess</a>
+                                              </td> 
+                                          </tr> 
+                                          <tr>
+                                              <td>2002</td>
+                                              <td>Apple</td>
+                                              <td>Uk</td>
+                                              <td class="">
+                                                  <a href="#" class="text-green">In LC Prcoess</a>
+                                              </td> 
+                                          </tr> 
+                                          <tr>
+                                              <td>2003</td>
+                                              <td>Mobile</td>
+                                              <td>Dubai</td>
+                                              <td class="">
+                                                  <a href="#" class="text-green">In LC Prcoess</a>
+                                              </td> 
+                                          </tr> 
+                                          <tr>
+                                              <td>2004</td>
+                                              <td>Laptop</td>
+                                              <td>Canada</td>
+                                              <td class="">
+                                                  <a href="#" class="text-green">In LC Prcoess</a>
+                                              </td> 
+                                          </tr> 
+                                      </tbody>
+                                  </table> 
+                              </div>
+                          </div> 
+                      </div>
+                  </div>
+              </div>
+          </div> 
+          <div class="col-md-4"> 
+              <div class="pus-card ">
+                  <div class="pus-card-header d-flex align-items-center text-center justify-content-between">
+                      <div class="pus-card-title">
+                          <h6>Total Order</h6>
+                      </div>
+                      <div class="pus-card-heading-elements">
+                          <ul class="list-inline mb-0"> 
+                              <li class="list-inline-item">
+                                  <a href="javascript:void(0);" class="table-button-white-hover" data-toggle="tooltip" data-placement="top" title="Reset">
+                                      <img src="assets/images/table-icons/reset.svg" class="img-fluid" alt="">
+                                  </a>
+                              </li> 
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="pus-card-content collapse show"> 
+                      <div class="row mb-1">  
+                          <div class="col-md-12"> 
+                              <div id="PieCharts"></div>
+                          </div> 
+                      </div>
+                  </div>
+              </div>  
+          </div> 
+      </div>
+
+      <div class="row mt-30 mb-30">
+          <div class="col-md-5"> 
+              <div class="pus-card ">
+                  <div class="pus-card-header d-flex align-items-center text-center justify-content-between">
+                      <div class="pus-card-title">
+                          <h6>Total Users</h6>
+                      </div>
+                      <div class="pus-card-heading-elements">
+                          <ul class="list-inline mb-0"> 
+                              <li class="list-inline-item">
+                                  <a href="javascript:void(0);" class="table-button-white-hover" data-toggle="tooltip" data-placement="top" title="Reset">
+                                      <img src="assets/images/table-icons/reset.svg" class="img-fluid" alt="">
+                                  </a>
+                              </li> 
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="pus-card-content collapse show"> 
+                      <div class="row mb-1">  
+                          <div class="col-md-12"> 
+                              <div id="columnCharts"></div>
+                          </div> 
+                      </div>
+                  </div>
+              </div>  
+          </div> 
+          <div class="col-md-7">
+              <div class="pus-card ">
+                  <div class="pus-card-header d-flex align-items-center text-center justify-content-between">
+                      <div class="pus-card-title">
+                          <h6>Users</h6>
+                      </div>
+                      <div class="pus-card-heading-elements">
+                          <ul class="list-inline mb-0"> 
+                              <li class="list-inline-item">
+                                  <a href="javascript:void(0);" class="table-button-white-hover" data-toggle="tooltip" data-placement="top" title="Reset">
+                                      <img src="assets/images/table-icons/reset.svg" class="img-fluid" alt="">
+                                  </a>
+                              </li> 
+                              <li class="list-inline-item">
+                                  <a href="javascript:void(0);" class="table-button-white-hover" data-toggle="tooltip" data-placement="top" title="Add User">
+                                      <img src="assets/images/table-icons/add.svg" class="img-fluid" alt="">
+                                  </a>
+                              </li> 
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="pus-card-content collapse show"> 
+                      <div class="row mb-1">  
+                          <div class="col-md-12"> 
+                              <div class="table-responsive table-view dashboardtable">
+                                  <table id="TableFeatures" class="table table-hovermb-0 datatable" style="width:100%">
+                                      <thead>
+                                          <tr>  
+                                              <th>Name</th>
+                                              <th>Email</th>
+                                              <th>Phone Number</th>
+                                              <th>City</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <tr>
+                                              <td>Ashish Gujarati</td>
+                                              <td>ashishguj@gmail.com</td>
+                                              <td>+91 9876543210</td>
+                                              <td>USA</td>
+                                          </tr> 
+                                          <tr>
+                                              <td>John Due</td>
+                                              <td>JohnDue@gmail.com</td>
+                                              <td>+91 8306005795</td>
+                                              <td>India</td>
+                                          </tr> 
+                                          <tr>
+                                              <td>Punit Gajera</td>
+                                              <td>Punit@keyconcepts.co.in</td>
+                                              <td>+91 9876543210</td>
+                                              <td>India</td>
+                                          </tr> 
+                                          <tr>
+                                              <td>Amar Panchal</td>
+                                              <td>Amar@gmail.com</td>
+                                              <td>+91 9876543210</td>
+                                              <td>India</td>
+                                          </tr> 
+                                          <tr>
+                                              <td>Punit Gajera</td>
+                                              <td>Punit@keyconcepts.co.in</td>
+                                              <td>+91 9876543210</td>
+                                              <td>India</td>
+                                          </tr>
+
+                                      </tbody>
+                                  </table> 
+                              </div>
+                          </div> 
+                      </div>
+                  </div>
+              </div>
+          </div> 
+          
+      </div>
+  </div>
+</div>
+
+<!-- page data area End -->
+ <!-- <script type="text/javascript">
+  var options = {
+      series: [44, 55, 13, 20, 50],
+      chart: {  
+          type: 'pie',
+      },
+      labels: ['Jun 2021', 'July 2021', 'Aug 2021', 'Sep 2021', 'Oct 2021'],
+      responsive: [{
+          breakpoint: 480,
+          options: {
+              chart: {
+                  width: 200
+              },
+              legend: {
+                  position: 'bottom'
+              }
+          }
+      }]
+  };
+
+  var chart = new ApexCharts(document.querySelector("#PieCharts"), options);
+  chart.render();
+
+
+
+  // columnCharts
+  var options = {
+    series: [{
+    name: 'Inflation',
+    data: [2.3, 3.1, 4.0, 10.1, 4.0, 3.6, 3.2, 2.3, 1.4, 0.8, 0.5, 0.2]
+  }],
+    chart: {
+    height: 350,
+    type: 'bar',
+  },
+  plotOptions: {
+    bar: {
+      borderRadius: 10,
+      dataLabels: {
+        position: 'top', // top, center, bottom
+      },
+    }
+  },
+  dataLabels: {
+    enabled: true,
+    formatter: function (val) {
+      return val + "%";
+    },
+    offsetY: -20,
+    style: {
+      fontSize: '12px',
+      colors: ["#304758"]
+    }
+  },
+  
+  xaxis: {
+    categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    position: 'top',
+    axisBorder: {
+      show: false
+    },
+    axisTicks: {
+      show: false
+    },
+    crosshairs: {
+      fill: {
+        type: 'gradient',
+        gradient: {
+          colorFrom: '#D8E3F0',
+          colorTo: '#BED1E6',
+          stops: [0, 100],
+          opacityFrom: 0.4,
+          opacityTo: 0.5,
+        }
+      }
+    },
+    tooltip: {
+      enabled: true,
+    }
+  },
+  yaxis: {
+    axisBorder: {
+      show: false
+    },
+    axisTicks: {
+      show: false,
+    },
+    labels: {
+      show: false,
+      formatter: function (val) {
+        return val + "%";
+      }
+    }
+  
+  },
+  title: {
+    text: 'Monthly Users, 2021',
+    floating: true,
+    offsetY: 330,
+    align: 'center',
+    style: {
+      color: '#444'
+    }
+  }
+  };
+
+  var chart = new ApexCharts(document.querySelector("#columnCharts"), options);
+  chart.render();
+</script> -->
+
+
+<!-- <button (click)="Testing()">Display Button</button>
+
+
+<input id="txtName" type="text" />  -->

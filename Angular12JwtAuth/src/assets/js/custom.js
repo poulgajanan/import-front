@@ -115,12 +115,12 @@ NOTE: This file contains all scripts for the actual Template.
     /*==========================================
             :: Datatable
     ==========================================*/
-    PUS.datatable = function () { 
-        $('.datatable').DataTable({
-            "scrollX": true,
-            "scrollCollapse": true
-        }); 
-    }; 
+    // PUS.datatable = function () { 
+    //     $('.datatable').DataTable({
+            // "scrollX": true,
+            // "scrollCollapse": true
+    //     }); 
+    // }; 
 
 	/*==========================================
     		:: On Load 
@@ -138,15 +138,15 @@ NOTE: This file contains all scripts for the actual Template.
 	});
 
     
-    // $(document).on("change", ":file", function() {
-    //     var input = $(this),
-    //     numFiles = input.get(0).files ? input.get(0).files.length : 1,
-    //     label = input
-    //     .val()
-    //     .replace(/\\/g, "/")
-    //     .replace(/.*\//, "");
-    //     input.trigger("fileselect", [numFiles, label]);
-    // });
+    $(document).on("change", ":file", function() {
+        var input = $(this),
+        numFiles = input.get(0).files ? input.get(0).files.length : 1,
+        label = input
+        .val()
+        .replace(/\\/g, "/")
+        .replace(/.*\//, "");
+        input.trigger("fileselect", [numFiles, label]);
+    });
 
 	/*==========================================
     		:: Document Ready
