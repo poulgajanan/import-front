@@ -22,7 +22,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
+// import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
 import { FlatpickrModule } from 'angularx-flatpickr';
 import { NgOtpInputModule } from  'ng-otp-input';
 import { MembershipcomponentComponent } from './membershipcomponent/membershipcomponent.component';
@@ -44,6 +44,7 @@ import { BankComponent } from './master/bank/bank.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
 import { PieChartComponent } from './pie-chart/pie-chart.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 // import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
@@ -77,8 +78,9 @@ import { PieChartComponent } from './pie-chart/pie-chart.component';
     AppRoutingModule,
     FormsModule,    //Exports the required providers and directives for template-driven forms, making them available for import by NgModules that import this module               
     HttpClientModule,  //Configures the dependency injector for HttpClient with supporting services for XSRF. Automatically imported by HttpClientModule.
+    NgbModule,
     BrowserAnimationsModule,  //Exports BrowserModule with additional dependency-injection providers for use with animations.
-    NgxIntlTelInputModule,
+    // NgxIntlTelInputModule,
     FlatpickrModule.forRoot(),
     ReactiveFormsModule, //Exports the required infrastructure and directives for reactive forms, making them available for import by NgModules that import this module.
     NgOtpInputModule,    //Adds directives and providers for in-app navigation among views defined in an application. Use the Angular Router service to declaratively specify application states and manage state transitions.
