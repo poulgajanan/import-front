@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+
 const AUTH_API = 'https://dev.tre-zix.com/gatewaysrv/api/auth/';
 const AUTH_API_LOGIN = 'https://dev.tre-zix.com/gatewaysrv/login/auth/signinwithotp';
 

@@ -36,10 +36,16 @@ import { BusineespartnerComponent } from './master/busineespartner/busineespartn
 import { BankComponent } from './master/bank/bank.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
+import {DocumentComponent}  from './master/document/document.component';
+import {LetterofcreditComponent} from './master/letterofcredit/letterofcredit.component';
+import {BankimportComponent} from './master/bankimport/bankimport.component';
 import { PieChartComponent } from './pie-chart/pie-chart.component';
+import {ThirdpartyinspectionComponent} from './master/thirdpartyinspection/thirdpartyinspection.component'
+
+import { VesseltrackingComponent} from './vesseltracking/vesseltracking.component';
 // import { ChartsModule } from 'ng2-charts';
 
-
+    
 const routes: Routes = [
     {path: '', redirectTo: '/index', pathMatch: 'full'},
     {path: 'index', component: HomeComponent},
@@ -61,7 +67,13 @@ const routes: Routes = [
     {path: 'master/curency', component:CurrencysettingsComponent},
     {path: 'master/busineespartner',component: BusineespartnerComponent},
     {path: 'master/bank', component: BankComponent},
-    {path : 'pie-chart',component: PieChartComponent}
+    {path :'master/document', component: DocumentComponent},
+    {path : 'pie-chart',component: PieChartComponent},
+    {path : 'document', component: DocumentComponent},
+    {path : 'letterofcredit', component: LetterofcreditComponent},
+    {path : 'bankimport' , component: BankimportComponent},
+    {path: 'third_party_inspection', component: ThirdpartyinspectionComponent },
+    {path: 'vesseltracking', component: VesseltrackingComponent}
 ];
 
 @NgModule({

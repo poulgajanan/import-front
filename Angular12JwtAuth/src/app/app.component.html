@@ -1,7 +1,5 @@
-<!-- <div> -->
-  
   <div id="app">
-    <app-navbar></app-navbar>  
+    <app-navbar></app-navbar>
     <div class="container-fluid">
       <router-outlet class=""></router-outlet>
       <nav class="navbar navbar-expand navbar-dark bg-dark leftmargin">
@@ -29,7 +27,7 @@
             <a href="/login" class="nav-link" routerLink="login">Login</a>
           </li>
         </ul>
-  
+
         <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
           <li class="nav-item">
             <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
@@ -40,5 +38,16 @@
         </ul>
       </nav>
     </div>
+</div>
+  <!-- <p>
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      Button with data-target
+    </button>
+  </p>
+  <div class="collapse" id="collapseExample">
+    <div class="card card-body">
+      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+    </div>
   </div>
-<!-- </div> -->
+
+  </div> -->

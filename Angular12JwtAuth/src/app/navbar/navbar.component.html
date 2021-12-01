@@ -37,6 +37,7 @@
                     <div class="sub-Catagorys">  
                         <a class="sub-drop collapsed" href="#Masters" data-toggle="collapse" data-target="#Masters" aria-expanded="true" title="Masters">
                             <img src="assets/images/icons/import.svg" class="img-fluid" alt="Import"  />
+                            
                             <span>Masters</span>
                         </a>
                         <div class=""> 
@@ -78,6 +79,14 @@
                                             <span>Bank</span>
                                         </a>
                                     </li> 
+
+                                    <li class="nav-item">
+                                        <a routerLink="/master/document" class="active" title="Document">
+                                            <img src="assets/images/icons/document.svg" class="img-fluid" alt="bank"  />
+                                            <span>Document</span>
+                                        </a>
+                                    </li> 
+
                                 </ul>
                             </div>
                         </div>
@@ -89,7 +98,7 @@
                             <img src="assets/images/icons/import.svg" class="img-fluid" alt="Import"  />
                             <span>Import</span>
                         </a>
-                        <div class=""> 
+                        <div class="">       
                             <div class="collapse" id="first" aria-expanded="false">
                                 <ul class="flex-column nav menu-content">
                                     <li class="nav-item">
@@ -110,11 +119,29 @@
                                             <span>Generate PO</span>
                                         </a>
                                     </li> 
+
+                                    <li class="nav-item">
+                                        <a routerLink="/letterofcredit">
+                                            <img src="assets/images/icons/letterofcredit.svg" class="img-fluid" alt="Letter of Credit"  />
+                                            <span>Letter of Credit</span>
+                                        </a>
+                                    </li> 
+                                    <li class="nav-item">
+                                        <a routerLink="/bankimport">
+                                            <img src="assets/images/icons/bank.svg" class="img-fluid" alt="BankImport"  />
+                                            <span>Bank</span>
+                                        </a>
+                                    </li> 
+                                    <li class="nav-item">
+                                        <a routerLink="/third_party_inspection">
+                                            <img src="assets/images/icons/bank.svg" class="img-fluid" alt="Third_Party_Inspection." />
+                                            <span>3rd Party Inspection</span>
+                                        </a>
+                                    </li> 
                                 </ul>
                             </div>
                         </div>
                     </div>
-                
                 <li>
                     <a href="" > 
                         <img src="assets/images/icons/export.svg" class="img-fluid" alt="export"  />
@@ -143,6 +170,12 @@
                     <a href="" > 
                         <img src="assets/images/icons/transport.svg" class="img-fluid" alt="export"  />
                         <span>Transporter</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/vesseltracking" title="Vessel Tracking"> 
+                        <img src="assets/images/icons/dashboard.svg" class="img-fluid" alt="Vessel Tracking"  />
+                        <span>Vessel Tracking</span>
                     </a>
                 </li>
                 
@@ -296,7 +329,7 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-right p-0">                                     
                         <li class="">
-                            <a href="#" class="d-flex">
+                            <a routerLink="/" class="d-flex">
                                 <span>
                                     <img src="assets/images/icons/user.svg" class="img-fluid" alt="">
                                 </span>
@@ -312,7 +345,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="login" class="d-flex">
+                            <a routerLink="/login" class="d-flex">
                                 <span>
                                     <img src="assets/images/icons/logout.svg" class="img-fluid" alt="">
                                 </span>
@@ -327,6 +360,7 @@
     </nav>
   </section>
 </div>
+
 <div id="back-to-top" class="back-to-top" style="display: none;">
   <a href="#"> 
       <span class="arrow topfirst"></span>
@@ -337,16 +371,3 @@
 
 
 
-<!-- <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times; </a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
-  </div> -->
-
-  <!-- <div id="main">
-    <h2>Sidenav Push Example</h2>
-    <p>Click on the element below to open the side navigation menu, and push this content to the right. Notice that we add a black see-through background-color to body when the sidenav is opened.</p>
-    <span style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776; open</span>
-  </div> -->

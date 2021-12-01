@@ -41,7 +41,9 @@
               "src/assets/js/popper.min.js",
               "src/assets/plugins/mobilecode/intlTelInput.js",
               "src/assets/plugins/mobilecode/intlTelInput.min.js",
-              "src/assets/plugins/mobilecode/utils.js"
+              "src/assets/plugins/mobilecode/utils.js",
+              "node_modules/bootstrap/dist/js/bootstrap.js",
+              "node_modules/bootstrap/dist/js/bootstrap.js"
             ]
           },
           "configurations": {
@@ -64,7 +66,15 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "outputHashing": "all"
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
             },
             "development": {
               "buildOptimizer": false,

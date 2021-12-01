@@ -161,11 +161,11 @@ NOTE: This file contains all scripts for the actual Template.
 
         
         // Collapsible Card
-        $('a[data-action="collapse"]').on('click', function (e) {
-            e.preventDefault();
-            $(this).closest('.pus-card').children('.pus-card-content').collapse('toggle');
-            $(this).closest('.pus-card').find('[data-action="collapse"] i').toggleClass('fa-plus fa-minus');
-        }); 
+        // $('a[data-action="collapse"]').on('click', function (e) {
+        //     e.preventDefault();
+        //     $(this).closest('.pus-card').children('.pus-card-content').collapse('toggle');
+        //     $(this).closest('.pus-card').find('[data-action="collapse"] i').toggleClass('fa-plus fa-minus');
+        // }); 
 
         // Close Card
         $('a[data-action="close"]').on('click', function () {
