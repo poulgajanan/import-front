@@ -15,7 +15,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
+// import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
 import { FlatpickrModule } from 'angularx-flatpickr';
 import { NgOtpInputModule } from  'ng-otp-input';
 import { MembershipcomponentComponent } from './membershipcomponent/membershipcomponent.component';
