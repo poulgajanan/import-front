@@ -1,6 +1,23 @@
   <div id="app">
     <app-navbar></app-navbar>
     <router-outlet class=""></router-outlet>
+
+    <div ngbDropdown class="dropdown">
+      <button ngbDropdownToggle id="dropdownMenuButton1" aria-expanded="false">
+    Dropdown button
+    </button>
+      <ul ngbDropdownMenu aria-labelledby="dropdownMenuButton1">
+        <li><a ngbDropdownItem href="#">Action</a></li>
+        <li><a ngbDropdownItem href="#">Another action</a></li>
+        <li><a ngbDropdownItem href="#">Something else here</a></li>
+      </ul>
+    </div>     
+
+    
+
+
+
+
     <nav class="navbar navbar-expand navbar-dark bg-dark leftmargin">
       <a routerLink="index" class="navbar-brand">Import-Export</a>
       <ul class="navbar-nav mr-auto" routerLinkActive="active">
@@ -36,9 +53,7 @@
         </li>
       </ul>
     </nav>
-  </div>
-
-  
+  </div>  
 <!-- </div> -->
 
 <p>

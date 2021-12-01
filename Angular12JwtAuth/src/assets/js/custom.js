@@ -115,12 +115,12 @@ NOTE: This file contains all scripts for the actual Template.
     /*==========================================
             :: Datatable
     ==========================================*/
-    // PUS.datatable = function () { 
-    //     $('.datatable').DataTable({
-            // "scrollX": true,
-            // "scrollCollapse": true
-    //     }); 
-    // }; 
+    PUS.datatable = function () { 
+        $('.datatable').DataTable({
+            "scrollX": true,
+            "scrollCollapse": true
+        }); 
+    }; 
 
 	/*==========================================
     		:: On Load 

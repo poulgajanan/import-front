@@ -1,19 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import "~bootstrap/dist/css/bootstrap.css";
-/* "node_modules/bootstrap/dist/css/bootstrap.css" */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+@import "~datatables.net-dt/css/jquery.dataTables.min.css";
 
 @import "~flatpickr/dist/flatpickr.css";
-
-@import "~assets/css/DataTables/dataTables.bootstrap4.min.css";
-
-@import "~assets/css/bootstrap.min.css";
-
-@import "~assets/css/custom.css";
 
 @import "~assets/css/responsive.css";
 
 @import "~assets/css/style.css";
+
+@import "~assets/css/custom.css";
 
 @import "~assets/plugins/mobilecode/intlTelInput.css";
 
