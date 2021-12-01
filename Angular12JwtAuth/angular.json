@@ -32,18 +32,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [
-              "src/assets/js/DataTables/dataTables.bootstrap4.min.js",
-              "src/assets/js/DataTables/jquery.dataTables.min.js",
-              "src/assets/js/bootstrap.min.js",
-              "src/assets/js/custom.js",
-              "src/assets/js/jquery.min.js",
-              "src/assets/js/popper.min.js",
-              "src/assets/plugins/mobilecode/intlTelInput.js",
-              "src/assets/plugins/mobilecode/intlTelInput.min.js",
-              "src/assets/plugins/mobilecode/utils.js",
-              "node_modules/bootstrap/dist/js/bootstrap.js",
-              "node_modules/bootstrap/dist/js/bootstrap.js"
+            "scripts": [              
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           },
           "configurations": {

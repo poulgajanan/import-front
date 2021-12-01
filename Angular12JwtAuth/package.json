@@ -32,13 +32,14 @@
     "ng2-charts": "^2.4.2",
     "ngx-bootstrap": "^7.1.0",
     "ngx-intl-tel-input": "^3.1.1",
+    "popper.js": "^1.16.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "yargs": "^17.2.1",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~12.2.0",
+    "@angular-devkit/build-angular": "^12.2.13",
     "@angular/cli": "~12.2.0",
     "@angular/compiler-cli": "~12.2.0",
     "@types/jasmine": "~3.8.0",

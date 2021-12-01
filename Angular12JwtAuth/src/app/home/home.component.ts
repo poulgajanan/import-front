@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../_services/user.service';
 
+import { User } from '../objectClass/user';
+import { Transaction} from '../objectClass/transaction';
+
 import * as $ from "jquery";
 
 @Component({
@@ -11,8 +14,14 @@ import * as $ from "jquery";
 export class HomeComponent implements OnInit {
   content?: string;
 
+
+  user: User = new User("","",0,"");
+ 
+  transaction : Transaction =new Transaction(0,"","","");
+
   constructor(private userService: UserService) { }
 
+ 
   ngOnInit(): void {
     // this.userService.getPublicContent().subscribe(
     //   data => {
@@ -24,9 +33,6 @@ export class HomeComponent implements OnInit {
     // );
   }
 
-  // Testing(){
-  //   var name = $("txtname").val();
-  //   alert(name);
-  // }
+
 
 }
