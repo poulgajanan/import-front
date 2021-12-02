@@ -1,6 +1,8 @@
 <div class="leftmargin">
 
     <!-- page data area start -->
+
+    <form #vesselForm="ngForm" (ngSubmit)="onSubmit(vesselForm.value)">
     <div class="pt-80">
         <div class="container-fluid ">
             <div class="page-navigation">
@@ -32,7 +34,7 @@
                     <!-- Vessel  -->
                     <div class="pus-card">
                         <div class="pus-card-header d-block d-md-flex align-items-center text-center justify-content-between">
-                            <div class="pus-card-title">
+                            <div class="pus-card-title form">
     
                                 <label class="m-0">
                                     <input type="checkbox" class="book_VesselShow"> &nbsp; I have book Vessel
@@ -49,7 +51,7 @@
                             <div class="pus-card-heading-elements">
                                 <ul class="list-inline mb-0"> 
                                     <li class="list-inline-item">
-                                        <a href="javascript:void(0);" class="table-button-white-hover" data-toggle="tooltip" data-placement="top" title="Reset">
+                                        <a href="javascript:void(0);" class="table-button-white-hover " data-toggle="tooltip" data-placement="top" title="Reset">
                                             <img src="assets/images/table-icons/reset.svg" class="img-fluid" alt="">
                                         </a>
                                     </li> 
@@ -63,33 +65,34 @@
                                         <div class="form-grid-list">
                                             <div class="form-group">
                                                 <label class="form-lbl" for=""> Name <span class="text-danger">*</span></label>
-                                                <input type="text" class="form-control" placeholder="Name">
-                                                
+                                                <input required type="text" class="form-control" #name="ngModel" ngModel name="name" placeholder="Name">
+                                                <span *nfIf="name.invalid" class="alert-danger">Name is required</span>
                                             </div>
                                         </div> 
                                          
                                         <div class="form-grid-list">
                                             <div class="form-group">
                                                 <label class="form-lbl" for=""> Tracking Info <span class="text-danger">*</span></label>
-                                                <input type="text" class="form-control" placeholder="Tracking Info ">                                                        
+                                                <input type="text" class="form-control"  #trackinginfo="ngModel" ngModel name="trackinginfo" placeholder="Tracking Info "> 
+                                                <span *nfIf="trackinginfo.invalid" class="alert-danger">Name is required</span>                                                       
                                             </div>
                                         </div> 
                                         <div class="form-grid-list">
                                             <div class="form-group">
                                                 <label class="form-lbl" for=""> Website <span class="text-danger">*</span></label>
-                                                <input type="text" class="form-control" placeholder="Website">                                                        
+                                                <input type="text" class="form-control"  #webiste="ngModel"  ngModel name="website" placeholder="Website">                                                        
                                             </div>
                                         </div> 
                                         <div class="form-grid-list">
                                             <div class="form-group">
                                                 <label class="form-lbl" for=""> Container No <span class="text-danger">*</span></label>
-                                                <input type="text" class="form-control" placeholder="Container No">                                                        
+                                                <input type="text" class="form-control"  #containerno="ngModel" ngModel  name="containerno" placeholder="Container No">                                                        
                                             </div>
                                         </div> 
                                         <div class="form-grid-list">
                                             <div class="form-group">
                                                 <label class="form-lbl" for=""> Shield No <span class="text-danger">*</span></label>
-                                                <input type="text" class="form-control" placeholder="Shield No">                                                        
+                                                <input type="text" class="form-control" #shieldno="ngModel" ngModel name="shieldno" placeholder="Shield No">                                                        
                                             </div>
                                         </div>  
                                             
@@ -98,7 +101,7 @@
                                 </div>
                                 <div class="col-md-12">
                                     <div class="text-center mt-3">
-                                        <a href="" class="button-style ">Add Vessel</a>
+                                        <button href="" type="submit" class="button-style ">Add Vessel</button>
                                     </div>
                                 </div>
                                                                         
@@ -110,6 +113,7 @@
         </div>
     </div>
     
-   
+   </form> 
             
 </div>
+
