@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-
+import 'jquery';
 // import { MatSliderModule } from '@angular/material/slider';
 import { AppComponent } from './app.component';
 
@@ -44,6 +44,12 @@ import { BankComponent } from './master/bank/bank.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
 import { PieChartComponent } from './pie-chart/pie-chart.component';
+import { DocumentComponent } from './master/document/document.component';
+import { LetterofcreditComponent } from './master/letterofcredit/letterofcredit.component';
+import { BankimportComponent } from './master/bankimport/bankimport.component';
+import {ThirdpartyinspectionComponent} from './master/thirdpartyinspection/thirdpartyinspection.component';
+
+import {VesseltrackingComponent } from './vesseltracking/vesseltracking.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 // import { ChartsModule } from 'ng2-charts';
 
@@ -70,7 +76,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     OtpmailComponent,          //One Time Password component 
     PlansComponent,            // To show membership plan to user.
     TableComponent,            // To show dashboard table 
-    NavbarComponent,           // Navbar components to show menu bar, notifications and and username of user
+    NavbarComponent, 
+    DocumentComponent, 
+    LetterofcreditComponent,
+    BankimportComponent,
+    VesseltrackingComponent,
+    ThirdpartyinspectionComponent
+            
     // PieChartComponent,       // showing Pie charts on dashboard to show to total orders
   ],
   imports: [
