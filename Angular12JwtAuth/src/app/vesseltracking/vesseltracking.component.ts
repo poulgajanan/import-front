@@ -8,8 +8,17 @@ import { FormControl,FormGroup,Validators } from '@angular/forms';
 })
 export class VesseltrackingComponent implements OnInit {
 
-  onSubmit(data : any){
-    console.log(data);
+  form: any = {
+    name: null,
+    trackinginfo:null,
+    webiste:null,
+    containerno:null,
+    shieldno: null,
+  }
+ 
+  onSubmit(){
+    const {name,trackinginfo,webiste,containerno,shieldno} = this.form;
+    console.log(this.form);
   }
   constructor() { }
 

@@ -2,7 +2,7 @@
 
     <!-- page data area start -->
 
-    <form #vesselForm="ngForm" (ngSubmit)="onSubmit(vesselForm.value)">
+    <form #vesselForm="ngForm" name="form" (ngSubmit)="onSubmit()">
     <div class="pt-80">
         <div class="container-fluid ">
             <div class="page-navigation">
@@ -10,11 +10,11 @@
                     <div class="col-md-12">
                         <div class="d-flex align-items-center text-center  ">
                             <div class="page-name">
-                                <h6>Vessel Tracking</h6>
+                                <h6>Vessel Tracking</h6> 
                             </div>
                             <div class="ml-auto box-breadcrumb"> 
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item">
+                                    <li class="breadcrumb-item">  
                                         <a href="" class="mr-2">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">
                                                 <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
@@ -23,7 +23,7 @@
                                         </a>
                                     </li>  
                                     <li class="breadcrumb-item active">Vessel Tracking</li>
-                                </ol>
+                                </ol> 
                             </div>
                         </div>
                     </div>
@@ -34,8 +34,7 @@
                     <!-- Vessel  -->
                     <div class="pus-card">
                         <div class="pus-card-header d-block d-md-flex align-items-center text-center justify-content-between">
-                            <div class="pus-card-title form">
-    
+                            <div class="pus-card-title form">    
                                 <label class="m-0">
                                     <input type="checkbox" class="book_VesselShow"> &nbsp; I have book Vessel
                                 </label> 
@@ -65,37 +64,39 @@
                                         <div class="form-grid-list">
                                             <div class="form-group">
                                                 <label class="form-lbl" for=""> Name <span class="text-danger">*</span></label>
-                                                <input required type="text" class="form-control" #name="ngModel" ngModel name="name" placeholder="Name">
-                                                <span *nfIf="name.invalid" class="alert-danger">Name is required</span>
+                                                <input [(ngModel)]="form.name" #name="ngModel" type="text" class="form-control" name="name" placeholder="Name" required>
+                                                <span *ngIf="name.invalid && name.touched" class="alert-danger">Name is required</span>
                                             </div>
                                         </div> 
                                          
                                         <div class="form-grid-list">
                                             <div class="form-group">
                                                 <label class="form-lbl" for=""> Tracking Info <span class="text-danger">*</span></label>
-                                                <input type="text" class="form-control"  #trackinginfo="ngModel" ngModel name="trackinginfo" placeholder="Tracking Info "> 
-                                                <span *nfIf="trackinginfo.invalid" class="alert-danger">Name is required</span>                                                       
+                                                <input  [(ngModel)]="form.trackinginfo" #trackinginfo="ngModel" type="text" class="form-control" name="trackinginfo" placeholder="Tracking Info " required> 
+                                                <span *ngIf="trackinginfo.invalid && trackinginfo.touched" class="alert-danger">Tracking Info is required</span>                                                       
                                             </div>
                                         </div> 
                                         <div class="form-grid-list">
                                             <div class="form-group">
                                                 <label class="form-lbl" for=""> Website <span class="text-danger">*</span></label>
-                                                <input type="text" class="form-control"  #webiste="ngModel"  ngModel name="website" placeholder="Website">                                                        
+                                                <input  [(ngModel)]="form.webiste" #webiste="ngModel" type="text" class="form-control" name="website" placeholder="Website" required>   
+                                                <span *ngIf="webiste.invalid && webiste.touched" class="alert-danger">Website is required</span>                                                          
                                             </div>
                                         </div> 
-                                        <div class="form-grid-list">
+                                        <div class="form-grid-list"> 
                                             <div class="form-group">
                                                 <label class="form-lbl" for=""> Container No <span class="text-danger">*</span></label>
-                                                <input type="text" class="form-control"  #containerno="ngModel" ngModel  name="containerno" placeholder="Container No">                                                        
+                                                <input  [(ngModel)]="form.containerno" #containerno="ngModel" type="text" class="form-control" ngModel  name="containerno" placeholder="Container No" required> 
+                                                <span *ngIf="containerno.invalid && containerno.touched" class="alert-danger">Container No. is required</span>                                                             
                                             </div>
                                         </div> 
                                         <div class="form-grid-list">
                                             <div class="form-group">
                                                 <label class="form-lbl" for=""> Shield No <span class="text-danger">*</span></label>
-                                                <input type="text" class="form-control" #shieldno="ngModel" ngModel name="shieldno" placeholder="Shield No">                                                        
+                                                <input [(ngModel)]="form.shieldno" #shieldno="ngModel" type="text" class="form-control" name="shieldno" placeholder="Shield No" required>    
+                                                <span *ngIf="shieldno.invalid && shieldno.touched" class="alert-danger">Shield No. is required</span>                                                         
                                             </div>
-                                        </div>  
-                                            
+                                        </div>                                              
                                     </div> 
                                     
                                 </div>
@@ -103,17 +104,13 @@
                                     <div class="text-center mt-3">
                                         <button href="" type="submit" class="button-style ">Add Vessel</button>
                                     </div>
-                                </div>
-                                                                        
+                                </div>                                                                        
                             </div>
                         </div>
                     </div> 
                 </div> 
             </div>
         </div>
-    </div>
-    
-   </form> 
-            
+    </div>    
+   </form>            
 </div>
-
