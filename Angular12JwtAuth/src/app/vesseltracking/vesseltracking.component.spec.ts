@@ -2,6 +2,10 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { VesseltrackingComponent } from './vesseltracking.component';
 
+
+
+
+    
 describe('VesseltrackingComponent', () => {
   let component: VesseltrackingComponent;
   let fixture: ComponentFixture<VesseltrackingComponent>;
@@ -18,8 +22,13 @@ describe('VesseltrackingComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
+  
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 });
+
+
+
+   
