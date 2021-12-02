@@ -220,8 +220,8 @@
                                             <a href="JavaScript:void(0);" class="icon-view">
                                                 <i class="fa fa-eye"></i>
                                             </a>
-                                              <span class="error" *ngIf="(confirmPassword.touched || f.submitted) && confirmPassword.errors?.required">Confirm Password is required.</span>
-                                              <span class="error" *ngIf="(confirmPassword.touched || f.submitted) && form.password !== form.confirmPassword">Password and Confirm Password is not matching.</span>
+                                              <div class="alert-danger" *ngIf="(confirmPassword.touched || f.submitted) && confirmPassword.errors?.required">Confirm Password is required.</div>
+                                              <div class="alert-danger" *ngIf="(confirmPassword.touched || f.submitted) && form.password !== form.confirmPassword">Password and Confirm Password is not matching.</div>
                                           </div> 
                                       </fieldset>
                                   </div>  

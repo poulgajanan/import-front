@@ -2,6 +2,10 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+// require('dotenv').config();
+
+// console.log(process.env.API);
+
 export const environment = {
   production: true
 };
