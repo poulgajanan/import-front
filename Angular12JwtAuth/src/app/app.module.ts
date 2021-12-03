@@ -3,9 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+
+// import 'jquery';
+
 import { AppRoutingModule } from './app-routing.module';
-import 'jquery';
-// import { MatSliderModule } from '@angular/material/slider';
 import { AppComponent } from './app.component';
 
 import { RegisterComponent } from './register/register.component';
@@ -89,10 +91,11 @@ import { MailComponent } from './mail/mail.component';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
+    NgbModule,
     AppRoutingModule,
     FormsModule,    //Exports the required providers and directives for template-driven forms, making them available for import by NgModules that import this module               
     HttpClientModule,  //Configures the dependency injector for HttpClient with supporting services for XSRF. Automatically imported by HttpClientModule.
-    NgbModule,
     BrowserAnimationsModule,  //Exports BrowserModule with additional dependency-injection providers for use with animations.
     // NgxIntlTelInputModule,
     FlatpickrModule.forRoot(),

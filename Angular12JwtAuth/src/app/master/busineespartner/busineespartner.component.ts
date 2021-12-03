@@ -7,7 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BusineespartnerComponent implements OnInit {
 
+  customer = true;
+
   constructor() { }
+
+  toggleCustomer(){
+    this.customer = true;
+  }
+
+  toggleVendor(){
+    this.customer = false;
+  }
 
   ngOnInit(): void {
   }

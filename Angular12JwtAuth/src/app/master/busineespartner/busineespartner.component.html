@@ -1,5 +1,5 @@
 <!-- page data area start -->
-<div class="pt-80">
+<div class="leftmargin pt-80">
     <div class="container-fluid ">
         <div class="page-navigation">
             <div class="row">
@@ -60,15 +60,26 @@
                                     <div class="tabs-po">
                                         <ul class="list-line box-po-tabs">
                                             <li class="list-inline-item">
-                                                <a href="javascript:void(0); " class="po-tabs-active" data-bind="Customer">Customer</a>
+                                                <a class="po-tabs-active" data-bind="Customer"
+                                                  (click)="toggleCustomer()"
+                                                >
+                                                  Customer
+                                                </a>
                                             </li>
                                             <li class="list-inline-item">
-                                                <a href="javascript:void(0);" data-bind="Vendor"> Vendor</a>
+                                                <a class="" data-bind="Vendor"
+                                                  (click)="toggleVendor()"
+
+                                                >
+                                                  Vendor
+                                                </a>
                                             </li> 
                                         </ul>
                                     </div>
                                     <div class="tabs-details-po">
-                                        <div id="Customer" class="details-po details-po-active">
+                                        <div id="Customer" class="details-po details-po-active"
+                                            
+                                        >
                                             <div class="">
                                                 <div class="grid-4 form-grid-4"> 
                                                     <div class="form-grid-list">
@@ -101,7 +112,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div id="Vendor" class="details-po">
+                                        <div id="Vendor" class="details-po"
+                                            
+                                        >
                                             <div class="">
                                                 <div class="grid-4 form-grid-4">
                                                     <div class="form-grid-list">

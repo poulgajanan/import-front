@@ -27,3 +27,8 @@
 body{
     overflow:auto;
 }
+ 
+.hideDiv {
+    display: none;
+ }
+ 
