@@ -45,6 +45,7 @@ import {ThirdpartyinspectionComponent} from './master/thirdpartyinspection/third
 import { VesseltrackingComponent} from './vesseltracking/vesseltracking.component';
 // import { ChartsModule } from 'ng2-charts';
 
+import { MailComponent} from './mail/mail.component';
     
 const routes: Routes = [
     {path: '', redirectTo: '/index', pathMatch: 'full'},
@@ -73,7 +74,8 @@ const routes: Routes = [
     {path : 'letterofcredit', component: LetterofcreditComponent},
     {path : 'bankimport' , component: BankimportComponent},
     {path: 'third_party_inspection', component: ThirdpartyinspectionComponent },
-    {path: 'vesseltracking', component: VesseltrackingComponent}
+    {path: 'vesseltracking', component: VesseltrackingComponent},
+    {path: 'mail', component: MailComponent},
 ];
 
 @NgModule({

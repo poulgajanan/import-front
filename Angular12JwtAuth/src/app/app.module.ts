@@ -51,6 +51,7 @@ import {ThirdpartyinspectionComponent} from './master/thirdpartyinspection/third
 
 import {VesseltrackingComponent } from './vesseltracking/vesseltracking.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MailComponent } from './mail/mail.component';
 // import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
@@ -81,7 +82,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     LetterofcreditComponent,
     BankimportComponent,
     VesseltrackingComponent,
-    ThirdpartyinspectionComponent
+    ThirdpartyinspectionComponent,
+    MailComponent
             
     // PieChartComponent,       // showing Pie charts on dashboard to show to total orders
   ],

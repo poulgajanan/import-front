@@ -7,6 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GeneratepoComponent implements OnInit {
 
+  form: any = {
+    vendor:null,
+    references:null,
+    currency:null,
+    quantity:null,
+    deadline:null,
+    date:null,
+  }
+      
+  onSubmit(){
+    const { vendor, references, currency,quantity, deadline ,receipttype } = this.form;
+    console.log(this.form);    
+  }
   constructor() { }
 
   ngOnInit(): void {

@@ -12,20 +12,20 @@ import { FormControl,FormGroup,Validators } from '@angular/forms';
 export class LicenseComponent implements OnInit {
   
 
-  // form: any = {
-  //   lic: null,
-  //   iec:null,
+  form: any = {
+    lic: null,
+    iec:null,
     
-  // }
+  }
       
-  // onSubmit(){
-  //   const {lic, iec} = this.form;
-  //   console.log(this.form);    
-  // }
+  onSubmit(){
+    const {lic, iec} = this.form;
+    console.log(this.form);    
+  }
       
   constructor() { }
 
-   license: License=new License(0,0);
+  //  license: License=new License(0,0);
   
   ngOnInit(): void {
   }
