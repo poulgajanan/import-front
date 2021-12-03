@@ -20,7 +20,25 @@ export class PlanningComponent implements OnInit {
     this.NotificationImg = "";
     this.MessageImg = "";
   }
-
+   
+  form: any = {
+    category: null,
+    subcategory: null,
+    name: null,
+    type:null,
+    state: null,
+    city: null,
+    zipcode: null,
+     currency: null,
+     quantity: null,
+     date: null
+  }
+      
+  onSubmit(){
+    const { category,subcategory,name,type,state,city,zipcode,currency,quantity,date} = this.form;
+    console.log(this.form);    
+  }
+      
   ngOnInit(): void {
   }
 

@@ -1,5 +1,6 @@
 
             <!-- page data area start -->
+            <!-- <form #licenseForm="ngForm" name="form" (ngSubmit)="onSubmit()"> -->
             <div class="pt-80 leftmargin">
 
                 <div class="container-fluid ">
@@ -63,8 +64,9 @@
                                                     <fieldset class="form-group">
                                                         <label class="form-lbl">LIC Number <span class="text-danger">*</span></label>
                                                         <div class="headersearch"> 
-                                                            <input  name="lic" type="text" class="form-control" placeholder="Enter LIC Number" required> 
-                                                            <span  class="alert-danger">LIC No. is required</span>
+                                                            <!-- <input  [(ngModel)]="form.lic" #lic="ngModel"  name="lic" type="text" class="form-control" placeholder="Enter LIC Number" required> 
+                                                            <span  *ngIf="lic.invalid && lic.touched"  class="alert-danger">LIC No. is required</span> -->
+                                                            
                                                         </div> 
                                                     </fieldset> 
                                                 </div>
@@ -72,8 +74,8 @@
                                                     <fieldset class="form-group">
                                                         <label class="form-lbl">IEC <span class="text-danger">*</span></label>
                                                         <div class="headersearch"> 
-                                                            <input   name="iec" type="text" class="form-control" placeholder="Enter IEC" required> 
-                                                            <span  class="alert-danger">IEC is required</span>
+                                                            <!-- <input  [(ngModel)]="form.iec" #iec="ngModel" name="iec" type="text" class="form-control" placeholder="Enter IEC" required> 
+                                                            <span  *ngIf="iec.invalid && iec.touched"  class="alert-danger">IEC is required</span> -->
                                                         </div>
                                                     </fieldset> 
                                                 </div>  
@@ -107,7 +109,7 @@
             </div>
             <!-- page data area End -->
 
-     
+            <!-- </form> -->
 
         <!-- start back to top area -->
         <div id="back-to-top" class="back-to-top">
