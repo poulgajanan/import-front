@@ -509,7 +509,7 @@ table.dataTable>thead .sorting:before, table.dataTable>thead .sorting:after, tab
 .details-po{display: none;}
 .details-po-active{display: block;}
 
-.box-po-tabs li a {position: relative; background: #edf0f7; display: inline-block; padding: 8px 15px; border-radius: 5px; color: rgb(32 32 32 / 80%); }
+.box-po-tabs li a {margin: 3px; position: relative; background: #edf0f7; display: inline-block; padding: 8px 15px; border-radius: 5px; color: rgb(32 32 32 / 80%); }
 .box-po-tabs li a.po-tabs-active {background: #0561d9; color: #ffffff;}
 .tabs-details-po {position: relative; border: 1px solid rgb(206 212 218); padding: 15px; border-radius: 5px;  margin-top: 8px; }
 
