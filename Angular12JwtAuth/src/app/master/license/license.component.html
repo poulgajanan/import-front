@@ -65,7 +65,7 @@
                                                         <label class="form-lbl">LIC Number <span class="text-danger">*</span></label>
                                                         <div class="headersearch"> 
                                                             <input  [(ngModel)]="form.lic" #lic="ngModel"  name="lic" type="text" class="form-control" placeholder="Enter LIC Number" required> 
-                                                            <span  *ngIf="lic.invalid && lic.touched"  class="alert-danger">LIC No. is required</span>
+                                                            <div  *ngIf="lic.invalid && lic.touched"  class="alert-danger">LIC No. is required</div>
                                                             
                                                         </div> 
                                                     </fieldset> 
@@ -75,7 +75,7 @@
                                                         <label class="form-lbl">IEC <span class="text-danger">*</span></label>
                                                         <div class="headersearch"> 
                                                             <input  [(ngModel)]="form.iec" #iec="ngModel" name="iec" type="text" class="form-control" placeholder="Enter IEC" required> 
-                                                            <span  *ngIf="iec.invalid && iec.touched"  class="alert-danger">IEC is required</span>
+                                                            <div  *ngIf="iec.invalid && iec.touched"  class="alert-danger">IEC is required</div>
                                                         </div>
                                                     </fieldset> 
                                                 </div>  
