@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
-import { FormControl,FormGroup,Validators } from '@angular/forms';
 @Component({
   selector: 'app-vesseltracking',
   templateUrl: './vesseltracking.component.html',
   styleUrls: ['./vesseltracking.component.css']
 })
 export class VesseltrackingComponent implements OnInit {
+  
+  isVisible = false;    
 
   form: any = {
     name: null,
@@ -15,9 +16,13 @@ export class VesseltrackingComponent implements OnInit {
     containerno:null,
     shieldno: null,
   }
- 
+
+  toggleBookVessel(){
+    this.isVisible = !this.isVisible;
+  }
+  
   onSubmit(){
-    const {name,trackinginfo,webiste,containerno,shieldno} = this.form;
+    const { name, trackinginfo, webiste, containerno, shieldno } = this.form;
     console.log(this.form);
   }
   constructor() { }

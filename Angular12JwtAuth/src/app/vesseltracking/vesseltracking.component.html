@@ -12,14 +12,11 @@
                             <div class="page-name">
                                 <h6>Vessel Tracking</h6> 
                             </div>
-                            <div class="ml-auto box-breadcrumb"> 
+                            <div class="ms-auto box-breadcrumb"> 
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item">  
                                         <a href="" class="mr-2">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">
-                                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                                <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>    <polyline points="9 22 9 12 15 12 15 22"></polyline>    </svg>
                                         </a>
                                     </li>  
                                     <li class="breadcrumb-item active">Vessel Tracking</li>
@@ -36,13 +33,17 @@
                         <div class="pus-card-header d-block d-md-flex align-items-center text-center justify-content-between">
                             <div class="pus-card-title form">    
                                 <label class="m-0">
-                                    <input type="checkbox" class="book_VesselShow"> &nbsp; I have book Vessel
+                                    <input type="checkbox" class="book_VesselShow" (change)="toggleBookVessel()"> &nbsp; I have book Vessel
                                 </label> 
                             </div> 
                         </div> 
                     </div>  
                     <!-- Customer Planning  -->
-                    <div class="pus-card mt-20 VesselShow">
+                    <div class="pus-card mt-20 VesselShow" 
+                        [ngClass]="{
+                            'hideDiv': !isVisible
+                        }"  
+                    >
                         <div class="pus-card-header d-flex align-items-center text-center justify-content-between">
                             <div class="pus-card-title">
                                 <h6>Book Vessel </h6>
@@ -50,7 +51,7 @@
                             <div class="pus-card-heading-elements">
                                 <ul class="list-inline mb-0"> 
                                     <li class="list-inline-item">
-                                        <a href="javascript:void(0);" class="table-button-white-hover " data-toggle="tooltip" data-placement="top" title="Reset">
+                                        <a class="table-button-white-hover " data-toggle="tooltip" data-placement="top" title="Reset">
                                             <img src="assets/images/table-icons/reset.svg" class="img-fluid" alt="">
                                         </a>
                                     </li> 
@@ -112,5 +113,5 @@
             </div>
         </div>
     </div>    
-   </form>            
+   </form>        
 </div>
