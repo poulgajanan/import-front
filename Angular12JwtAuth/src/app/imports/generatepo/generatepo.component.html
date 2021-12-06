@@ -70,14 +70,14 @@
                                                 <option value="Vendor Name Two">Vendor Name Two</option>
                                                 <option value="Vendor Name Three">Vendor Name Three</option> 
                                             </select>  
-                                            <span *ngIf="vendor.invalid && vendor.touched" class="alert-danger">Vendor type is required</span>  
+                                            <div *ngIf="vendor.invalid && vendor.touched" class="alert-danger">Vendor type is required</div>  
                                         </fieldset> 
                                     </div> 
                                     <div class="form-grid-list">
                                         <div class="form-group">
                                             <label class="form-lbl" for=""> Vendor Reference <span class="text-danger">*</span></label>
                                             <input  [(ngModel)]="form.references" #references="ngModel"  name="references" type="text" class="form-control" placeholder="Vendor Reference" required>                                                        
-                                            <span *ngIf="references.invalid && references.touched" class="alert-danger">References is required</span>
+                                            <div *ngIf="references.invalid && references.touched" class="alert-danger">References is required</div>
                                         </div>
                                     </div>  
                                     <div class="form-grid-list">
@@ -89,14 +89,14 @@
                                                 <option value="Dollar">Dollar</option>
                                                 <option value="Pound">Pound</option> 
                                             </select>
-                                            <span *ngIf="currency.invalid && currency.touched" class="alert-danger">Currency is required</span>
+                                            <div *ngIf="currency.invalid && currency.touched" class="alert-danger">Currency is required</div>
                                         </div>
                                     </div> 
                                     <div class="form-grid-list">
                                         <div class="form-group">
                                             <label class="form-lbl" for=""> Quantity <span class="text-danger">*</span></label>
                                             <input   [(ngModel)]="form.quantity" #quantity="ngModel" name="quantity" type="Number" class="form-control" placeholder="Quantity" required>
-                                            <span *ngIf="quantity.invalid && quantity.touched" class="alert-danger">Quantity is required</span>                                                        
+                                            <div *ngIf="quantity.invalid && quantity.touched" class="alert-danger">Quantity is required</div>                                                        
                                         </div>
                                     </div>
                                     <div class="form-grid-list">
@@ -105,7 +105,7 @@
                                             <div class="headersearch">
                                                 <input  [(ngModel)]="form.deadline" #deadline="ngModel" name="deadline" type="date" id=" " value="01-12-2020" name="StartDate" class="form-control datepicker mr-2" data-bs-date-format="mm/dd/yyyy" required>
                                                 <!-- <i class="fa fa-calendar"></i> -->
-                                                <span *ngIf="deadline.invalid && deadline.touched" class="alert-danger">Deadline is required</span>
+                                                <div *ngIf="deadline.invalid && deadline.touched" class="alert-danger">Deadline is required</div>
                                             </div>
                                         </fieldset> 
                                     </div> 
@@ -119,7 +119,7 @@
                                                 <option value="Receipt Date Tw">Receipt Date Two</option>
                                                 <option value="Receipt Date Thre">Receipt Date Three</option> 
                                             </select> 
-                                            <span *ngIf="receipttype.invalid && receipttype.touched" class="alert-danger"> Receipt Date is required</span>
+                                            <div *ngIf="receipttype.invalid && receipttype.touched" class="alert-danger"> Receipt Date is required</div>
                                         </fieldset> 
                                     </div> 
                                 </div> 
@@ -304,7 +304,7 @@
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="text-center mt-3">
-                                                            <button routerLink='generatepopayment' type="submit" class="button-style ">Send By Email</button>
+                                                            <button routerLink='import-generatepo-generatepopayment' type="submit" class="button-style ">Send By Email</button>
                                                         </div>
                                                     </div>
                                                 </div>

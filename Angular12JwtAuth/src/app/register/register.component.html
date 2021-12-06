@@ -38,10 +38,10 @@
                                         required 
                                         minlength="3"
                                         maxlength="100"                     
-                                        #companyName="ngModel"
+                                        #companyName="ngModel" 
                                         />
                                         <div class="alert-danger" *ngIf="companyName.errors && f.submitted">
-                                            <div *ngIf="companyName.errors.required">Company name is required</div>
+                                            <span *ngIf="companyName.invalid && companyName.touched">Company name is required</span>
                                             <div *ngIf="companyName.errors.minlength">
                                               company Name must be at least 3 characters
                                             </div>
@@ -63,7 +63,7 @@
                                         name="companyDesignation"
                                         [(ngModel)]="form.companyDesignation"
                                         required                      
-                                        #companyDesignation="ngModel"
+                                        #companyDesignation="ngModel" 
                                       /> 
                                       <div class="alert-danger" *ngIf="companyDesignation.errors && f.submitted">
                                       <span *ngIf="companyDesignation.errors.required">Designation is required</span>
@@ -81,7 +81,7 @@
                                         name="firstName"
                                         [(ngModel)]="form.firstName"
                                         required                      
-                                        #firstName="ngModel"
+                                        #firstName="ngModel" 
                                       /> 
                                       <div class="alert-danger" *ngIf="firstName.errors && f.submitted">
                                         <span *ngIf="firstName.errors.required">First Name is required</span>
@@ -97,7 +97,7 @@
                                             name="lastName"
                                             [(ngModel)]="form.lastName"
                                             required                      
-                                            #lastName="ngModel"
+                                            #lastName="ngModel" 
                                           />
                                           <div class="alert-danger" *ngIf="lastName.errors && f.submitted">
                                             <span *ngIf="lastName.errors.required">Last Name is required</span>
@@ -138,7 +138,7 @@
                                           [(ngModel)]="form.email"
                                           required
                                           email                      
-                                          #email="ngModel"
+                                          #email="ngModel" 
                                         />
                                         <div class="alert-danger" *ngIf="email.errors && f.submitted">
                                           <div *ngIf="email.errors.required">Email is required</div>
@@ -159,7 +159,7 @@
                                           name="mobile"
                                           [(ngModel)]="form.mobile"
                                           required                      
-                                          #mobile="ngModel"
+                                          #mobile="ngModel" required
                                         />
                                         <div class="alert-danger" *ngIf="mobile.errors && f.submitted">
                                           <div *ngIf="mobile.errors.required">mobile Number is required</div>
@@ -186,7 +186,7 @@
                                             [(ngModel)]="form.password"
                                             required   
                                             minlength="6"                   
-                                            #password="ngModel"
+                                            #password="ngModel" 
                                           />
                                           <a class="icon-view">
                                             <i class="fa fa-eye"></i>
@@ -211,7 +211,7 @@
                                               [(ngModel)]="form.confirmPassword"
                                               #confirmPassword="ngModel"
                                               required                      
-                                              aria-label="confirmpassword"
+                                              aria-label="confirmpassword" 
                                             />
                                             <a class="icon-view">
                                                 <i class="fa fa-eye"></i>

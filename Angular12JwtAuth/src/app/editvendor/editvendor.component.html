@@ -1,6 +1,6 @@
 
 <div class="leftmargin">
-
+    <form #generatepoForm="ngForm" name="form" (ngSubmit)="onSubmit()">
 <div class="pt-80">
     <div class="container-fluid ">
         <div class="page-navigation">
@@ -139,15 +139,18 @@
                                     <div class="form-grid-list">
                                         <div class="form-group">
                                             <label class="form-lbl" for="">Price <span class="text-danger">*</span></label>
-                                            <input type="number" class="form-control" placeholder="5,000">                                    
+                                            <input [(ngModel)]="form.price" #price="ngModel"  name="price" type="number" class="form-control" placeholder="5,000" required>                                    
+                                            <div *ngIf="price.invalid && price.touched" class="alert-danger">Price is required</div>  
                                         </div>
                                     </div>
                                     <div class="form-grid-list">
                                         <fieldset class="form-group">
                                             <label class="form-lbl">Approx Date  <span class="text-danger">*</span></label>
                                             <div class="headersearch">
-                                                <input type="text" id=" " value="01-12-2020" name="StartDate" class="form-control datepicker mr-2" data-date-format="mm/dd/yyyy">
-                                                <i class="far fa-calendar"></i>
+                                                <input  [(ngModel)]="form.date" #date="ngModel"  name="date"  type="date" value="01-12-2020" name="StartDate" class="form-control datepicker mr-2" data-date-format="mm/dd/yyyy" required>
+                                                
+                                              
+                                                <div *ngIf="date.invalid && date.touched" class="alert-danger">Date is required</div>  
                                             </div>
                                         </fieldset> 
                                     </div>
@@ -155,8 +158,9 @@
                                         <fieldset class="form-group">
                                             <label class="form-lbl">Upload Documents  <span class="text-danger">*</span></label>
                                             <div class="headersearch custom-file"> 
-                                                <input class="custom-file-input" id="inputGroupFile04" type="file">
+                                                <input  [(ngModel)]="form.document" #document="ngModel"  name="document"  class="custom-file-input" id="inputGroupFile04" type="file" required>
                                                 <label class="custom-file-label" for="inputGroupFile04">Select Documents</label> 
+                                                <div *ngIf="document.invalid && document.touched" class="alert-danger">Document is required</div>  
                                             </div>
                                         </fieldset> 
                                     </div>
@@ -164,7 +168,8 @@
                                         <fieldset class="form-group">
                                             <label class="form-lbl">Your Terms  <span class="text-danger">*</span></label>
                                             <div class="headersearch"> 
-                                                <textarea name="" id="input" class="form-control" rows="3" required="required"></textarea>
+                                                <textarea  [(ngModel)]="form.terms" #terms="ngModel"  name="terms"  name="" id="input" class="form-control" rows="3" required></textarea>
+                                                <div *ngIf="terms.invalid && terms.touched" class="alert-danger">Terms is required</div>  
                                             </div>
                                         </fieldset> 
                                     </div> 
@@ -183,7 +188,7 @@
     </div>
 </div>
 <!-- page data area End -->
-
+</form>
 </div> 
 
 <!-- start back to top area -->

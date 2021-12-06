@@ -6,6 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./editvendor.component.css']
 })
 export class EditvendorComponent implements OnInit {
+  
+
+  
+  form: any = {
+   price: null,
+   date: null,
+   document: null,
+   terms: null
+  }
+ 
+  onSubmit(){
+    const { price, date, document ,terms } = this.form;
+    console.log(this.form);    
+  }
+  
 
   constructor() { }
 

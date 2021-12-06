@@ -13,7 +13,7 @@ import { NgOtpInputModule } from  'ng-otp-input';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
+
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { LoginwithotpComponent } from './loginwithotp/loginwithotp.component';
@@ -21,37 +21,42 @@ import { VerifyotpComponent } from './verifyotp/verifyotp.component';
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
 import { VerifyMobileComponent } from './verify-mobile/verify-mobile.component';
 import { authInterceptorProviders } from 'src/_helpers/auth.interceptor';
-import { BoardUserComponent } from './board-user/board-user.component';
-// import { SignupComponent } from  './signup/signup.component';
-import { HomeComponent } from './home/home.component';
-import { ProfileComponent } from './profile/profile.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
-import { MembershipcomponentComponent } from './membershipcomponent/membershipcomponent.component';
-import { AddformComponent } from './addform/addform.component';
-import { GeneratepoComponent } from './generatepo/generatepo.component';
-import { EditvendorComponent } from './editvendor/editvendor.component';
-import { OtpComponent } from './otp/otp.component';
-import { PlanningComponent } from './planning/planning.component';
-import { OtpmailComponent } from './otpmail/otpmail.component';
-import { PlansComponent } from './plans/plans.component';
-import { TableComponent } from './table/table.component';
-import { VendorComponent } from './vendor/vendor.component';
+import { BoardUserComponent } from './board-user/board-user.component';
+import { ProfileComponent } from './profile/profile.component';
+// import { SignupComponent } from  './signup/signup.component';
+import { HomeComponent } from './home/home.component';
+import { NavbarComponent } from './navbar/navbar.component';
+
 import { CompanysetupComponent } from './master/companysetup/companysetup.component';
 import { PortComponent } from './master/port/port.component';
 import { LicenseComponent } from './master/license/license.component';
 import { CurrencysettingsComponent } from './master/currencysettings/currencysettings.component';
 import { BusineespartnerComponent } from './master/busineespartner/busineespartner.component';
-import { BankComponent } from './master/bank/bank.component';
-import { DocumentComponent } from './master/document/document.component';
-import { LetterofcreditComponent } from './master/letterofcredit/letterofcredit.component';
 import { BankimportComponent } from './master/bankimport/bankimport.component';
-import {ThirdpartyinspectionComponent} from './master/thirdpartyinspection/thirdpartyinspection.component';
-import {VesseltrackingComponent } from './vesseltracking/vesseltracking.component';
-import { MailComponent } from './mail/mail.component';
-import { GeneratepopaymentComponent } from './generatepo/generatepopayment/generatepopayment.component';
+import { DocumentComponent } from './master/document/document.component';
 
-import { PieChartComponent } from './pie-chart/pie-chart.component';
+import { GeneratepoComponent } from './imports/generatepo/generatepo.component';
+import { PlanningComponent } from './imports/planning/planning.component';
+import { VendorComponent } from './imports/vendor/vendor.component';
+import { BankComponent } from './imports/bank/bank.component';
+import { LetterofcreditComponent } from './imports/letterofcredit/letterofcredit.component';
+import {ThirdpartyinspectionComponent} from './imports/thirdpartyinspection/thirdpartyinspection.component';
+import { MailComponent } from './imports/vendor/mail/mail.component';
+import { GeneratepopaymentComponent } from './imports/generatepo/generatepopayment/generatepopayment.component';
+
+import { MembershipcomponentComponent } from './membershipcomponent/membershipcomponent.component';
+import { AddformComponent } from './addform/addform.component';
+import { EditvendorComponent } from './editvendor/editvendor.component';
+import { OtpComponent } from './otp/otp.component';
+import { OtpmailComponent } from './otpmail/otpmail.component';
+import { PlansComponent } from './plans/plans.component';
+import { TableComponent } from './table/table.component';
+import { VesseltrackingComponent } from './vesseltracking/vesseltracking.component';
+
+
+// import { PieChartComponent } from './pie-chart/pie-chart.component';
 // import { ChartsModule } from 'ng2-charts';
 
 @NgModule({

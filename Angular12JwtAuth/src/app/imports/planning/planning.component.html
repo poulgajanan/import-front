@@ -71,7 +71,7 @@
                                                             <option value="Electronic">Electronic</option>
                                                             <option value="Cloth">Cloth</option> 
                                                         </select>
-                                                        <span *ngIf="category.invalid && category.touched " class="alert-danger ">Category is required</span>
+                                                        <div *ngIf="category.invalid && category.touched " class="alert-danger ">Category is required</div>
                                                     </fieldset> 
                                                 </div> 
                                                 <div class="form-grid-list">
@@ -83,14 +83,14 @@
                                                             <option value="Orange<">Orange</option>
                                                             <option value="Grapes">Grapes</option> 
                                                         </select>
-                                                        <span *ngIf="subcategory.invalid && subcategory.touched" class="alert-danger ">Sub Category is required</span>
+                                                        <div *ngIf="subcategory.invalid && subcategory.touched" class="alert-danger ">Sub Category is required</div>
                                                     </fieldset> 
                                                 </div> 
                                                 <div class="form-grid-list">
                                                     <div class="form-group">
                                                         <label class="form-lbl" for=""> Product Name <span class="text-danger">*</span></label>
                                                         <input [(ngModel)]="form.name" #name="ngModel"  name ="name" type="text" class="form-control" placeholder="Name" required>
-                                                        <span *ngIf="name.invalid && name.touched" class="alert-danger ">Name is required</span>
+                                                        <div *ngIf="name.invalid && name.touched" class="alert-danger ">Name is required</div>
                                                     </div>
                                                 </div> 
                                                 <div class="form-grid-list">
@@ -103,7 +103,7 @@
                                                                 <option value="Vendor Name Two">Vendor Name Two</option>
                                                                 <option value="Vendor Name Three">Vendor Name Three</option> 
                                                             </select>
-                                                            <span *ngIf="type.invalid && type.touched" class="alert-danger ">Vendor type is required</span> 
+                                                            <div *ngIf="type.invalid && type.touched" class="alert-danger ">Vendor type is required</div> 
                                                             <div class="toolbar-filter">
                                                                 <a href="javascript:void(0);" class="add-vendors toolbar-link-filter" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add Vendor">
                                                                     <img src="assets/images/table-icons/add.svg" class="img-fluid" alt="">
@@ -116,28 +116,28 @@
                                                     <div class="form-group">
                                                         <label class="form-lbl" for=""> Vendor Country <span class="text-danger">*</span></label>
                                                         <input   [(ngModel)]="form.country" #country="ngModel"  name="country"  type="text" class="form-control" placeholder="Country " required>
-                                                        <span *ngIf="country.invalid && country.touched" class="alert-danger ">Country is required</span>                                                      
+                                                        <div *ngIf="country.invalid && country.touched" class="alert-danger ">Country is required</div>                                                      
                                                     </div>
                                                 </div> 
                                                 <div class="form-grid-list">
                                                     <div class="form-group">
                                                         <label class="form-lbl" for=""> Vendor State <span class="text-danger">*</span></label>
                                                         <input [(ngModel)]="form.state" #state="ngModel"  name="state"  type="text" class="form-control" placeholder="State" required>
-                                                        <span *ngIf="state.invalid && state.touched" class="alert-danger ">State is required</span>                                                         
+                                                        <div *ngIf="state.invalid && state.touched" class="alert-danger ">State is required</div>                                                         
                                                     </div>
                                                 </div> 
                                                 <div class="form-grid-list">
                                                     <div class="form-group">
                                                         <label class="form-lbl" for=""> Vendor City <span class="text-danger">*</span></label>
                                                         <input [(ngModel)]="form.city" #city="ngModel"  name="city"  type="text" class="form-control" placeholder="City" required>      
-                                                        <span *ngIf="city.invalid && city.touched" class="alert-danger ">City is required</span>                                                   
+                                                        <div *ngIf="city.invalid && city.touched" class="alert-danger ">City is required</div>                                                   
                                                     </div>
                                                 </div> 
                                                 <div class="form-grid-list">
                                                     <div class="form-group">
                                                         <label class="form-lbl" for=""> Vendor Zip/Postal Code <span class="text-danger">*</span></label>
                                                         <input [(ngModel)]="form.zipcode" #zipcode="ngModel"  name="zipcode"  type="text" class="form-control" placeholder="City" required>  
-                                                        <span *ngIf="zipcode.invalid && zipcode.touched" class="alert-danger Fild-box-Error">Zip Code is required</span>                                                       
+                                                        <div *ngIf="zipcode.invalid && zipcode.touched" class="alert-danger Fild-box-Error">Zip Code is required</div>                                                       
                                                     </div>
                                                 </div> 
                                                 <div class="form-grid-list">
@@ -149,14 +149,14 @@
                                                             <option value="Dollar">Dollar</option>
                                                             <option value="Pound">Pound</option> 
                                                         </select>
-                                                        <span *ngIf="currency.invalid && currency.touched" class="alert-danger Fild-box-Error">Currency is required</span> 
+                                                        <div *ngIf="currency.invalid && currency.touched" class="alert-danger Fild-box-Error">Currency is required</div> 
                                                     </div>
                                                 </div> 
                                                 <div class="form-grid-list">
                                                     <div class="form-group">
                                                         <label class="form-lbl" for=""> Quantity <span class="text-danger">*</span></label>
                                                         <input [(ngModel)]="form.quantity" #quantity="ngModel"  name="quantity"  type="Number" class="form-control" placeholder="Quantity" required>   
-                                                        <span *ngIf="quantity.invalid && quantity.touched" class="alert-danger ">Quantity is required</span>                                                      
+                                                        <div *ngIf="quantity.invalid && quantity.touched" class="alert-danger ">Quantity is required</div>                                                      
                                                     </div>
                                                 </div>
                                                 <div class="form-grid-list">
@@ -164,7 +164,7 @@
                                                         <label class="form-lbl">Approx Date  <span class="text-danger">*</span></label>
                                                         <div class="headersearch">
                                                             <input [(ngModel)]="form.date" #date="ngModel"  name="date"  type="date" id=" " value="01-12-2020" name="StartDate" class="form-control datepicker mr-2" data-date-format="mm/dd/yyyy" required>
-                                                            <span *ngIf="date.invalid && date.touched" class="alert-danger ">Approxmate data is required</span>                                                            
+                                                            <div *ngIf="date.invalid && date.touched" class="alert-danger ">Approxmate data is required</div>                                                            
                                                         </div>
                                                     </fieldset> 
                                                 </div> 
