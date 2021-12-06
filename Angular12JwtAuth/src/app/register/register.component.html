@@ -108,24 +108,21 @@
                               <div class="row">                                         
                                   <div class="col-md-12"> 
                                       <fieldset class="form-group">
-                                          <label class="form-lbl">Date Of Birth</label>
-                                          <div class="headersearch">
-                                            <input
-                                            type="text"
-                                            mwlFlatpickr
-                                            class="form-control"
+                                        <label class="form-lbl">Date Of Birth <span class="required">*</span></label>
+                                        <div class="headersearch">
+                                          <input
+                                            type="date"
+                                            name="date"
+                                            class="form-control datepicker mr-2"
                                             name="dateOfBirth"                
-                                            [(ngModel)]="form.dateOfBirth"
-                                            required
-                                            [altInput]="true" 
-                                            [convertModelValue]="true"                      
+                                            [(ngModel)]="form.dateOfBirth"                                            
                                             #dateOfBirth="ngModel"
+                                            required
                                           />   
                                           <div class="alert-danger" *ngIf="dateOfBirth.errors && f.submitted">
                                             <span *ngIf="dateOfBirth.errors.required">DOB is required</span>
-                                          </div>                                         
-                                              
-                                          </div>
+                                          </div>                                              
+                                        </div>
                                       </fieldset>
                                   </div>  
                               </div>
@@ -181,24 +178,24 @@
                                   <div class="col-md-12"> 
                                       <fieldset class="form-group view-password">  
                                         <label class="form-lbl">Password <span class="required">*</span></label> 
-                                        <input
-                                          type="password"
-                                          class="form-control"
-                                          name="password"
-                                          [(ngModel)]="form.password"
-                                          required   
-                                          minlength="6"                   
-                                          #password="ngModel"
-                                        />
-                                        <div class="alert-danger" *ngIf="password.errors && f.submitted">
-                                          <div *ngIf="password.errors.required">Password is required</div>
-                                          <div *ngIf="password.errors.minlength">
-                                            Password must be at least 6 characters
+                                        <div class="password_eye">
+                                          <input
+                                            type="password"
+                                            class="form-control"
+                                            name="password"
+                                            [(ngModel)]="form.password"
+                                            required   
+                                            minlength="6"                   
+                                            #password="ngModel"
+                                          />
+                                          <a class="icon-view">
+                                            <i class="fa fa-eye"></i>
+                                          </a>
+                                          <div class="alert-danger" *ngIf="password.errors && f.submitted">
+                                            <div *ngIf="password.errors.required">Password is required</div>
+                                            <div *ngIf="password.errors.minlength"> Password must be at least 6 characters </div>
                                           </div>
-                                        </div>
-                                        <a href="JavaScript:void(0);" class="icon-view">
-                                          <i class="fa fa-eye"></i>
-                                        </a>                                           
+                                        </div>                                                                           
                                       </fieldset> 
                                   </div>  
                               </div>
@@ -216,12 +213,11 @@
                                               required                      
                                               aria-label="confirmpassword"
                                             />
-                                           
-                                            <a href="JavaScript:void(0);" class="icon-view">
+                                            <a class="icon-view">
                                                 <i class="fa fa-eye"></i>
                                             </a>
-                                              <div class="alert-danger" *ngIf="(confirmPassword.touched || f.submitted) && confirmPassword.errors?.required">Confirm Password is required.</div>
-                                              <div class="alert-danger" *ngIf="(confirmPassword.touched || f.submitted) && form.password !== form.confirmPassword">Password and Confirm Password is not matching.</div>
+                                            <div class="alert-danger" *ngIf="(confirmPassword.touched || f.submitted) && confirmPassword.errors?.required">Confirm Password is required.</div>
+                                            <div class="alert-danger" *ngIf="(confirmPassword.touched || f.submitted) && form.password !== form.confirmPassword">Password and Confirm Password is not matching.</div>
                                           </div> 
                                       </fieldset>
                                   </div>  

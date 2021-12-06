@@ -2,14 +2,18 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-
-// import 'jquery';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgOtpInputModule } from  'ng-otp-input';
+// import { FlatpickrModule } from 'angularx-flatpickr';
+// import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 
+import { AppComponent } from './app.component';
+import { NavbarComponent } from './navbar/navbar.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { LoginwithotpComponent } from './loginwithotp/loginwithotp.component';
@@ -23,10 +27,6 @@ import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-// import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
-import { FlatpickrModule } from 'angularx-flatpickr';
-import { NgOtpInputModule } from  'ng-otp-input';
 import { MembershipcomponentComponent } from './membershipcomponent/membershipcomponent.component';
 import { AddformComponent } from './addform/addform.component';
 import { GeneratepoComponent } from './generatepo/generatepo.component';
@@ -43,18 +43,15 @@ import { LicenseComponent } from './master/license/license.component';
 import { CurrencysettingsComponent } from './master/currencysettings/currencysettings.component';
 import { BusineespartnerComponent } from './master/busineespartner/busineespartner.component';
 import { BankComponent } from './master/bank/bank.component';
-import { NavbarComponent } from './navbar/navbar.component';
-
-import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { DocumentComponent } from './master/document/document.component';
 import { LetterofcreditComponent } from './master/letterofcredit/letterofcredit.component';
 import { BankimportComponent } from './master/bankimport/bankimport.component';
 import {ThirdpartyinspectionComponent} from './master/thirdpartyinspection/thirdpartyinspection.component';
-
 import {VesseltrackingComponent } from './vesseltracking/vesseltracking.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MailComponent } from './mail/mail.component';
 import { GeneratepopaymentComponent } from './generatepo/generatepopayment/generatepopayment.component';
+
+import { PieChartComponent } from './pie-chart/pie-chart.component';
 // import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
@@ -72,8 +69,15 @@ import { GeneratepopaymentComponent } from './generatepo/generatepopayment/gener
     VerifyotpComponent,        
     LoginwithotpComponent,     //Login with OTP component    
     MembershipcomponentComponent,
+    CompanysetupComponent,
+    BankComponent,
+    BusineespartnerComponent,
+    CurrencysettingsComponent,
+    LicenseComponent,    
+    PortComponent,
     AddformComponent,          //Form for Import
     GeneratepoComponent,       //Generate PO Page Component
+    VendorComponent,
     EditvendorComponent,       //Edit vendor details component
     OtpComponent,              //One time Password component
     PlanningComponent,         //Planning Component for process
@@ -88,21 +92,20 @@ import { GeneratepopaymentComponent } from './generatepo/generatepopayment/gener
     ThirdpartyinspectionComponent,
     MailComponent,
     GeneratepopaymentComponent
-            
     // PieChartComponent,       // showing Pie charts on dashboard to show to total orders
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     CommonModule,
     NgbModule,
-    AppRoutingModule,
     FormsModule,    //Exports the required providers and directives for template-driven forms, making them available for import by NgModules that import this module               
     HttpClientModule,  //Configures the dependency injector for HttpClient with supporting services for XSRF. Automatically imported by HttpClientModule.
     BrowserAnimationsModule,  //Exports BrowserModule with additional dependency-injection providers for use with animations.
-    // NgxIntlTelInputModule,
-    FlatpickrModule.forRoot(),
     ReactiveFormsModule, //Exports the required infrastructure and directives for reactive forms, making them available for import by NgModules that import this module.
     NgOtpInputModule,    //Adds directives and providers for in-app navigation among views defined in an application. Use the Angular Router service to declaratively specify application states and manage state transitions.
+    // NgxIntlTelInputModule,
+    // FlatpickrModule.forRoot(),
     // PieChartComponent,
     // ChartsModule,      //The component to instantiate when the path matches. Can be empty if child routes specify components.    
   ],

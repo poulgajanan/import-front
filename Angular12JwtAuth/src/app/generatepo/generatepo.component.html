@@ -1,5 +1,6 @@
 <!-- page data area start -->
 <div class="leftmargin">
+    <div  id="#top"></div>
     <div class="pt-80">
     <form #generatepoForm="ngForm" name="form" (ngSubmit)="onSubmit()">
     <div class="container-fluid ">
@@ -44,12 +45,12 @@
                         <div class="pus-card-heading-elements">
                             <ul class="list-inline mb-0"> 
                                 <li class="list-inline-item">
-                                    <a href="javascript:void(0);" class="table-button-white-hover" data-toggle="tooltip" data-placement="top" title="Reset">
+                                    <a class="table-button-white-hover" data-bs-toggle="tooltip" data-bs-placement="top" title="Reset">
                                         <img src="assets/images/table-icons/reset.svg" class="img-fluid" alt="">
                                     </a>
                                 </li>
                                 <!-- <li class="list-inline-item">
-                                    <a href="javascript:void(0);" class="table-button-white-hover" data-toggle="tooltip" data-placement="top" title="Save">
+                                    <a href="javascript:void(0);" class="table-button-white-hover" data-bs-toggle="tooltip" data-bs-placement="top" title="Save">
                                         <img src="assets/images/table-icons/save.svg" class="img-fluid" alt="">
                                     </a>
                                 </li>  -->
@@ -102,7 +103,7 @@
                                         <fieldset class="form-group">
                                             <label class="form-lbl">Approx Order Deadline  <span class="text-danger">*</span></label>
                                             <div class="headersearch">
-                                                <input  [(ngModel)]="form.deadline" #deadline="ngModel" name="deadline" type="date" id=" " value="01-12-2020" name="StartDate" class="form-control datepicker mr-2" data-date-format="mm/dd/yyyy" required>
+                                                <input  [(ngModel)]="form.deadline" #deadline="ngModel" name="deadline" type="date" id=" " value="01-12-2020" name="StartDate" class="form-control datepicker mr-2" data-bs-date-format="mm/dd/yyyy" required>
                                                 <!-- <i class="fa fa-calendar"></i> -->
                                                 <span *ngIf="deadline.invalid && deadline.touched" class="alert-danger">Deadline is required</span>
                                             </div>
@@ -129,15 +130,33 @@
                                     <div class="tabs-po">
                                         <ul class="list-line box-po-tabs">
                                             <li class="list-inline-item">
-                                                <a href="javascript:void(0); " class="po-tabs-active" data-bind="products">Products</a>
+                                                <a class="" data-bs-bind="products"
+                                                    (click)="toggleProduct()"
+                                                    [ngClass]="{
+                                                        'po-tabs-active' : isProduct
+                                                    }"
+                                                >
+                                                  Products
+                                                </a>
                                             </li>
                                             <li class="list-inline-item">
-                                                <a href="javascript:void(0);" data-bind="otherinfo"> Other Information</a>
+                                                <a class="" data-bs-bind="otherinfo"
+                                                    (click)="toggleOtherInfo()"
+                                                    [ngClass]="{
+                                                        'po-tabs-active' : !isProduct
+                                                    }"
+                                                >
+                                                  Other Information
+                                                </a>
                                             </li> 
                                         </ul>
                                     </div>
                                     <div class="tabs-details-po">
-                                        <div id="products" class="details-po details-po-active">
+                                        <div id="products" class="details-po"
+                                            [ngClass]="{
+                                                'details-po-active' : isProduct
+                                            }"
+                                        >
                                             <div class="">
                                                 <div class="table-responsive table-view">
                                                     <table id="TableFeatures" class="table table-hovermb-0 table-bordered defaulttable m-0" style="width:100%">
@@ -173,8 +192,8 @@
                                                                 </td>
                                                                 <td>
                                                                     <div class="headersearch">
-                                                                        <input type="text" id=" " value="01-12-2020" name="StartDate" class="form-control datepicker mr-2" data-date-format="mm/dd/yyyy">
-                                                                        <i class="far fa-calendar"></i>
+                                                                        <input type="date" id=" " value="01-12-2020" name="StartDate" class="form-control datepicker mr-2" data-bs-date-format="mm/dd/yyyy">
+                                                                        
                                                                     </div>
                                                                 </td>
                                                                 <td>
@@ -222,8 +241,8 @@
                                                                 </td>
                                                                 <td>
                                                                     <div class="headersearch">
-                                                                        <input type="text" id=" " value="01-12-2020" name="StartDate" class="form-control datepicker mr-2" data-date-format="mm/dd/yyyy">
-                                                                        <i class="far fa-calendar"></i>
+                                                                        <input type="date" id=" " value="01-12-2020" name="StartDate" class="form-control datepicker mr-2" data-bs-date-format="mm/dd/yyyy">
+                                                                        
                                                                     </div>
                                                                 </td>
                                                                 <td>
@@ -291,7 +310,11 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div id="otherinfo" class="details-po">
+                                        <div id="otherinfo" class="details-po"
+                                            [ngClass]="{
+                                                'details-po-active' : !isProduct
+                                            }"
+                                        >
                                             No other Information
                                         </div> 
                                     </div>
@@ -310,7 +333,7 @@
 
 <!-- start back to top area -->
 <div id="back-to-top" class="back-to-top">
-    <a href="#"> 
+    <a (click)="toTop()"> 
         <span class="arrow topfirst"></span>
         <span class="arrow topsecond"></span>
     </a>
@@ -325,7 +348,7 @@
         <div class="right-panel-head">
             <h6 class="text-color">Add Vendor</h6>
             <a class="close-panel flags-panel" href="javascript:void(0);">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="iconify" data-icon="feather:chevron-right" style="vertical-align: -0.125em; transform: rotate(360deg);">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="iconify" data-bs-icon="feather:chevron-right" style="vertical-align: -0.125em; transform: rotate(360deg);">
                     <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M9 18l6-6l-6-6"></path>
                     </g>

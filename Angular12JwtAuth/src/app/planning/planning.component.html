@@ -164,8 +164,7 @@
                                                         <label class="form-lbl">Approx Date  <span class="text-danger">*</span></label>
                                                         <div class="headersearch">
                                                             <input [(ngModel)]="form.date" #date="ngModel"  name="date"  type="date" id=" " value="01-12-2020" name="StartDate" class="form-control datepicker mr-2" data-date-format="mm/dd/yyyy" required>
-                                                            <span *ngIf="date.invalid && date.touched" class="alert-danger ">Country is required</span> 
-                                                            <i class="fa fa-calendar"></i>
+                                                            <span *ngIf="date.invalid && date.touched" class="alert-danger ">Approxmate data is required</span>                                                            
                                                         </div>
                                                     </fieldset> 
                                                 </div> 
@@ -175,7 +174,7 @@
                                         </div>
                                         <div class="col-md-12">
                                             <div class="text-center mt-3">
-                                                <button type="submit" href="index.html" class="button-style ">Send</button>
+                                                <button type="submit" routerLink="/import-vendor" class="button-style ">Send</button>
                                             </div>
                                         </div>
                                     </div>

@@ -29,5 +29,5 @@ export class VesseltrackingComponent implements OnInit {
 
   ngOnInit(): void { 
   }
-
+  
 }
