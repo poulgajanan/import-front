@@ -66,7 +66,7 @@
                                         #companyDesignation="ngModel" 
                                       /> 
                                       <!-- <div class="alert-danger" *ngIf="companyDesignation.errors && f.submitted"> -->
-                                      <span  class="alert-danger" *ngIf="companyDesignation.invalid && companyDesignation.touched">Designation is required</span>
+                                      <div  class="alert-danger" *ngIf="companyDesignation.invalid && companyDesignation.touched">Designation is required</div>
                                       <!-- </div>  -->
                                     </fieldset> 
                                   </div>  
@@ -84,7 +84,7 @@
                                         #firstName="ngModel" 
                                       /> 
                                       <!-- <div class="alert-danger" *ngIf="firstName.errors && f.submitted"> -->
-                                        <span class="alert-danger"  *ngIf="firstName.invalid && firstName.touched">First Name is required</span>
+                                        <div class="alert-danger"  *ngIf="firstName.invalid && firstName.touched">First Name is required</div>
                                       <!-- </div>  -->
                                       </fieldset> 
                                   </div>  
@@ -100,7 +100,7 @@
                                             #lastName="ngModel" 
                                           />
                                           <!-- <div class="alert-danger" *ngIf="lastName.errors && f.submitted"> -->
-                                            <span class="alert-danger"  *ngIf="lastName.invalid && lastName.touched">Last Name is required</span>
+                                            <div class="alert-danger"  *ngIf="lastName.invalid && lastName.touched">Last Name is required</div>
                                           <!-- </div>  -->
                                       </fieldset> 
                                   </div>  
@@ -120,7 +120,7 @@
                                             required
                                           />   
                                           <!-- <div class="alert-danger" *ngIf="dateOfBirth.errors && f.submitted"> -->
-                                            <span class="alert-danger" *ngIf="dateOfBirth.invalid && dateOfBirth.touched">DOB is required</span>
+                                            <div class="alert-danger" *ngIf="dateOfBirth.invalid && dateOfBirth.touched">DOB is required</div>
                                           <!-- </div>-->                                               
                                         </div>
                                       </fieldset>
