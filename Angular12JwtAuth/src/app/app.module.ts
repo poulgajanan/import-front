@@ -49,6 +49,7 @@ import { BankimportComponent } from './master/bankimport/bankimport.component';
 import {ThirdpartyinspectionComponent} from './master/thirdpartyinspection/thirdpartyinspection.component';
 import {VesseltrackingComponent } from './vesseltracking/vesseltracking.component';
 import { MailComponent } from './mail/mail.component';
+import { GeneratepopaymentComponent } from './generatepo/generatepopayment/generatepopayment.component';
 
 import { PieChartComponent } from './pie-chart/pie-chart.component';
 // import { ChartsModule } from 'ng2-charts';
@@ -89,7 +90,8 @@ import { PieChartComponent } from './pie-chart/pie-chart.component';
     BankimportComponent,
     VesseltrackingComponent,
     ThirdpartyinspectionComponent,
-    MailComponent            
+    MailComponent,
+    GeneratepopaymentComponent
     // PieChartComponent,       // showing Pie charts on dashboard to show to total orders
   ],
   imports: [

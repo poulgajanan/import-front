@@ -46,7 +46,7 @@ import { VesseltrackingComponent} from './vesseltracking/vesseltracking.componen
 // import { ChartsModule } from 'ng2-charts';
 
 import { MailComponent} from './mail/mail.component';
-    
+import {GeneratepopaymentComponent} from './generatepo/generatepopayment/generatepopayment.component';
 const routes: Routes = [
     {path: '', redirectTo: '/index', pathMatch: 'full'},
     {path: 'index', component: HomeComponent},   
@@ -76,7 +76,7 @@ const routes: Routes = [
     {path: 'plans', component: PlansComponent},
     {path : 'document', component: DocumentComponent},
     {path: 'mail', component: MailComponent},
-    {path : 'pie-chart',component: PieChartComponent}
+    {path : 'generatepopayment', component: GeneratepopaymentComponent}
 ];
 
 

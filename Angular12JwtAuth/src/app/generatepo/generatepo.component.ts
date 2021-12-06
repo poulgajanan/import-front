@@ -15,7 +15,7 @@ export class GeneratepoComponent implements OnInit {
     currency:null,
     quantity:null,
     deadline:null,
-    date:null,
+    date:null
   }
 
   constructor() { }
