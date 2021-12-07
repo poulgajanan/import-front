@@ -35,6 +35,7 @@ import { DocumentComponent }  from './master/document/document.component';
 // ------------------------------------------------------IMPORT-----------------------------------------------------------//
 import { PlanningComponent } from './imports/planning/planning.component';
 import { VendorComponent } from './imports/vendor/vendor.component';
+import { EditvendorComponent } from './imports/vendor/editvendor/editvendor.component';
 import { MailComponent } from './imports/vendor/mail/mail.component';
 import { BankComponent } from './imports/bank/bank.component';
 import { GeneratepoComponent } from './imports/generatepo/generatepo.component';
@@ -45,7 +46,6 @@ import { ThirdpartyinspectionComponent } from './imports/thirdpartyinspection/th
 
 import { MembershipcomponentComponent } from './membershipcomponent/membershipcomponent.component';
 import { AddformComponent } from './addform/addform.component';
-import { EditvendorComponent } from './editvendor/editvendor.component';
 import { PlansComponent } from './plans/plans.component';
 import { TableComponent } from './table/table.component';
 
@@ -76,6 +76,7 @@ const routes: Routes = [
     // ------------------------------------------------------IMPORT ROUTERS-----------------------------------------------------------//
     {path: 'import-planning', component: PlanningComponent},
     {path: 'import-vendor', component: VendorComponent},
+    {path: 'import-vendor-editvendor',component: EditvendorComponent},    
     {path: 'import-vendor-mail', component: MailComponent},
     {path: 'import-generatepo', component: GeneratepoComponent},
     {path: 'import-generatepo-generatepopayment', component: GeneratepopaymentComponent},
@@ -85,7 +86,6 @@ const routes: Routes = [
     // -----------------------------------------------------------------------------------------------------------------------------//
     {path: 'vesseltracking', component: VesseltrackingComponent},
     {path: 'addform', component: AddformComponent},
-    {path:'editvendor',component: EditvendorComponent},    
     {path: 'table', component: TableComponent},    
     {path: 'plans', component: PlansComponent},
     {path: 'document', component: DocumentComponent}

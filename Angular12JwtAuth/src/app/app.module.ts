@@ -40,15 +40,15 @@ import { DocumentComponent } from './master/document/document.component';
 import { GeneratepoComponent } from './imports/generatepo/generatepo.component';
 import { PlanningComponent } from './imports/planning/planning.component';
 import { VendorComponent } from './imports/vendor/vendor.component';
+import { EditvendorComponent } from './imports/vendor/editvendor/editvendor.component';
+import { MailComponent } from './imports/vendor/mail/mail.component';
 import { BankComponent } from './imports/bank/bank.component';
 import { LetterofcreditComponent } from './imports/letterofcredit/letterofcredit.component';
 import {ThirdpartyinspectionComponent} from './imports/thirdpartyinspection/thirdpartyinspection.component';
-import { MailComponent } from './imports/vendor/mail/mail.component';
 import { GeneratepopaymentComponent } from './imports/generatepo/generatepopayment/generatepopayment.component';
 
 import { MembershipcomponentComponent } from './membershipcomponent/membershipcomponent.component';
 import { AddformComponent } from './addform/addform.component';
-import { EditvendorComponent } from './editvendor/editvendor.component';
 import { OtpComponent } from './otp/otp.component';
 import { OtpmailComponent } from './otpmail/otpmail.component';
 import { PlansComponent } from './plans/plans.component';

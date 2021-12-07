@@ -7,7 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GeneratepopaymentComponent implements OnInit {
 
+  isPaymentTerms = true;
+
   constructor() { }
+
+  togglePaymentTerms(){
+    this.isPaymentTerms = true;    
+  }
+
+  togglePaymentMilestone(){
+    this.isPaymentTerms = false;
+  }
 
   ngOnInit(): void {
   }

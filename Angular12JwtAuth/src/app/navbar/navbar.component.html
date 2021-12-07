@@ -27,96 +27,96 @@
         
           <div class="sidebar-menu">
               <ul class="menu-list m-0 list-inline"> 
-                  <li>
-                      <a routerLink="/index" title="Dashboard"> 
-                          <img src="assets/images/icons/dashboard.svg" class="img-fluid" alt=""  />
-                          <span>Dashboard</span>
-                      </a>
-                  </li>
-                  <li> 
+                    <li>
+                        <a routerLink="/index" title="Dashboard"> 
+                            <img src="assets/images/icons/dashboard.svg" class="img-fluid" alt=""  />
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li> 
                       <div class="sub-Catagorys">
-                          <a class="sub-drop collapsed" (click)="masterCollapse.toggle()" [attr.aria-expanded]="!isCollapsedMaster" aria-controls="collapseExample">
-                              <img src="assets/images/icons/import.svg" class="img-fluid" alt="Import"  />
-                              <span>Masters</span>
-                          </a>
-                          <div class="">
-                              <div #masterCollapse="ngbCollapse" [(ngbCollapse)]="isCollapsedMaster" class="collapse">
-                                  <ul class="flex-column nav menu-content">
-                                      <li class="nav-item">
-                                          <a routerLink="master-companysetup" class="active" title="Company Setup">
-                                              <img src="assets/images/icons/planning.svg" class="img-fluid" alt="Planning"  />
-                                              <span>Company Setup</span>
-                                          </a>
-                                      </li>
-                                      <li class="nav-item">
-                                          <a routerLink="master-license" title="License">
-                                              <img src="assets/images/icons/vendor.svg" class="img-fluid" alt="Vendor"  />
-                                              <span>License</span>
-                                          </a>
-                                      </li> 
-                                      <li class="nav-item">
-                                          <a routerLink="master-port" title="Port">
-                                              <img src="assets/images/icons/vendor.svg" class="img-fluid" alt="Port"  />
-                                              <span>Port</span>
-                                          </a>
-                                      </li> 
-                                      <li class="nav-item">
-                                          <a routerLink="master-curency" title="Currency Setting">
-                                              <img src="assets/images/icons/generate_po.svg" class="img-fluid" alt="Generate PO"  />
-                                              <span>Currency Setting</span>
-                                          </a>
-                                      </li> 
-                                      <li class="nav-item">
-                                          <a routerLink="master-busineespartner" title="Business Partner">
-                                              <img src="assets/images/icons/lc.svg" class="img-fluid" alt="Letter of Credit"  />
-                                              <span>Business Partner</span>
-                                          </a>
-                                      </li> 
-                                      <li class="nav-item">
-                                          <a routerLink="master-bank" class="active" title="Bank">
-                                              <img src="assets/images/icons/bank.svg" class="img-fluid" alt="bank"  />
-                                              <span>Bank</span>
-                                          </a>
-                                      </li>
-                                      <li class="nav-item">
-                                            <a routerLink="master-document" title="Document">
-                                                <img src="assets/images/icons/document.svg" class="img-fluid" alt="Document"  />
-                                                <span>Document</span>
+                            <a class="sub-drop collapsed" (click)="masterCollapse.toggle()" [attr.aria-expanded]="!isCollapsedMaster" aria-controls="collapseExample">
+                                <img src="assets/images/icons/import.svg" class="img-fluid" alt="Import"  />
+                                <span>Masters</span>
+                            </a>
+                            <div class="">
+                                <div #masterCollapse="ngbCollapse" [(ngbCollapse)]="isCollapsedMaster" class="collapse">
+                                    <ul class="flex-column nav menu-content">
+                                        <li class="nav-item">
+                                            <a routerLink="master-companysetup" class="active" title="Company Setup">
+                                                <img src="assets/images/icons/planning.svg" class="img-fluid" alt="Planning"  />
+                                                <span>Company Setup</span>
                                             </a>
                                         </li>
-                                  </ul>
-                              </div>
+                                        <li class="nav-item">
+                                            <a routerLink="master-license" title="License">
+                                                <img src="assets/images/icons/vendor.svg" class="img-fluid" alt="License"  />
+                                                <span>License</span>
+                                            </a>
+                                        </li> 
+                                        <li class="nav-item">
+                                            <a routerLink="master-port" title="Port">
+                                                <img src="assets/images/icons/vendor.svg" class="img-fluid" alt="Port"  />
+                                                <span>Port</span>
+                                            </a>
+                                        </li> 
+                                        <li class="nav-item">
+                                            <a routerLink="master-curency" title="Currency Setting">
+                                                <img src="assets/images/icons/generate_po.svg" class="img-fluid" alt="Currency Setting"  />
+                                                <span>Currency Setting</span>
+                                            </a>
+                                        </li> 
+                                        <li class="nav-item">
+                                            <a routerLink="master-busineespartner" title="Business Partner">
+                                                <img src="assets/images/icons/lc.svg" class="img-fluid" alt="Business Partner"  />
+                                                <span>Business Partner</span>
+                                            </a>
+                                        </li> 
+                                        <li class="nav-item">
+                                            <a routerLink="master-bank" class="active" title="Bank">
+                                                <img src="assets/images/icons/bank.svg" class="img-fluid" alt="Bank"  />
+                                                <span>Bank</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a routerLink="master-document" title="Document">
+                                                    <img src="assets/images/icons/document.svg" class="img-fluid" alt="Document"  />
+                                                    <span>Document</span>
+                                                </a>
+                                            </li>
+                                    </ul>
+                                </div>
                           </div>
                       </div>
-                  </li>
-                  <li>
-                      <div class="sub-Catagorys">  
-                          <a class="sub-drop collapsed" (click)="importCollapse.toggle()" [attr.aria-expanded]="!isCollapsedImport" aria-controls="collapseExample">
-                              <img src="assets/images/icons/import.svg" class="img-fluid" alt="Import"  />
-                              <span>Import</span>
-                          </a>
-                          <div class=""> 
-                              <div #importCollapse="ngbCollapse" [(ngbCollapse)]="isCollapsedImport" class="collapse">
-                                  <ul class="flex-column nav menu-content">
-                                      <li class="nav-item">
-                                          <a routerLink="import-planning" class="active" >
-                                              <img src="assets/images/icons/planning.svg" class="img-fluid" alt="Home"  />
-                                              <span>Planning</span>
-                                          </a>
-                                      </li>
-                                      <li class="nav-item">
-                                          <a routerLink="import-vendor">
-                                              <img src="assets/images/icons/vendor.svg" class="img-fluid" alt="Home"  />
-                                              <span>Vendor</span>
-                                          </a>
-                                      </li> 
-                                      <li class="nav-item">
-                                          <a routerLink="import-generatepo">
-                                              <img src="assets/images/icons/generate_po.svg" class="img-fluid" alt="Home"  />
-                                              <span>Generate PO</span>
-                                          </a>
-                                      </li> 
-                                      <li class="nav-item">
+                    </li>
+                    <li>
+                        <div class="sub-Catagorys">  
+                            <a class="sub-drop collapsed" (click)="importCollapse.toggle()" [attr.aria-expanded]="!isCollapsedImport" aria-controls="collapseExample">
+                                <img src="assets/images/icons/import.svg" class="img-fluid" alt="Import"  />
+                                <span>Import</span>
+                            </a>
+                            <div class=""> 
+                                <div #importCollapse="ngbCollapse" [(ngbCollapse)]="isCollapsedImport" class="collapse">
+                                    <ul class="flex-column nav menu-content">
+                                        <li class="nav-item">
+                                            <a routerLink="import-planning" class="active" >
+                                                <img src="assets/images/icons/planning.svg" class="img-fluid" alt="Planning"  />
+                                                <span>Planning</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a routerLink="import-vendor">
+                                                <img src="assets/images/icons/vendor.svg" class="img-fluid" alt="Vendor"  />
+                                                <span>Vendor</span>
+                                            </a>
+                                        </li> 
+                                        <li class="nav-item">
+                                            <a routerLink="import-generatepo">
+                                                <img src="assets/images/icons/generate_po.svg" class="img-fluid" alt="Generate PO"  />
+                                                <span>Generate PO</span>
+                                            </a>
+                                        </li> 
+                                        <li class="nav-item">
                                         <a routerLink="import-letterofcredit">
                                             <img src="assets/images/icons/letterofcredit.svg" class="img-fluid" alt="Letter of Credit"  />
                                             <span>Letter of Credit</span>
@@ -124,7 +124,7 @@
                                     </li> 
                                     <li class="nav-item">
                                         <a routerLink="import-bankimport">
-                                            <img src="assets/images/icons/bank.svg" class="img-fluid" alt="BankImport"  />
+                                            <img src="assets/images/icons/bank.svg" class="img-fluid" alt="Bank"  />
                                             <span>Bank</span>
                                         </a>
                                     </li> 
@@ -134,47 +134,73 @@
                                             <span>3rd Party Inspection</span>
                                         </a>
                                     </li>
-                                  </ul>
-                              </div>
-                          </div>
-                      </div>
-                  
-                  <li>
-                      <a href="" > 
-                          <img src="assets/images/icons/export.svg" class="img-fluid" alt="export"  />
-                          <span>Export</span>
-                      </a>
-                  </li>
-                  <li>
-                      <a href="" > 
-                          <img src="assets/images/icons/shipping_agent.svg" class="img-fluid" alt="export"  />
-                          <span>Shipping Agent</span>
-                      </a>
-                  </li>
-                  <li>
-                      <a href="" > 
-                          <img src="assets/images/icons/freight_forwarder.svg" class="img-fluid" alt="export"  />
-                          <span>Freight Forwarder</span>
-                      </a>
-                  </li>
-                  <li>
-                      <a href="" > 
-                          <img src="assets/images/icons/custom_duty.svg" class="img-fluid" alt="export"  />
-                          <span>Custom</span>
-                      </a>
-                  </li>
-                  <li>
-                      <a href="" > 
-                          <img src="assets/images/icons/transport.svg" class="img-fluid" alt="export"  />
-                          <span>Transporter</span>
-                      </a>
-                  </li>
-                  <li>
-                      <a routerLink="/vesseltracking" title="Vessel Tracking"> 
-                          <img src="assets/images/icons/dashboard.svg" class="img-fluid" alt="Vessel Tracking"  />
-                          <span>Vessel Tracking</span>
-                      </a>
-                    </li>                  
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li> 
+                        <div class="sub-Catagorys">
+                            <a class="sub-drop collapsed" (click)="exportCollapse.toggle()" [attr.aria-expanded]="!isCollapsedExport" aria-controls="collapseExample">
+                                <img src="assets/images/icons/export.svg" class="img-fluid" alt="Import"  />
+                                <span>Export</span>
+                            </a>
+                            <div class="">
+                                <div #exportCollapse="ngbCollapse" [(ngbCollapse)]="isCollapsedExport" class="collapse">
+                                    <ul class="flex-column nav menu-content">
+                                        <li class="nav-item">
+                                            <a routerLink="/" class="active" title="bank">
+                                                <img src="assets/images/icons/bank.svg" class="img-fluid" alt="bank"  />
+                                                <span>Bank</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a routerLink="/" title="">
+                                                <!-- <img src="assets/images/icons/" class="img-fluid" alt=""  /> -->
+                                                <span>-----</span>
+                                            </a>
+                                        </li> 
+                                        <li class="nav-item">
+                                            <a routerLink="/" title="">
+                                                <!-- <img src="assets/images/icons/" class="img-fluid" alt=""  /> -->
+                                                <span>----</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="" > 
+                            <img src="assets/images/icons/shipping_agent.svg" class="img-fluid" alt="export"  />
+                            <span>Shipping Agent</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" > 
+                            <img src="assets/images/icons/freight_forwarder.svg" class="img-fluid" alt="export"  />
+                            <span>Freight Forwarder</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" > 
+                            <img src="assets/images/icons/custom_duty.svg" class="img-fluid" alt="export"  />
+                            <span>Custom</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" > 
+                            <img src="assets/images/icons/transport.svg" class="img-fluid" alt="export"  />
+                            <span>Transporter</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="/vesseltracking" title="Vessel Tracking"> 
+                            <img src="assets/images/icons/dashboard.svg" class="img-fluid" alt="Vessel Tracking"  />
+                            <span>Vessel Tracking</span>
+                        </a>
+                    </li>               
               </ul>
           </div>
       </div>
@@ -319,7 +345,7 @@
                   <!-- User Account -->
                   <li ngbDropdown class="list-inline-item dropdown user-menu ">
                       <a ngbDropdownToggle class="dropdown-toggle" data-bs-bs-toggle="dropdown" aria-expanded="false">
-                          <span class="login-name fw_6">John Doe </span>
+                          <span class="login-name fw_6">Ashish Gujarati </span>
                           <img src="assets/images/icons/avtara.png" class="user-image ml-2" alt="User Image">
                       </a>
                       <ul ngbDropdownMenu class="dropdown-menu dropdown-menu-right p-0">                                     

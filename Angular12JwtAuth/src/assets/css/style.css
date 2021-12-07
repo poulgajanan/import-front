@@ -516,3 +516,39 @@ table.dataTable>thead .sorting:before, table.dataTable>thead .sorting:after, tab
 /*------------------------
     Planning End
 ------------------------*/
+
+/*------------------------
+    notification Start
+------------------------*/
+.notification-list > .media {margin-bottom: 15px; border-bottom: 1px solid #d3d3d3; padding-bottom: 15px; }
+.notification-list > .media:nth-last-child(1){border-bottom: none; margin-bottom: 0px; padding-bottom: 0px;}
+/*------------------------
+    notification End
+------------------------*/
+
+/*------------------------
+    Application forms Start
+------------------------*/
+.details-application{display: none;}
+.details-application-active{display: block;}
+.box-application-tabs li{display: inline-block;width: 100%;}
+.box-application-tabs li a {width: 100%; display: inline-block; margin: 0px 0; border: 1px solid #d3d3d3; padding: 10px; font-size: 14px; }
+.box-application-tabs li a.application-tabs-active {background: #0461d9; color: #fff; }
+
+/*------------------------
+    Application forms End
+------------------------*/
+
+
+.tox-notifications-container{display: none;}
+.bottom-alert {position: fixed; z-index: 999; right: 16px; bottom: 0; width: 30%; display: none;}
+
+.doc-form input{margin: 0 5px;}
+.doc-form input:focus{outline: none;}
+
+.doc-form .table td, 
+.doc-form .table th {padding: 5px 10px; vertical-align: middle; align-items: center; font-size: 12px;}
+.doc-form p {margin-bottom: 15px;}
+
+.status-approved {background: green; padding: 3px 10px; color: #fff; border-radius: 15px; font-size: 12px; }
+    .status-pending {background: yellow; padding: 3px 10px; color: #202020; border-radius: 15px; font-size: 12px; }
