@@ -6,15 +6,11 @@
 
 @import "~datatables.net-dt/css/jquery.dataTables.min.css";
 
-@import "~flatpickr/dist/flatpickr.css";
-
 @import "~assets/css/custom.css";
 
 @import "~assets/css/responsive.css";
 
 @import "~assets/css/style.css";
-
-@import "~assets/plugins/mobilecode/intlTelInput.css";
 
 @media only screen and (min-width: 992px){
 /* @media (min-width: 992px){ */
