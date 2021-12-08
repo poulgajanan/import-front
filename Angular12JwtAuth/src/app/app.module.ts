@@ -10,11 +10,12 @@ import { NgOtpInputModule } from  'ng-otp-input';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { NavbarComponent } from './navbar/navbar.component';
+
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { LoginwithotpComponent } from './loginwithotp/loginwithotp.component';
-import { OtpComponent } from './otp/otp.component';
-import { OtpmailComponent } from './otpmail/otpmail.component';
 import { VerifyotpComponent } from './verifyotp/verifyotp.component';
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
 import { VerifyMobileComponent } from './verify-mobile/verify-mobile.component';
@@ -23,9 +24,6 @@ import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
 import { BoardUserComponent } from './board-user/board-user.component';
 import { ProfileComponent } from './profile/profile.component';
-
-import { HomeComponent } from './home/home.component';
-import { NavbarComponent } from './navbar/navbar.component';
 
 // ------------------------------------------------------MASTER-----------------------------------------------------------//
 import { CompanysetupComponent } from './master/companysetup/companysetup.component';
@@ -82,10 +80,8 @@ import { MembershipcomponentComponent } from './membershipcomponent/membershipco
     PortComponent,
     GeneratepoComponent,       //Generate PO Page Component
     VendorComponent,
-    EditvendorComponent,       //Edit vendor details component
-    OtpComponent,              //One time Password component
-    PlanningComponent,         //Planning Component for process
-    OtpmailComponent,          //One Time Password component    
+    EditvendorComponent,       //Edit vendor details component                  
+    PlanningComponent,         //Planning Component for process              
     NavbarComponent, 
     DocumentComponent, 
     LetterofcreditComponent,

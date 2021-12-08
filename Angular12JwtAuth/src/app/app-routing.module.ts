@@ -1,12 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { HomeComponent } from './home/home.component';
+
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
-import { OtpComponent } from './otp/otp.component';
-import { OtpmailComponent } from './otpmail/otpmail.component';
-
-import { HomeComponent } from './home/home.component';
+import { LoginwithotpComponent } from './loginwithotp/loginwithotp.component';
+import { VerifyotpComponent } from './verifyotp/verifyotp.component';
+import { VerifyEmailComponent } from './verify-email/verify-email.component';
+import { VerifyMobileComponent } from './verify-mobile/verify-mobile.component';
+import { BoardAdminComponent } from './board-admin/board-admin.component';
+import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
+import { BoardUserComponent } from './board-user/board-user.component';
+import { ProfileComponent } from './profile/profile.component';
+import { MembershipcomponentComponent } from './membershipcomponent/membershipcomponent.component';
 
 // ------------------------------------------------------MASTER-----------------------------------------------------------//
 import { CompanysetupComponent } from './master/companysetup/companysetup.component';
@@ -32,7 +39,7 @@ import { ThirdpartyinspectionComponent } from './imports/thirdpartyinspection/th
 
 
 import { VesseltrackingComponent } from './vesseltracking/vesseltracking.component';
-import { MembershipcomponentComponent } from './membershipcomponent/membershipcomponent.component';
+
 
 // import { AddformComponent } from './addform/addform.component';
 // import { TableComponent } from './table/table.component';
@@ -40,10 +47,17 @@ import { MembershipcomponentComponent } from './membershipcomponent/membershipco
 const routes: Routes = [
   {path: '', redirectTo: '/index', pathMatch: 'full'},
   {path: 'index', component: HomeComponent},   
-  {path: 'login', component: LoginComponent},
-  {path: 'register' , component: RegisterComponent},
-  {path: 'otp', component: OtpComponent},
-  {path: 'otpmail', component: OtpmailComponent},
+  {path: 'register' , component: RegisterComponent}, 
+  {path: 'loginwithotp', component: LoginComponent},
+  { path: 'login', component: LoginwithotpComponent},
+  { path: 'profile', component: ProfileComponent },
+  { path: 'user', component: BoardUserComponent },
+  { path: 'mod', component: BoardModeratorComponent },
+  { path: 'admin', component: BoardAdminComponent },
+  { path: 'otp', component: VerifyotpComponent },
+  { path: 'verifyMobile', component: VerifyMobileComponent},
+  { path: 'verifyEmail', component: VerifyEmailComponent},  
+  { path: 'membership', component: MembershipcomponentComponent},
   // ------------------------------------------------------MASTER ROUTERS-----------------------------------------------------------//
   {path: 'master-companysetup', component: CompanysetupComponent},
   {path: 'master-license',component: LicenseComponent},
@@ -66,8 +80,7 @@ const routes: Routes = [
 
 
   // -----------------------------------------------------------------------------------------------------------------------------//
-  {path: 'vesseltracking', component: VesseltrackingComponent},
-  {path: 'membership', component: MembershipcomponentComponent},
+  {path: 'vesseltracking', component: VesseltrackingComponent}
 
   // {path: 'addform', component: AddformComponent},
   // {path: 'table', component: TableComponent}    
