@@ -6,6 +6,9 @@
 
 @import "~datatables.net-dt/css/jquery.dataTables.min.css";
 
+/* @import "~intl-tel-input/build/css/intlTelInput.min.css"; */
+@import "~intl-tel-input/build/css/intlTelInput.css";
+
 @import "~assets/css/custom.css";
 
 @import "~assets/css/responsive.css";
@@ -28,5 +31,9 @@ body{
  
 .hideDiv {
     display: none;
- }
+}
+
+.showDiv{
+    display: block;
+}
  

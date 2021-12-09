@@ -39,70 +39,74 @@ export class RegisterComponent implements OnInit {
   constructor(private router: Router,private authService: AuthService,private sendotp: OtpverifyService) { }
 
   ngOnInit(): void {   
-  } 
+  }
+
+  onCountryChange(event: any){
+    console.log(event);
+  }
  
 
-   onSubmit(): void{
-    const {companyName,companyDesignation,firstName,lastName,dateOfBirth,email,mobile,password,} = this.form;
-    this.authService.checkAvailable(companyName, email, mobile).subscribe(
-      data => {
-        console.log(data);
-        this.isSuccessful = true;         
-        this.isSignUpFailed = false;
-        this.sendMessage();
-        this.sendEmail();              
-        this.router.navigateByUrl('/verifyMobile',{state: this.form})
-        this.register();
-      },
-      err => {
-        this.errorMessage = err.error.message;
-        this.isSignUpFailed = true;       
-      }
-    );
-   }
+  onSubmit(): void{
+  const {companyName,companyDesignation,firstName,lastName,dateOfBirth,email,mobile,password,} = this.form;
+  this.authService.checkAvailable(companyName, email, mobile).subscribe(
+    data => {
+      console.log(data);
+      this.isSuccessful = true;         
+      this.isSignUpFailed = false;
+      this.sendMessage();
+      this.sendEmail();              
+      this.router.navigateByUrl('/verifyMobile',{state: this.form})
+      this.register();
+    },
+    err => {
+      this.errorMessage = err.error.message;
+      this.isSignUpFailed = true;       
+    }
+  );
+  }
 
-   sendMessage(): void{
-    const {companyName,companyDesignation,firstName,lastName,dateOfBirth,email,mobile,password,} = this.form;
-    this.sendotp.sendMobileOtp(mobile).subscribe(
-      data => {
-        console.log(data);       
-        this.isSuccess=true;       
-        this.isSignUpFailed = false;       
-      },
-      err => {
-        this.errorMessage = err.error.message;
-        this.isSignUpFailed = true;       
-      }
-    );
-   }
+  sendMessage(): void{
+  const {companyName,companyDesignation,firstName,lastName,dateOfBirth,email,mobile,password,} = this.form;
+  this.sendotp.sendMobileOtp(mobile).subscribe(
+    data => {
+      console.log(data);       
+      this.isSuccess=true;       
+      this.isSignUpFailed = false;       
+    },
+    err => {
+      this.errorMessage = err.error.message;
+      this.isSignUpFailed = true;       
+    }
+  );
+  }
 
-   sendEmail(): void{
-    const {companyName,companyDesignation,firstName,lastName,dateOfBirth,email,mobile,password,} = this.form;
-    this.sendotp.sendEmailOtp(email).subscribe(
-      data => {
-        console.log(data);       
-        this.isSuccess=true;       
-        this.isSignUpFailed = false;       
-      },
-      err => {
-        this.errorMessage = err.error.message;
-        this.isSignUpFailed = true;       
-      }
-    );
-   }
+  sendEmail(): void{
+  const {companyName,companyDesignation,firstName,lastName,dateOfBirth,email,mobile,password,} = this.form;
+  this.sendotp.sendEmailOtp(email).subscribe(
+    data => {
+      console.log(data);       
+      this.isSuccess=true;       
+      this.isSignUpFailed = false;       
+    },
+    err => {
+      this.errorMessage = err.error.message;
+      this.isSignUpFailed = true;       
+    }
+  );
+  }
 
-   register(): void{
-    const {companyName,companyDesignation,firstName,lastName,dateOfBirth,email,mobile,password} = this.form;
-    this.authService.register( companyName,companyDesignation,firstName,lastName,dateOfBirth,email,mobile,password).subscribe(
-      data => {
-        console.log(data);       
-        this.isSuccess=true;       
-        this.isSignUpFailed = false;       
-      },
-      err => {
-        this.errorMessage = err.error.message;
-        this.isSignUpFailed = true;       
-      }
-    );
-   }
+  register(): void{
+  const {companyName,companyDesignation,firstName,lastName,dateOfBirth,email,mobile,password} = this.form;
+  this.authService.register( companyName,companyDesignation,firstName,lastName,dateOfBirth,email,mobile,password).subscribe(
+    data => {
+      console.log(data);       
+      this.isSuccess=true;       
+      this.isSignUpFailed = false;       
+    },
+    err => {
+      this.errorMessage = err.error.message;
+      this.isSignUpFailed = true;       
+    }
+  );
+  }
 }

@@ -21,7 +21,7 @@ import { LicenseComponent } from './master/license/license.component';
 import { PortComponent } from './master/port/port.component';
 import { CurrencysettingsComponent } from './master/currencysettings/currencysettings.component';
 import { BusineespartnerComponent } from './master/busineespartner/busineespartner.component';
-import { BankimportComponent } from './master/bankimport/bankimport.component';
+import { BankimportComponent } from './imports/bankimport/bankimport.component';
 import { DocumentComponent } from './master/document/document.component';
 
 // ------------------------------------------------------IMPORT-----------------------------------------------------------//
@@ -32,7 +32,7 @@ import { MailComponent } from './imports/vendor/mail/mail.component';
 import { GeneratepoComponent } from './imports/generatepo/generatepo.component';
 import { GeneratepopaymentComponent } from './imports/generatepo/generatepopayment/generatepopayment.component';
 import { LetterofcreditComponent } from './imports/letterofcredit/letterofcredit.component';
-import { BankComponent } from './imports/bank/bank.component';
+import { BankComponent } from './master/bank/bank.component';
 import { ThirdpartyinspectionComponent } from './imports/thirdpartyinspection/thirdpartyinspection.component';
 
 // ------------------------------------------------------EXPORT-----------------------------------------------------------//

@@ -189,7 +189,7 @@
                                                                         <fieldset class="form-group">
                                                                             <label class="form-lbl">Upload Documents  <span class="text-danger">*</span></label>
                                                                             <div class="headersearch custom-file"> 
-                                                                                <input  [(ngModel)]="form.document" #document="ngModel"  name="document"  class="custom-file-input" id="inputGroupFile04" type="file" required>
+                                                                                <input  [(ngModel)]="form.document" #document="ngModel"  name="document"  class="form-control custom-file-input" id="inputGroupFile04" type="file" required>
                                                                                 <label class="custom-file-label" for="inputGroupFile04">Select Documents</label> 
                                                                                 <div *ngIf="document.invalid && document.touched" class="alert-danger">Document is required</div>  
                                                                             </div>

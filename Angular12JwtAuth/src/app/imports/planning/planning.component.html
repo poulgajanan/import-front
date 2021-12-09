@@ -237,7 +237,17 @@
                                         <div class="form-grid-list"> 
                                             <fieldset class="form-group">
                                                 <label class="form-lbl">Mobile Number <span class="text-danger">*</span></label>
-                                                <input type="text" class="form-control phone-code" id="" >
+                                                <!-- <input type="text" class="form-control phone-code" id="" > -->
+                                                <input 
+                                                    type="text"
+                                                    class="form-control"
+                                                    [(ngModel)]="form.mobile"
+                                                    name="mobile"
+                                                    #mobile="ngModel"
+                                                    required                                            
+                                                    ng2TelInput
+                                                    [ng2TelInputOptions]="{initialCountry: 'in'}"
+                                                />
                                             </fieldset>
                                         </div> 
                                         <div class="form-grid-list grid-column1">
@@ -370,7 +380,17 @@
                                         <div class="form-grid-list"> 
                                             <fieldset class="form-group">
                                                 <label class="form-lbl">Mobile Number <span class="text-danger">*</span></label>
-                                                <input type="text" class="form-control phone-code" id="" >
+                                                <!-- <input type="text" class="form-control phone-code" id="" > -->
+                                                <input 
+                                                    type="text"
+                                                    class="form-control"
+                                                    [(ngModel)]="form.mobile"
+                                                    name="mobile"
+                                                    #mobile="ngModel"
+                                                    required                                            
+                                                    ng2TelInput
+                                                    [ng2TelInputOptions]="{initialCountry: 'in'}"
+                                                />
                                             </fieldset>
                                         </div> 
                                         

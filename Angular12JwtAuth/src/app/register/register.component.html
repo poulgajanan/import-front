@@ -141,7 +141,7 @@
                                           #email="ngModel" 
                                         />
                                         <!-- <div class="alert-danger" *ngIf="email.errors && f.submitted"> -->
-                                          <div *ngIf="email.invalid && email.touched">Email is required</div>
+                                          <div class="alert-danger" *ngIf="email.invalid && email.touched">Email is required</div>
                                           <!-- <div *ngIf="email.errors.email">
                                             Email must be a valid email address
                                           </div> -->
@@ -154,13 +154,17 @@
                                   <div class="col-md-12">
                                       <fieldset class="form-group">
                                           <label class="form-lbl">Mobile Number <span class="required">*</span></label>
-                                          <input               
-                                          class="form-control"
-                                          name="mobile"
-                                          [(ngModel)]="form.mobile"
-                                          required                      
-                                          #mobile="ngModel" required
-                                        />
+                                          <input 
+                                            type="text"
+                                            class="form-control"
+                                            [(ngModel)]="form.mobile"
+                                            name="mobile"
+                                            #mobile="ngModel"
+                                            required                                            
+                                            ng2TelInput
+                                            [ng2TelInputOptions]="{initialCountry: 'in'}"
+                                            (countryChange)="onCountryChange($event)"
+                                          />
                                         <!-- <div class="alert-danger" *ngIf="mobile.errors && f.submitted"> -->
                                           <div class="alert-danger"  *ngIf="mobile.invalid && mobile.touched">Mobile Number is required</div>
                                           <!-- <div *ngIf="mobile.errors.minlength">
