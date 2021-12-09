@@ -9,9 +9,6 @@ import { Component, OnInit } from '@angular/core';
 
 export class NavbarComponent implements OnInit {
 
-  public isCollapsedMaster = true;
-  public isCollapsedImport = true;
-  public isCollapsedExport = true;
   // public profile = false;
 
   constructor() { }

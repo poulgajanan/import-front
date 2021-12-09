@@ -33,14 +33,14 @@
                             <span>Dashboard</span>
                         </a>
                     </li>
-                    <li> 
-                      <div class="sub-Catagorys">
-                            <a class="sub-drop collapsed" (click)="masterCollapse.toggle()" [attr.aria-expanded]="!isCollapsedMaster" aria-controls="collapseExample">
+                    <li>
+                        <div class="sub-Catagorys">
+                            <a class="sub-drop collapsed" data-bs-toggle="collapse" data-bs-target="#master" aria-expanded="true">
                                 <img src="assets/images/icons/import.svg" class="img-fluid" alt="Import"  />
                                 <span>Masters</span>
                             </a>
                             <div class="">
-                                <div #masterCollapse="ngbCollapse" [(ngbCollapse)]="isCollapsedMaster" class="collapse">
+                                <div class="collapse" id="master" aria-expanded="false">
                                     <ul class="flex-column nav menu-content">
                                         <li class="nav-item">
                                             <a routerLink="master-companysetup" class="active" title="Company Setup">
@@ -86,17 +86,17 @@
                                             </li>
                                     </ul>
                                 </div>
-                          </div>
+                            </div>
                       </div>
                     </li>
                     <li>
                         <div class="sub-Catagorys">  
-                            <a class="sub-drop collapsed" (click)="importCollapse.toggle()" [attr.aria-expanded]="!isCollapsedImport" aria-controls="collapseExample">
+                            <a class="sub-drop collapsed" data-bs-toggle="collapse" data-bs-target="#import" aria-expanded="true">
                                 <img src="assets/images/icons/import.svg" class="img-fluid" alt="Import"  />
                                 <span>Import</span>
                             </a>
                             <div class=""> 
-                                <div #importCollapse="ngbCollapse" [(ngbCollapse)]="isCollapsedImport" class="collapse">
+                                <div class="collapse" id="import" aria-expanded="false">
                                     <ul class="flex-column nav menu-content">
                                         <li class="nav-item">
                                             <a routerLink="import-planning" class="active" >
@@ -141,12 +141,12 @@
                     </li>
                     <li> 
                         <div class="sub-Catagorys">
-                            <a class="sub-drop collapsed" (click)="exportCollapse.toggle()" [attr.aria-expanded]="!isCollapsedExport" aria-controls="collapseExample">
+                            <a class="sub-drop collapsed" data-bs-toggle="collapse" data-bs-target="#export" aria-expanded="true">
                                 <img src="assets/images/icons/export.svg" class="img-fluid" alt="Import"  />
                                 <span>Export</span>
                             </a>
                             <div class="">
-                                <div #exportCollapse="ngbCollapse" [(ngbCollapse)]="isCollapsedExport" class="collapse">
+                                <div class="collapse" id="export" aria-expanded="false">
                                     <ul class="flex-column nav menu-content">
                                         <li class="nav-item">
                                             <a routerLink="/" class="active" title="bank">
@@ -208,11 +208,10 @@
   <!-- end  header area -->   
   
   <!--  header-main area-->
-  
-    <section class="header-main-fix">
+    <section class="header-main-fix">        
       <nav class="navbar navbar-static-top navbar-expand-lg">  
+          <div class="navbar-right ms-auto">            
           <!-- User Account -->
-          <div class="navbar-right ms-auto">
               <ul class="list-inline m-0 account-right-login">
                   <!-- -header-notification -->
                   <li ngbDropdown class="list-inline-item dropdown header-notification">

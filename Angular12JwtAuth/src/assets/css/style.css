@@ -226,6 +226,37 @@ label.form-lbl {margin: 0; font-size: 14px; opacity: 0.8; width: 100%;}
 }
 
 /*================================================
+:: scoll bar css Style
+==================================================*/ 
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #959da3;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #656b70;
+}
+
+
+/*---------------------------------
+    scorll bar End
+---------------------------------*/
+
+
+
+/*================================================
 :: home css Style
 ==================================================*/ 
 /*Left area Start*/
@@ -299,10 +330,10 @@ header.mobile-active:after {content: ""; position: fixed; background: rgb(0 0 0 
 .navbar .dropdown-menu > li a {display: block; padding: 10px 15px;}
 .header-notification .dropdown-toggle img {-webkit-animation: tada 1.5s ease infinite; animation: tada 1.5s ease infinite; }
 
-.sub-Catagorys .sub-drop[data-toggle]:not(.collapsed):after {content: "-"; font-size: 22px; position: absolute; top: -2px; bottom: 0; margin: auto; right: 15px; color: #fff; }
-.sub-Catagorys .sub-drop[data-toggle].collapsed:after {content: "+"; font-size: 22px; position: absolute; top: 0px; bottom: 0; margin: auto; right: 15px; color: #fff; }
-.header-left .sub-Catagorys .sub-drop[data-toggle]:not(.collapsed):after, .header-left .sub-Catagorys .sub-drop[data-toggle].collapsed:after{display: none;}
-.hover-header-left .sub-Catagorys .sub-drop[data-toggle]:not(.collapsed):after, .hover-header-left .sub-Catagorys .sub-drop[data-toggle].collapsed:after{display: block;}
+.sub-Catagorys .sub-drop:not(.collapsed):after {content: "-"; font-size: 22px; position: absolute; top: -2px; bottom: 0; margin: auto; right: 15px; color: #fff; }
+.sub-Catagorys .sub-drop.collapsed:after {content: "+"; font-size: 22px; position: absolute; top: 0px; bottom: 0; margin: auto; right: 15px; color: #fff; }
+.header-left .sub-Catagorys .sub-drop:not(.collapsed):after, .header-left .sub-Catagorys .sub-drop.collapsed:after{display: none;}
+.hover-header-left .sub-Catagorys .sub-drop:not(.collapsed):after, .hover-header-left .sub-Catagorys .sub-drop.collapsed:after{display: block;}
 
 /*---------------------------------
     header-main End

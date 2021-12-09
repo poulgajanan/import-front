@@ -68,8 +68,6 @@ NOTE: This file contains all scripts for the actual Template.
         $(".mob-header").click(function(){
             $(".header-left").addClass("hover-header-left");
         })
-
-
     };
 
     /*==========================================
