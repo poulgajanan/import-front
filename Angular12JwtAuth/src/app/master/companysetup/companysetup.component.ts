@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 
-import { CompanySetup } from '../../objectClass/companySetup';
+import { CompanySetup } from '../../constants/companySetup';
 
 @Component({
   selector: 'app-companysetup',

@@ -68,8 +68,6 @@ NOTE: This file contains all scripts for the actual Template.
         $(".mob-header").click(function(){
             $(".header-left").addClass("hover-header-left");
         })
-
-
     };
 
     /*==========================================
@@ -257,13 +255,20 @@ NOTE: This file contains all scripts for the actual Template.
         // on keyup / change flag: reset
         telInput.on("keyup change", reset);  
 
-        $('.box-po-tabs li a').on('click', function() {        
-            var dashboard_menu_type = $(this).attr('data-bind');
-            $('.details-po').hide();
-            $('.box-po-tabs li a').removeClass('po-tabs-active');
-            $('#' + dashboard_menu_type).show();
-            $(this).addClass('po-tabs-active');
-        });
+        // $('.box-po-tabs li a').on('click', function() {        
+        //     var dashboard_menu_type = $(this).attr('data-bind');
+        //     $('.details-po').hide();
+        //     $('.box-po-tabs li a').removeClass('po-tabs-active');
+        //     $('#' + dashboard_menu_type).show();
+        //     $(this).addClass('po-tabs-active');
+        // });
+        // $('.box-application-tabs li a').on('click', function() {        
+        //     var dashboard_menu_type = $(this).attr('data-bind');
+        //     $('.details-application').hide();
+        //     $('.box-application-tabs li a').removeClass('application-tabs-active');
+        //     $('#' + dashboard_menu_type).show();
+        //     $(this).addClass('application-tabs-active');
+        // });
 
 	}); 
 })(jQuery);

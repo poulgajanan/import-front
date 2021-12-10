@@ -7,9 +7,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BankimportComponent implements OnInit {
 
+  isMatch = false;
+  isUnMatch = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  match(){
+    this.isMatch = true;
+  }
+
+  unmatch(){
+    this.isUnMatch = true;
+  }
+
+  // matchClose(){
+  //   this.isMatch = false;
+  // }
+
+  // unmatchClose(){
+  //   this.isUnMatch = false;
+  // }
+
+
 
 }

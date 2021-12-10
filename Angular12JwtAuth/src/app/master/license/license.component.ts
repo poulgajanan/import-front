@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { License } from '../../objectClass/license';
+import { License } from '../../constants/license';
 
 import { FormControl,FormGroup,Validators } from '@angular/forms';
 

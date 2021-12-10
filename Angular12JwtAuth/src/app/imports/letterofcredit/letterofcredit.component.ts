@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LetterofcreditComponent implements OnInit {
 
+  tab : Number = 1;
+
   constructor() { }
+
+  changeTab(newTab : Number){
+    this.tab = newTab;
+  }
 
   ngOnInit(): void {
   }

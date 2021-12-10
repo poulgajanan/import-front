@@ -42,14 +42,13 @@
                         <div class="pus-card-heading-elements">
                             <ul class="list-inline mb-0"> 
                                 <li class="list-inline-item">
-                                    <select name="" class="form-control">                                                    
-                                        <option value="" >Select Bank</option>
-                                        <option value="" selected="">ICICI</option>
+                                    <select class="form-select">
+                                        <option value="" selected="">Select Bank</option>
+                                        <option value="" >ICICI</option>
                                         <option value="">SBI</option>
                                         <option value="">Other</option>
                                     </select>
                                 </li>
-                                 
                             </ul>
                         </div>
                     </div>
@@ -63,22 +62,64 @@
                                                 <div class="">
                                                     <ul class="list-line box-application-tabs">
                                                         <li class="list-inline-item">
-                                                            <a href="javascript:void(0); " class="application-tabs-active" data-bind="FormA1">Form A1</a>
+                                                            <a class="" data-bs-bind="FormA1"
+                                                                (click)="changeTab(1)"
+                                                                [ngClass]="{
+                                                                    'application-tabs-active' : (tab == 1)
+                                                                }"
+                                                            >
+                                                                Form A1
+                                                            </a>
                                                         </li>
                                                         <li class="list-inline-item">
-                                                            <a href="javascript:void(0);" data-bind="FEMADecleration"> FEMA Decleration & NNL Form</a>
+                                                            <a data-bs-bind="FEMADecleration"
+                                                                (click)="changeTab(2)"
+                                                                [ngClass]="{
+                                                                    'application-tabs-active' : (tab == 2)
+                                                                }"
+                                                            >
+                                                                FEMA Decleration & NNL Form
+                                                            </a>
                                                         </li> 
                                                         <li class="list-inline-item">
-                                                            <a href="javascript:void(0);" data-bind="MEMO"> Limit Set up MEMO</a>
+                                                            <a data-bs-bind="MEMO"
+                                                                (click)="changeTab(3)"
+                                                                [ngClass]="{
+                                                                    'application-tabs-active' : (tab == 3)
+                                                                }"
+                                                            >
+                                                                Limit Set up MEMO
+                                                            </a>
                                                         </li> 
                                                         <li class="list-inline-item">
-                                                            <a href="javascript:void(0);" data-bind="AppraisalNote"> Letter of Credit Appraisal Note</a>
+                                                            <a data-bs-bind="AppraisalNote"
+                                                                (click)="changeTab(4)"
+                                                                [ngClass]="{
+                                                                    'application-tabs-active' : (tab == 4)
+                                                                }"
+                                                            >                                                            
+                                                                Letter of Credit Appraisal Note
+                                                            </a>
                                                         </li> 
                                                         <li class="list-inline-item">
-                                                            <a href="javascript:void(0);" data-bind="Executed"> Customer Request Letter for Import LC MFA Executed</a>
+                                                            <a data-bs-bind="Executed"
+                                                                (click)="changeTab(5)"
+                                                                [ngClass]="{
+                                                                    'application-tabs-active' : (tab == 5)
+                                                                }"
+                                                            >
+                                                                Customer Request Letter for Import LC MFA Executed
+                                                            </a>
                                                         </li> 
                                                         <li class="list-inline-item">
-                                                            <a href="javascript:void(0);" data-bind="NotExecuted"> Customer Request Letter for Import LC MFA Not Executed</a>
+                                                            <a data-bs-bind="NotExecuted"
+                                                                (click)="changeTab(6)"
+                                                                [ngClass]="{
+                                                                    'application-tabs-active' : (tab == 6)
+                                                                }"
+                                                            >
+                                                                Customer Request Letter for Import LC MFA Not Executed
+                                                            </a>
                                                         </li> 
                                                     </ul>
                                                 </div>                                                            
@@ -87,7 +128,11 @@
                                         <div class="col-md-9">
                                             <div class="Application-details-po form doc-form">
                                                 <div class="tabs-details-po mt-lg-0  mt-3">
-                                                    <div id="FormA1" class="details-application details-application-active">
+                                                    <div id="FormA1" class="details-application "
+                                                        [ngClass]="{
+                                                            'details-application-active' : (tab == 1)
+                                                        }"
+                                                    >
                                                         <div class="">
                                                             <div class="text-center">
                                                                 <p>(To be printed on White paper)</p>
@@ -125,7 +170,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="">
-                                                                <p>___________________________________________________________________________________________</p>
+                                                                <p class="bg-dark">________________</p>
                                                                 <br>
                                                                 <p>
                                                                     I/We wish to purchase 
@@ -262,7 +307,7 @@
                                                             </div>
 
                                                             <div class="">
-                                                                <table class="table table-responsive table-bordered text-center">
+                                                                <table class="table table-responsive table-bordered text-center" overflow-x="auto">
                                                                     <thead>
                                                                         <tr>
                                                                             <th colspan="4">Invoice Details</th>
@@ -717,7 +762,11 @@
 
                                                         </div>
                                                     </div>
-                                                    <div id="FEMADecleration" class="details-application">
+                                                    <div id="FEMADecleration" class="details-application"
+                                                        [ngClass]="{
+                                                            'details-application-active' : (tab == 2)
+                                                        }"
+                                                    >
                                                         <div class="">
                                                             <div class="bank-lc-list">
                                                                 <div class="text-center">
@@ -745,16 +794,32 @@
                                                             </div>
                                                         </div>
                                                     </div> 
-                                                    <div id="MEMO" class="details-application">
+                                                    <div id="MEMO" class="details-application"
+                                                        [ngClass]="{
+                                                            'details-application-active' : (tab == 3)
+                                                        }"
+                                                    >
                                                         Limit Set up MEMO
                                                     </div> 
-                                                    <div id="AppraisalNote" class="details-application">
+                                                    <div id="AppraisalNote" class="details-application"
+                                                        [ngClass]="{
+                                                            'details-application-active' : (tab == 4)
+                                                        }"
+                                                    >
                                                         Letter of Credit Appraisal Note
                                                     </div> 
-                                                    <div id="Executed" class="details-application">
+                                                    <div id="Executed" class="details-application"
+                                                        [ngClass]="{
+                                                            'details-application-active' : (tab == 5)
+                                                        }"
+                                                    >
                                                         Customer Request Letter for Import LC MFA Executed
                                                     </div> 
-                                                    <div id="NotExecuted" class="details-application">
+                                                    <div id="NotExecuted" class="details-application"
+                                                        [ngClass]="{
+                                                            'details-application-active' : (tab == 6)
+                                                        }"
+                                                    >
                                                         Customer Request Letter for Import LC MFA Not Executed
                                                     </div>                                                                  
                                                 </div>
@@ -782,200 +847,36 @@
 </div> 
 <!-- end back to top area --> 
 
-
-<!-- Right Panel filter -->
-<div class="right-panel-filter right-panel-wrapper">
-<div class="panel-overlay"></div>
-<div class="right-panel w-40">
-    <div class="right-panel-head">
-        <h6 class="text-color">Add Vendor</h6>
-        <a class="close-panel flags-panel" href="javascript:void(0);">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="iconify" data-icon="feather:chevron-right" style="vertical-align: -0.125em; transform: rotate(360deg);">
-                <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M9 18l6-6l-6-6"></path>
-                </g>
-            </svg>
-        </a>
-    </div>
-    <div class="right-panel-body">
-        <div class="right-filters">
-            <div class="row"> 
-                <div class="col-md-12"> 
-                    <div class="filters-scroll">
-                        <div class="companydetails filters-details">
-                            <div class="filters-details-title border-bottom  pl-3 pr-3 pt-2 pb-2 ">
-                                <p class="text-color">Company Details</p>
-                            </div>
-                            <div class="grid-2 form-grid-2 p-3">
-                                <div class="form-grid-list grid-column1">
-                                    <fieldset class="form-group">
-                                        <label class="form-lbl">Company Name <span class="text-danger">*</span></label>
-                                        <div class="headersearch"> 
-                                            <input type="text" class="form-control" placeholder="Company Name" required="required"> 
-                                        </div> 
-                                    </fieldset> 
-                                </div>
-                                <div class="form-grid-list">
-                                    <fieldset class="form-group">
-                                        <label class="form-lbl">Compnay Email <span class="text-danger">*</span></label>
-                                        <div class="headersearch"> 
-                                            <input type="text" class="form-control" placeholder="Enter compnay email" required="required"> 
-                                        </div>
-                                    </fieldset> 
-                                </div> 
-                                <div class="form-grid-list"> 
-                                    <fieldset class="form-group">
-                                        <label class="form-lbl">Mobile Number <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control phone-code" id="" >
-                                    </fieldset>
-                                </div> 
-                                <div class="form-grid-list grid-column1">
-                                    <fieldset class="form-group ">
-                                        <label class="form-lbl">Compnay Website <span class="text-danger">*</span></label>
-                                        <div class="headersearch"> 
-                                            <input type="text" class="form-control" placeholder="Enter compnay website" required="required"> 
-                                        </div>
-                                    </fieldset> 
-                                </div> 
-                                
-                                <div class="form-grid-list grid-column1">
-                                    <fieldset class="form-group">
-                                        <label class="form-lbl">Address Line 1 <span class="text-danger">*</span></label>
-                                        <div class="headersearch"> 
-                                            <input type="text" class="form-control" placeholder="Enter address line 1" required="required"> 
-                                        </div>
-                                    </fieldset> 
-                                </div>
-                                <div class="form-grid-list grid-column1">
-                                    <fieldset class="form-group">
-                                        <label class="form-lbl">Address Line 2 </label>
-                                        <div class="headersearch"> 
-                                            <input type="text" class="form-control" placeholder="Enter address line 2" required="required"> 
-                                        </div>
-                                    </fieldset> 
-                                </div>
-                                <div class="form-grid-list">
-                                    <fieldset class="form-group">
-                                        <label class="form-lbl">Country <span class="text-danger">*</span></label>
-                                        <div class="headersearch"> 
-                                            <input type="text" class="form-control" placeholder="Enter Country" required="required"> 
-                                        </div>
-                                    </fieldset> 
-                                </div>
-                                <div class="form-grid-list">
-                                    <fieldset class="form-group">
-                                        <label class="form-lbl">State <span class="text-danger">*</span></label>
-                                        <div class="headersearch"> 
-                                            <input type="text" class="form-control" placeholder="Enter State" required="required"> 
-                                        </div>
-                                    </fieldset> 
-                                </div>
-                                <div class="form-grid-list">
-                                    <fieldset class="form-group">
-                                        <label class="form-lbl">City <span class="text-danger">*</span></label>
-                                        <div class="headersearch"> 
-                                            <input type="text" class="form-control" placeholder="Enter City" required="required"> 
-                                        </div>
-                                    </fieldset> 
-                                </div>
-                                <div class="form-grid-list">
-                                    <fieldset class="form-group">
-                                        <label class="form-lbl">Zip/Postal Code <span class="text-danger">*</span></label>
-                                        <div class="headersearch"> 
-                                            <input type="text" class="form-control" placeholder="Enter Zip/Postal Code" required="required"> 
-                                        </div>
-                                    </fieldset> 
-                                </div> 
-                            </div>                                       
-                        </div>
-                        <div class="contactdetails filters-details">
-                            <div class="filters-details-title border-bottom  pl-3 pr-3 pt-2 pb-2 ">
-                                <p class="text-color">Person Details</p>
-                            </div>
-                            <div class="grid-2 form-grid-2 p-3">
-                                <div class="form-grid-list grid-column1">
-                                    <fieldset class="form-group">
-                                        <label class="form-lbl">Name <span class="text-danger">*</span></label>
-                                        <div class="headersearch"> 
-                                            <input type="text" class="form-control" placeholder="Enter name" required="required"> 
-                                        </div> 
-                                    </fieldset> 
-                                </div>
-                                <div class="form-grid-list">
-                                    <fieldset class="form-group">
-                                        <label class="form-lbl">Email <span class="text-danger">*</span></label>
-                                        <div class="headersearch"> 
-                                            <input type="text" class="form-control" placeholder="Enter Email" required="required"> 
-                                        </div> 
-                                    </fieldset> 
-                                </div>
-                                <div class="form-grid-list"> 
-                                    <fieldset class="form-group">
-                                        <label class="form-lbl">Mobile Number <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control phone-code" id="" >
-                                    </fieldset>
-                                </div> 
-                                
-                            </div>                                       
-                        </div> 
-                        <div class="companydocumnets filters-details">
-                            <div class="filters-details-title border-bottom  pl-3 pr-3 pt-2 pb-2 ">
-                                <p class="text-color">Upload Documnets</p>
-                            </div>
-                            <div class="grid-2 form-grid-2 p-3">
-                                <div class="form-grid-list grid-column1">
-                                    <fieldset class="form-group">
-                                        <label class="form-lbl">GST <span class="text-danger">*</span></label> 
-                                        <div class="headersearch custom-file"> 
-                                            <input class="custom-file-input" id="inputGroupFile04" type="file">
-                                            <label class="custom-file-label" for="inputGroupFile04">Select Documents</label> 
-                                        </div>
-                                    </fieldset> 
-                                </div>                                             
-                            </div>                                       
-                        </div>  
-                    </div>
-                </div>
-                <div class="col-md-12 text-center mt-3"> 
-                    <div class="d-flex justify-content-center align-items-center"> 
-                        <a class="button-style ml-2" href=""> <img src="assets/images/table-icons/add.svg" class="img-fluid icon-filter-white mr-2" width="14px" alt=""> Add Vendor</a>
-                    </div>
-                </div>
-            </div>
-        </div>                
-    </div>
-</div>
-</div>   
-
 <!-- Select Bank Model-->
-<div class="modal fade" tabindex="-1" role="dialog" id="selectbank">
-<div class="modal-dialog" role="document">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title">Please select Bank</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
+<!-- <div class="modal fade" tabindex="-1" role="dialog" id="selectbank">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Please select Bank</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="form">
+                    <div class="">
+                        <fieldset class="form-group ">
+                            <label class="form-lbl">Select Bank  <span class="text-danger">*</span></label>
+                            <select name="" class="form-control">
+                                <option value="" selected="">Select Bank</option>
+                                <option value="">ICICI</option>
+                                <option value="">SBI</option>
+                                <option value="">Other</option> 
+                            </select> 
+                        </fieldset>
+                    </div>
+                    <div class="text-right">
+                        <a href="" class="button-style" data-bs-dismiss="modal">Select</a>
+                    </div>
+                </form>
+            </div> 
         </div>
-        <div class="modal-body">
-            <form class="form">
-                <div class="">
-                    <fieldset class="form-group ">
-                        <label class="form-lbl">Select Bank  <span class="text-danger">*</span></label>
-                        <select name="" class="form-control">
-                            <option value="" selected="">Select Bank</option>
-                            <option value="">ICICI</option>
-                            <option value="">SBI</option>
-                            <option value="">Other</option> 
-                        </select> 
-                    </fieldset>
-                </div>
-                <div class="text-right">
-                    <a href="" class="button-style" data-dismiss="modal">Select</a>
-                </div>
-            </form>
-        </div> 
     </div>
-</div>
-</div> 
+</div>  -->
+
 </div>

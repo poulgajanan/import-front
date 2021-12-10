@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../_services/user.service';
 import { Chart, registerables } from 'chart.js';
 
-import { User } from '../objectClass/user';
-import { Transaction} from '../objectClass/transaction';
+import { User } from '../constants/user';
+import { Transaction} from '../constants/transaction';
 
 import * as $ from "jquery";
 
