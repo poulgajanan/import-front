@@ -89,7 +89,7 @@
                                                     <label class="form-lbl" for=""> Product Name <span class="text-danger">*</span></label>
                                                     <input [(ngModel)]="form.name" #name="ngModel"  name ="name" type="text" class="form-control" placeholder="Name" required>
                                                     <div *ngIf="name.invalid && name.touched" class="alert-danger ">Name is required</div>
-                                                </div>
+                                                </div> 
                                             </div> 
                                             <div class="form-grid-list">
                                                 <fieldset class="form-group ">
@@ -112,7 +112,7 @@
                                             </div> 
                                             <div class="form-grid-list">
                                                 <div class="form-group">
-                                                    <label class="form-lbl" for=""> Vendor Country <span class="text-danger">*</span></label>
+                                                    <label class="form-lbl" for=""> Vendor Country<span class="text-danger">*</span></label>
                                                     <input   [(ngModel)]="form.country" #country="ngModel"  name="country"  type="text" class="form-control" placeholder="Country " required>
                                                     <div *ngIf="country.invalid && country.touched" class="alert-danger ">Country is required</div>                                                      
                                                 </div>
