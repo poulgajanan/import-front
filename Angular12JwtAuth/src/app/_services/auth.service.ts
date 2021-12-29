@@ -3,8 +3,10 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 
-const AUTH_API = 'https://dev.tre-zix.com/gatewaysrv/api/auth/';
-const AUTH_API_LOGIN = 'https://dev.tre-zix.com/gatewaysrv/login/auth/signinwithotp';
+// const AUTH_API = 'https://dev.tre-zix.com/gatewaysrv/api/auth/';
+// const AUTH_API_LOGIN = 'https://dev.tre-zix.com/gatewaysrv/login/auth/signinwithotp';
+const AUTH_API = 'http://localhost:8080/api/auth/';
+const AUTH_API_LOGIN = 'http://localhost:8080/login/auth/signinwithotp';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })

@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const API_URL_verify = 'http://localhost:8090/email';
-const APIL_verify = 'http://localhost:8090/sms';
+const API_URL_verify = 'http://localhost:8080/email';
+const APIL_verify = 'http://localhost:8080/sms';
 
 @Injectable({
   providedIn: 'root'

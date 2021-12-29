@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { collapseTextChangeRangesAcrossMultipleVersions } from 'typescript';
+import { TokenStorageService } from '../_services/token-storage.service';
 
 @Component({
   selector: 'app-navbar',
@@ -11,9 +13,14 @@ export class NavbarComponent implements OnInit {
 
   // public profile = false;
 
-  constructor() { }
+  constructor(private tokenStorageService: TokenStorageService) { }
 
   ngOnInit(): void {
+  }
+
+  logout(): void {
+    this.tokenStorageService.signOut();
+    // window.location.reload();
   }
 
   // toggleProfile(){
