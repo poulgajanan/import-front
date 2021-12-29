@@ -170,19 +170,20 @@ NOTE: This file contains all scripts for the actual Template.
           $(this).closest('.pus-card').removeClass().slideUp('fast');
         }); 
 
-        $('.select-select2').select2({
+        // $('.select-select2').select2({
 
-        });
-        $.fn.datepicker.defaults.format = "mm/dd/yyyy";
-        $('.datepicker').datepicker({
-            startDate: '-3d'
-        });
+        // });
 
-        $.fn.datepicker.defaults.format = "mm/dd/yyyy";
-        $('.rangpicker').daterangepicker({
-            autoUpdateInput: true, 
-            opens: 'left'
-        });
+        // $.fn.datepicker.defaults.format = "mm/dd/yyyy";
+        // $('.datepicker').datepicker({
+        //     startDate: '-3d'
+        // });
+
+        // $.fn.datepicker.defaults.format = "mm/dd/yyyy";
+        // $('.rangpicker').daterangepicker({
+        //     autoUpdateInput: true, 
+        //     opens: 'left'
+        // });
 
         // password show
         $('.view-password').find('.input-password').each(function(index, input) {
@@ -210,50 +211,50 @@ NOTE: This file contains all scripts for the actual Template.
         });
 
         // Mobile number
-        var telInput = $(".phone-code")
-            // initialise plugin
-            telInput.intlTelInput({
-            allowExtensions: true,
-            formatOnDisplay: true,
-            autoFormat: true,
-            autoHideDialCode: true,
-            autoPlaceholder: true,
-            defaultCountry: "auto",
-            ipinfoToken: "yolo",
-            nationalMode: false,
-            numberType: "MOBILE",
-            //onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
-            preferredCountries: ['sa', 'ae', 'qa','om','bh','kw','ma'],
-            preventInvalidNumbers: true,
-            separateDialCode: true,
-            initialCountry: "auto",
-            geoIpLookup: function(callback) {
-            $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
-                var countryCode = (resp && resp.country) ? resp.country : "";
-                callback(countryCode);
-            });
-        },
-           utilsScript: "js/mobilecode/utils.js"
-        });
+        // var telInput = $(".phone-code")
+        //     // initialise plugin
+        //     telInput.intlTelInput({
+        //     allowExtensions: true,
+        //     formatOnDisplay: true,
+        //     autoFormat: true,
+        //     autoHideDialCode: true,
+        //     autoPlaceholder: true,
+        //     defaultCountry: "auto",
+        //     ipinfoToken: "yolo",
+        //     nationalMode: false,
+        //     numberType: "MOBILE",
+        //     //onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+        //     preferredCountries: ['sa', 'ae', 'qa','om','bh','kw','ma'],
+        //     preventInvalidNumbers: true,
+        //     separateDialCode: true,
+        //     initialCountry: "auto",
+        //     geoIpLookup: function(callback) {
+        //     $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+        //         var countryCode = (resp && resp.country) ? resp.country : "";
+        //         callback(countryCode);
+        //     });
+        // },
+        //    utilsScript: "js/mobilecode/utils.js"
+        // });
         var reset = function() {
           telInput.removeClass("error");
           // errorMsg.addClass("hide");
           // validMsg.addClass("hide");
         };
         // on blur: validate
-        telInput.blur(function() {
-          reset();
-          if ($.trim(telInput.val())) {
-            if (telInput.intlTelInput("isValidNumber")) {
-              validMsg.removeClass("hide");
-            } else {
-              telInput.addClass("error");
-              errorMsg.removeClass("hide");
-            }
-          }
-        });
+        // telInput.blur(function() {
+        //   reset();
+        //   if ($.trim(telInput.val())) {
+        //     if (telInput.intlTelInput("isValidNumber")) {
+        //       validMsg.removeClass("hide");
+        //     } else {
+        //       telInput.addClass("error");
+        //       errorMsg.removeClass("hide");
+        //     }
+        //   }
+        // });
         // on keyup / change flag: reset
-        telInput.on("keyup change", reset);  
+        // telInput.on("keyup change", reset);  
 
         // $('.box-po-tabs li a').on('click', function() {        
         //     var dashboard_menu_type = $(this).attr('data-bind');
