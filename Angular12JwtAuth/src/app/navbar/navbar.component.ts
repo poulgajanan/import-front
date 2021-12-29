@@ -20,7 +20,7 @@ export class NavbarComponent implements OnInit {
 
   logout(): void {
     this.tokenStorageService.signOut();
-    // window.location.reload();
+    window.location.href='/login';
   }
 
   // toggleProfile(){

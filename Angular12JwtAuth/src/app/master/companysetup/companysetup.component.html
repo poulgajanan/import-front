@@ -79,7 +79,12 @@
                                     <div class="form-grid-list"> 
                                         <fieldset class="form-group"> 
                                             <label class="form-lbl">Mobile Number <span class="text-danger">*</span></label>
-                                            <input  [(ngModel)]="form.mobilenumber" #mobilenumber="ngModel" type="text" name="mobilenumber"  class="form-control phone-code" id="" required>
+                                            <input  [(ngModel)]="form.mobilenumber" #mobilenumber="ngModel" type="text" name="mobilenumber"  class="form-control phone-code" id="" required
+                                            ng2TelInput
+                                            mobilenumber
+                                            [ng2TelInputOptions]="{initialCountry: 'in'}"
+                                            (countryChange)="onCountryChange($event)"
+                                            >
                                             <div *ngIf="mobilenumber.invalid && mobilenumber.touched" class="alert-danger ">Mobile Number is required</div> 
                                         </fieldset>
                                     </div> 

@@ -1,5 +1,6 @@
 <!-- page data area start -->
 <div class="leftmargin pt-80">
+    <form #businessForm="ngForm" name="form" (ngSubmit)="onSubmit()">
     <div class="container-fluid ">
         <div class="page-navigation">
             <div class="row">
@@ -101,7 +102,16 @@
                                                     <div class="form-grid-list"> 
                                                         <fieldset class="form-group">
                                                             <label class="form-lbl">Mobile Number <span class="text-danger">*</span></label>
-                                                            <input type="text" class="form-control phone-code" id="" >
+                                                            <input 
+                                                            type="text"
+                                                            class="form-control phone"
+                                                            [(ngModel)]="form.mobile"
+                                                            name="mobile"
+                                                            #mobile="ngModel"
+                                                            required                                            
+                                                            ng2TelInput
+                                                            [ng2TelInputOptions]="{initialCountry: 'in'}"
+                                                        />
                                                         </fieldset>
                                                     </div> 
                                                 </div> 
@@ -112,7 +122,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div id="Vendor" class="details-po"
+                                        <div id="Vendor" class="details-po details-po-active"
                                             
                                         >
                                             <div class="">
@@ -209,8 +219,8 @@
                                                         <fieldset class="form-group">
                                                             <label class="form-lbl">Approx Date  <span class="text-danger">*</span></label>
                                                             <div class="headersearch">
-                                                                <input type="text" id=" " value="01-12-2020" name="StartDate" class="form-control datepicker mr-2" data-date-format="mm/dd/yyyy">
-                                                                <i class="far fa-calendar"></i>
+                                                                <input type="date" id=" " value="01-12-2020" name="StartDate" class="form-control datepicker mr-2" data-date-format="mm/dd/yyyy">
+                                                               
                                                             </div>
                                                         </fieldset> 
                                                     </div> 
@@ -231,6 +241,7 @@
             </div> 
         </div>
     </div>
+</form>
 </div>
 <!-- page data area End -->
 
@@ -374,8 +385,16 @@
                                     <div class="form-grid-list"> 
                                         <fieldset class="form-group">
                                             <label class="form-lbl">Mobile Number <span class="text-danger">*</span></label>
-                                            <input type="text" class="form-control phone-code" id="" >
-                                        </fieldset>
+                                            <input 
+                                                    type="text"
+                                                    class="form-control"
+                                                   
+                                                    name="mobile"
+                                                  
+                                                    required                                            
+                                                 
+                                                />
+                                        </fieldset> 
                                     </div> 
                                     
                                 </div>                                       

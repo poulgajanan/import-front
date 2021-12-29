@@ -4,8 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 
 import { RegisterComponent } from './register/register.component';
+import { LoginOtpComponent } from './loginotp/loginotp.component';
 import { LoginComponent } from './login/login.component';
-import { LoginwithotpComponent } from './loginwithotp/loginwithotp.component';
 import { VerifyotpComponent } from './verifyotp/verifyotp.component';
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
 import { VerifyMobileComponent } from './verify-mobile/verify-mobile.component';
@@ -48,8 +48,8 @@ const routes: Routes = [
   {path: '', redirectTo: '/index', pathMatch: 'full'},
   {path: 'index', component: HomeComponent},   
   {path: 'register' , component: RegisterComponent}, 
-  {path: 'loginwithotp', component: LoginComponent},
-  { path: 'login', component: LoginwithotpComponent},
+  {path: 'loginwithotp', component: LoginOtpComponent},
+  { path: 'login', component: LoginComponent},
   { path: 'profile', component: ProfileComponent },
   { path: 'user', component: BoardUserComponent },
   { path: 'mod', component: BoardModeratorComponent },

@@ -19,6 +19,19 @@ export class BusineespartnerComponent implements OnInit {
     this.customer = false;
   }
 
+  onCountryChange(event: any){
+    console.log(event);
+  }
+ form: any = {
+   name : null,
+   email: null,
+   mobilenumber: null
+ }
+  onSubmit(): void{
+    const {name,email,mobilenumber} = this.form;
+    console.log(this.form);  
+  }
+
   ngOnInit(): void {
   }
 

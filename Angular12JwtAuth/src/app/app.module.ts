@@ -19,8 +19,8 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
 import { RegisterComponent } from './register/register.component';
+import { LoginOtpComponent } from './loginotp/loginotp.component';
 import { LoginComponent } from './login/login.component';
-import { LoginwithotpComponent } from './loginwithotp/loginwithotp.component';
 import { VerifyotpComponent } from './verifyotp/verifyotp.component';
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
 import { VerifyMobileComponent } from './verify-mobile/verify-mobile.component';
@@ -68,8 +68,8 @@ import { VesseltrackingComponent } from './vesseltracking/vesseltracking.compone
     NavbarComponent,
 
     RegisterComponent,        //User Registeration Component
-    LoginComponent,           // User Login Component
-    LoginwithotpComponent,        //Login with OTP component    
+    LoginOtpComponent,          //Login with OTP component     
+    LoginComponent,            // User Login Component
     VerifyotpComponent,        
     VerifyEmailComponent,      // verifying email address of user 
     VerifyMobileComponent,     // Mobile OTP Verifation Component

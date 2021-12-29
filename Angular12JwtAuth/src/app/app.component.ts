@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { TokenStorageService } from './_services/token-storage.service';
-import { Router } from '@angular/router';
+
 // import * as $ from 'jquery';
 
 @Component({
@@ -17,14 +17,12 @@ export class AppComponent {
   username?: string;
 
   constructor(private titleService: Title, 
-              private tokenStorageService: TokenStorageService,
-              private route : Router
+              private tokenStorageService: TokenStorageService
               ) { }
 
   ngOnInit(): void {
     this.isLoggedIn = !!this.tokenStorageService.getToken();
-    // this.isLoggedIn = true;
-
+   
     if (this.isLoggedIn) {
       const user = this.tokenStorageService.getUser();
       this.roles = user.roles;
@@ -34,9 +32,7 @@ export class AppComponent {
 
       this.username = user.username;
     }
-    else{
-      this.route.navigate(['/login']); 
-    }
+   
   }
 
   public setTitle(newTitle: string){

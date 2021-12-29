@@ -29,11 +29,7 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  onOtpChange($event:any): void{
-    if($event.length==4){
-      this.value=$event
-    }     
-  }
+  
 
   onSubmit(): void {
     const { username, password } = this.form;
@@ -72,4 +68,6 @@ export class LoginComponent implements OnInit {
   reloadPage(): void {
     window.location.reload();
   }
+  
+
 }

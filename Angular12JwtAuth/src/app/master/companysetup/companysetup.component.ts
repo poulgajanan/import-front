@@ -31,6 +31,10 @@ export class CompanysetupComponent implements OnInit {
     console.log(this.form);  
   }
 
+  onCountryChange(event: any){
+    console.log(event);
+  }
+
   ngOnInit(): void {
   }
 

@@ -3,11 +3,11 @@ import { AuthService } from '../_services/auth.service';
 import { TokenStorageService } from '../_services/token-storage.service';
 
 @Component({
-  selector: 'app-loginwithotp',
-  templateUrl: './loginwithotp.component.html',
-  styleUrls: ['./loginwithotp.component.css']
+  selector: 'app-login',
+  templateUrl: './loginotp.component.html',
+  styleUrls: ['./loginotp.component.css']
 })
-export class LoginwithotpComponent implements OnInit {
+export class LoginOtpComponent implements OnInit {
 
   form: any = {
     username: null,
@@ -29,7 +29,11 @@ export class LoginwithotpComponent implements OnInit {
     }
   }
 
-  
+  onOtpChange($event:any): void{
+    if($event.length==4){
+      this.value=$event
+    }     
+  }
 
   onSubmit(): void {
     const { mobile, otp } = this.form;
@@ -67,6 +71,5 @@ export class LoginwithotpComponent implements OnInit {
   }
   reloadPage(): void {
     window.location.reload();
-  }
-
+  }  
 }
