@@ -33,21 +33,20 @@
               "src/styles.css"
             ],
             "scripts": [
-              "src/assets/js/DataTables/dataTables.bootstrap4.min.js",
-              "src/assets/js/DataTables/jquery.dataTables.min.js",
-              "src/assets/js/bootstrap.min.js",
-              "src/assets/js/custom.js",
-              "src/assets/js/jquery.min.js",
-              "src/assets/js/popper.min.js",
-              "src/assets/plugins/mobilecode/intlTelInput.js",
-              "src/assets/plugins/mobilecode/intlTelInput.min.js",
-              "src/assets/plugins/mobilecode/utils.js"
+              "jquery/dist/jquery.min.js",              
+              "bootstrap/dist/js/bootstrap.bundle.min.js",
+              "select2/dist/js/select2.min.js",
+              "@fortawesome/fontawesome-free/js/all.min.js",
+              "datatables.net/js/jquery.dataTables.min.js",
+              "datatables.net-dt/js/dataTables.dataTables.min.js",
+              "intl-tel-input/build/js/intlTelInput.min.js",
+              "src/assets/js/custom.js"              
             ]
           },
           "configurations": {
             "production": {
-              "budgets": [
-                {
+              "budgets": [   
+                { 
                   "type": "initial",
                   "maximumWarning": "5000kb",
                   "maximumError": "5mb"
@@ -64,7 +63,15 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "outputHashing": "all"
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
             },
             "development": {
               "buildOptimizer": false,

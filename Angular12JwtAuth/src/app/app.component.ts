@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { TokenStorageService } from './_services/token-storage.service';
+
+// import * as $ from 'jquery';
 
 @Component({
   selector: 'app-root',
@@ -13,11 +16,13 @@ export class AppComponent {
   showModeratorBoard = false;
   username?: string;
 
-  constructor(private tokenStorageService: TokenStorageService) { }
+  constructor(private titleService: Title, 
+              private tokenStorageService: TokenStorageService
+              ) { }
 
   ngOnInit(): void {
     this.isLoggedIn = !!this.tokenStorageService.getToken();
-
+   
     if (this.isLoggedIn) {
       const user = this.tokenStorageService.getUser();
       this.roles = user.roles;
@@ -27,11 +32,15 @@ export class AppComponent {
 
       this.username = user.username;
     }
+   
+  }
+
+  public setTitle(newTitle: string){
+    this.titleService.setTitle(newTitle);
   }
 
   logout(): void {
-    this.tokenStorageService.signOut();
+    this.tokenStorageService.signOut();    
     window.location.reload();
   }
-  
 }

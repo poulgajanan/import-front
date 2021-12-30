@@ -1,0 +1,432 @@
+<div class="leftmargin">
+    <!-- page data area start -->
+    <form #planningForm="ngForm" name="form" (ngSubmit)="onSubmit()">
+        <div class="pt-80">
+            <div class="container-fluid ">
+                <div class="page-navigation">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="d-flex align-items-center text-center  ">
+                                <div class="page-name">
+                                    <h6>Planning</h6>
+                                </div>
+                                <div class="ms-auto box-breadcrumb"> 
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item">
+                                            <a href="" class="mr-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">
+                                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                                                </svg>
+                                            </a>
+                                        </li> 
+                                        <li class="breadcrumb-item">
+                                            <a href="" class="mr-2">
+                                                Import
+                                            </a>
+                                        </li> 
+                                        <li class="breadcrumb-item active">Planning</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Customer Planning  -->
+                        <div class="pus-card ">
+                            <div class="pus-card-header d-flex align-items-center text-center justify-content-between">
+                                <div class="pus-card-title">
+                                    <h6>Customer Planning</h6>
+                                </div>
+                                <div class="pus-card-heading-elements">
+                                    <ul class="list-inline mb-0"> 
+                                        <li class="list-inline-item">
+                                            <a class="table-button-white-hover" data-bs-toggle="tooltip" data-bs-placement="top" title="Reset">
+                                                <img src="assets/images/table-icons/reset.svg" class="img-fluid" alt="">
+                                            </a>
+                                        </li>
+                                        <!-- <li class="list-inline-item">
+                                            <a class="table-button-white-hover" data-bs-toggle="tooltip" data-bs-placement="top" title="Save">
+                                                <img src="assets/images/table-icons/save.svg" class="img-fluid" alt="">
+                                            </a>
+                                        </li>  -->
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="pus-card-content collapse show"> 
+                                <div class="row mb-1">  
+                                    <div class="col-md-12">
+                                        
+                                        <div class="grid-4 form-grid-4">
+                                            <div class="form-grid-list">
+                                                <fieldset class="form-group ">
+                                                    <label class="form-lbl">Select Category  <span class="text-danger">*</span></label>
+                                                    <select [(ngModel)]="form.category" #category="ngModel"  name="category"  name="" class="form-control" required>
+                                                        <option value="" selected="">Select Category</option>
+                                                        <option value="Food">Food</option>
+                                                        <option value="Electronic">Electronic</option>
+                                                        <option value="Cloth">Cloth</option> 
+                                                    </select>
+                                                    <div *ngIf="category.invalid && category.touched " class="alert-danger ">Category is required</div>
+                                                </fieldset> 
+                                            </div> 
+                                            <div class="form-grid-list">
+                                                <fieldset class="form-group">
+                                                    <label class="form-lbl">Select Sub Category  <span class="text-danger">*</span></label>
+                                                    <select  [(ngModel)]="form.subcategory" #subcategory="ngModel"  name="subcategory"   class="form-control" required>
+                                                        <option >Select Sub Category</option>
+                                                        <option value="Mango">Mango </option>
+                                                        <option value="Orange">Orange</option>
+                                                        <option value="Grapes">Grapes</option> 
+                                                    </select>
+                                                    <div *ngIf="subcategory.invalid && subcategory.touched" class="alert-danger ">Sub Category is required</div>
+                                                </fieldset> 
+                                            </div> 
+                                            <div class="form-grid-list">
+                                                <div class="form-group">
+                                                    <label class="form-lbl" for=""> Product Name <span class="text-danger">*</span></label>
+                                                    <input [(ngModel)]="form.name" #name="ngModel"  name ="name" type="text" class="form-control" placeholder="Name" required>
+                                                    <div *ngIf="name.invalid && name.touched" class="alert-danger ">Name is required</div>
+                                                </div> 
+                                            </div> 
+                                            <div class="form-grid-list">
+                                                <fieldset class="form-group ">
+                                                    <label class="form-lbl">Select Vendor  <span class="text-danger">*</span></label>
+                                                    <div class="select-vendors">
+                                                        <select  [(ngModel)]="form.type" #type="ngModel"  name="type"  class="form-control select-select2" required>
+                                                            <option value="">Select Vendor</option>
+                                                            <option value="Vendor Name One">Vendor Name One </option>
+                                                            <option value="Vendor Name Two">Vendor Name Two</option>
+                                                            <option value="Vendor Name Three">Vendor Name Three</option> 
+                                                        </select>
+                                                        <div *ngIf="type.invalid && type.touched" class="alert-danger ">Vendor type is required</div> 
+                                                        <div class="toolbar-filter">
+                                                            <a class="add-vendors toolbar-link-filter" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Add Vendor">
+                                                                <img src="assets/images/table-icons/add.svg" class="img-fluid" alt="">
+                                                            </a>
+                                                        </div>                                       
+                                                    </div>
+                                                </fieldset> 
+                                            </div> 
+                                            <div class="form-grid-list">
+                                                <div class="form-group">
+                                                    <label class="form-lbl" for=""> Vendor Country<span class="text-danger">*</span></label>
+                                                    <input   [(ngModel)]="form.country" #country="ngModel"  name="country"  type="text" class="form-control" placeholder="Country " required>
+                                                    <div *ngIf="country.invalid && country.touched" class="alert-danger ">Country is required</div>                                                      
+                                                </div>
+                                            </div> 
+                                            <div class="form-grid-list">
+                                                <div class="form-group">
+                                                    <label class="form-lbl" for=""> Vendor State <span class="text-danger">*</span></label>
+                                                    <input [(ngModel)]="form.state" #state="ngModel"  name="state"  type="text" class="form-control" placeholder="State" required>
+                                                    <div *ngIf="state.invalid && state.touched" class="alert-danger ">State is required</div>                                                         
+                                                </div>
+                                            </div> 
+                                            <div class="form-grid-list">
+                                                <div class="form-group">
+                                                    <label class="form-lbl" for=""> Vendor City <span class="text-danger">*</span></label>
+                                                    <input [(ngModel)]="form.city" #city="ngModel"  name="city"  type="text" class="form-control" placeholder="City" required>      
+                                                    <div *ngIf="city.invalid && city.touched" class="alert-danger ">City is required</div>                                                   
+                                                </div>
+                                            </div> 
+                                            <div class="form-grid-list">
+                                                <div class="form-group">
+                                                    <label class="form-lbl" for=""> Vendor Zip/Postal Code <span class="text-danger">*</span></label>
+                                                    <input [(ngModel)]="form.zipcode" #zipcode="ngModel"  name="zipcode"  type="text" class="form-control" placeholder="City" required>  
+                                                    <div *ngIf="zipcode.invalid && zipcode.touched" class="alert-danger Fild-box-Error">Zip Code is required</div>                                                       
+                                                </div>
+                                            </div> 
+                                            <div class="form-grid-list">
+                                                <div class="form-group">
+                                                    <label class="form-lbl" for=""> Currency <span class="text-danger">*</span></label>
+                                                    <select [(ngModel)]="form.currency" #currency="ngModel"  name="currency"  class="form-control select-select2" required>
+                                                        <option value="">Select Currency</option>
+                                                        <option value="INR">INR </option>
+                                                        <option value="Dollar">Dollar</option>
+                                                        <option value="Pound">Pound</option> 
+                                                    </select>
+                                                    <div *ngIf="currency.invalid && currency.touched" class="alert-danger Fild-box-Error">Currency is required</div> 
+                                                </div>
+                                            </div> 
+                                            <div class="form-grid-list">
+                                                <div class="form-group">
+                                                    <label class="form-lbl" for=""> Quantity <span class="text-danger">*</span></label>
+                                                    <input [(ngModel)]="form.quantity" #quantity="ngModel"  name="quantity"  type="Number" class="form-control" placeholder="Quantity" required>   
+                                                    <div *ngIf="quantity.invalid && quantity.touched" class="alert-danger ">Quantity is required</div>                                                      
+                                                </div>
+                                            </div>
+                                            <div class="form-grid-list">
+                                                <fieldset class="form-group">
+                                                    <label class="form-lbl">Approx Date  <span class="text-danger">*</span></label>
+                                                    <div class="headersearch">
+                                                        <input [(ngModel)]="form.date" #date="ngModel"  name="date"  type="date" id=" " value="01-12-2020" name="StartDate" class="form-control datepicker mr-2" data-bs-date-format="mm/dd/yyyy" required>
+                                                        <div *ngIf="date.invalid && date.touched" class="alert-danger ">Approxmate data is required</div>                                                            
+                                                    </div>
+                                                </fieldset> 
+                                            </div> 
+                                                
+                                        </div> 
+                                        
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="text-center mt-3">
+                                            <button type="submit" routerLink="/import-vendor" class="button-style ">Send</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- page data area End -->
+
+    <!-- start back to top area -->
+    <div id="back-to-top" class="back-to-top">
+        <a href="#"> 
+            <span class="arrow topfirst"></span>
+            <span class="arrow topsecond"></span>
+        </a>
+    </div> 
+    <!-- end back to top area --> 
+
+    <!-- Right Panel filter -->
+    <div class="right-panel-filter right-panel-wrapper">
+        <div class="panel-overlay"></div>
+        <div class="right-panel w-40">
+            <div class="right-panel-head">
+                <h6 class="text-color">Add Vendor</h6>
+                <a class="close-panel flags-panel" href="javascript:void(0);">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" class="iconify" data-bs-icon="feather:chevron-right" style="vertical-align: -0.125em; transform: rotate(360deg);">
+                        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 18l6-6l-6-6"></path>
+                        </g>
+                    </svg>
+                </a>
+            </div>
+            <div class="right-panel-body">
+                <div class="right-filters">
+                    <div class="row"> 
+                        <div class="col-md-12"> 
+                            <div class="filters-scroll">
+                                <div class="companydetails filters-details">
+                                    <div class="filters-details-title border-bottom  pl-3 pr-3 pt-2 pb-2 ">
+                                        <p class="text-color">Company Details</p>
+                                    </div>
+                                    <div class="grid-2 form-grid-2 p-3">
+                                        <div class="form-grid-list grid-column1">
+                                            <fieldset class="form-group">
+                                                <label class="form-lbl">Company Name <span class="text-danger">*</span></label>
+                                                <div class="headersearch"> 
+                                                    <input type="text" class="form-control" placeholder="Company Name" required="required"> 
+                                                </div> 
+                                            </fieldset> 
+                                        </div>
+                                        <div class="form-grid-list">
+                                            <fieldset class="form-group">
+                                                <label class="form-lbl">Compnay Email <span class="text-danger">*</span></label>
+                                                <div class="headersearch"> 
+                                                    <input type="text" class="form-control" placeholder="Enter compnay email" required="required"> 
+                                                </div>
+                                            </fieldset> 
+                                        </div> 
+                                        <div class="form-grid-list"> 
+                                            <fieldset class="form-group">
+                                                <label class="form-lbl">Mobile Number <span class="text-danger">*</span></label>
+                                                <!-- <input type="text" class="form-control phone-code" id="" > -->
+                                                <input 
+                                                    type="text"
+                                                    class="form-control"
+                                                    [(ngModel)]="form.mobile"
+                                                    name="mobile"
+                                                    #mobile="ngModel"
+                                                    required                                            
+                                                    ng2TelInput
+                                                    [ng2TelInputOptions]="{initialCountry: 'in'}"
+                                                />
+                                            </fieldset>
+                                        </div> 
+                                        <div class="form-grid-list grid-column1">
+                                            <fieldset class="form-group ">
+                                                <label class="form-lbl">Compnay Website <span class="text-danger">*</span></label>
+                                                <div class="headersearch"> 
+                                                    <input type="text" class="form-control" placeholder="Enter compnay website" required="required"> 
+                                                </div>
+                                            </fieldset> 
+                                        </div> 
+                                        <div class="form-grid-list grid-column1">
+                                            <fieldset class="form-group">
+                                                <label class="form-lbl">Address Line 1 <span class="text-danger">*</span></label>
+                                                <div class="headersearch"> 
+                                                    <input type="text" class="form-control" placeholder="Enter address line 1" required="required"> 
+                                                </div>
+                                            </fieldset> 
+                                        </div>
+                                        <div class="form-grid-list grid-column1">
+                                            <fieldset class="form-group">
+                                                <label class="form-lbl">Address Line 2 </label>
+                                                <div class="headersearch"> 
+                                                    <input type="text" class="form-control" placeholder="Enter address line 2" required="required"> 
+                                                </div>
+                                            </fieldset> 
+                                        </div>
+                                        <div class="form-grid-list">
+                                            <fieldset class="form-group">
+                                                <label class="form-lbl">Country <span class="text-danger">*</span></label>
+                                                <div class="headersearch"> 
+                                                    <input type="text" class="form-control" placeholder="Enter Country" required="required"> 
+                                                </div>
+                                            </fieldset> 
+                                        </div>
+                                        <div class="form-grid-list">
+                                            <fieldset class="form-group">
+                                                <label class="form-lbl">State <span class="text-danger">*</span></label>
+                                                <div class="headersearch"> 
+                                                    <input type="text" class="form-control" placeholder="Enter State" required="required"> 
+                                                </div>
+                                            </fieldset> 
+                                        </div>
+                                        <div class="form-grid-list">
+                                            <fieldset class="form-group">
+                                                <label class="form-lbl">City <span class="text-danger">*</span></label>
+                                                <div class="headersearch"> 
+                                                    <input type="text" class="form-control" placeholder="Enter City" required="required"> 
+                                                </div>
+                                            </fieldset> 
+                                        </div>
+                                        <div class="form-grid-list">
+                                            <fieldset class="form-group">
+                                                <label class="form-lbl">Zip/Postal Code <span class="text-danger">*</span></label>
+                                                <div class="headersearch"> 
+                                                    <input type="text" class="form-control" placeholder="Enter Zip/Postal Code" required="required"> 
+                                                </div>
+                                            </fieldset> 
+                                        </div> 
+                                        <div class="form-grid-list">
+                                            <fieldset class="form-group ">
+                                                <label class="form-lbl">HSM Items <span class="text-danger">*</span></label>
+                                                <div class="headersearch"> 
+                                                    <input type="text" class="form-control" placeholder="Enter HSM Items" required="required"> 
+                                                </div>
+                                            </fieldset> 
+                                        </div> 
+                                        <div class="form-grid-list">
+                                            <fieldset class="form-group ">
+                                                <label class="form-lbl">HSM Code <span class="text-danger">*</span></label>
+                                                <div class="headersearch"> 
+                                                    <input type="text" class="form-control" placeholder="Enter HSM Code" required="required"> 
+                                                </div>
+                                            </fieldset> 
+                                        </div> 
+                                        <div class="form-grid-list">
+                                            <fieldset class="form-group ">
+                                                <label class="form-lbl">GST Number <span class="text-danger">*</span></label>
+                                                <div class="headersearch"> 
+                                                    <input type="text" class="form-control" placeholder="Enter GST Number" required="required"> 
+                                                </div>
+                                            </fieldset> 
+                                        </div> 
+                                        <div class="form-grid-list">
+                                            <fieldset class="form-group ">
+                                                <label class="form-lbl">IE Code <span class="text-danger">*</span></label>
+                                                <div class="headersearch"> 
+                                                    <input type="text" class="form-control" placeholder="Enter IE Code" required="required"> 
+                                                </div>
+                                            </fieldset> 
+                                        </div> 
+                                        <div class="form-grid-list">
+                                            <fieldset class="form-group">
+                                                <label class="form-lbl">Bank Name<span class="text-danger">*</span></label>
+                                                <div class="headersearch"> 
+                                                    <input type="text" class="form-control" placeholder="Enter Bank Name" required="required"> 
+                                                </div>
+                                            </fieldset> 
+                                        </div> 
+                                        <div class="form-grid-list">
+                                            <fieldset class="form-group">
+                                                <label class="form-lbl">Bank Code<span class="text-danger">*</span></label>
+                                                <div class="headersearch"> 
+                                                    <input type="text" class="form-control" placeholder="Enter Bank Code" required="required"> 
+                                                </div>
+                                            </fieldset> 
+                                        </div> 
+                                    </div>                                       
+                                </div>
+                                <div class="contactdetails filters-details">
+                                    <div class="filters-details-title border-bottom  pl-3 pr-3 pt-2 pb-2 ">
+                                        <p class="text-color">Person Details</p>
+                                    </div>
+                                    <div class="grid-2 form-grid-2 p-3">
+                                        <div class="form-grid-list grid-column1">
+                                            <fieldset class="form-group">
+                                                <label class="form-lbl">Name <span class="text-danger">*</span></label>
+                                                <div class="headersearch"> 
+                                                    <input type="text" class="form-control" placeholder="Enter name" required="required"> 
+                                                </div> 
+                                            </fieldset> 
+                                        </div>
+                                        <div class="form-grid-list">
+                                            <fieldset class="form-group">
+                                                <label class="form-lbl">Email <span class="text-danger">*</span></label>
+                                                <div class="headersearch"> 
+                                                    <input type="text" class="form-control" placeholder="Enter Email" required="required"> 
+                                                </div> 
+                                            </fieldset> 
+                                        </div>
+                                        <div class="form-grid-list"> 
+                                            <fieldset class="form-group">
+                                                <label class="form-lbl">Mobile Number <span class="text-danger">*</span></label>
+                                                <!-- <input type="text" class="form-control phone-code" id="" > -->
+                                                <input 
+                                                    type="text"
+                                                    class="form-control"
+                                                    [(ngModel)]="form.mobile"
+                                                    name="mobile"
+                                                    #mobile="ngModel"
+                                                    required                                            
+                                                    ng2TelInput
+                                                    [ng2TelInputOptions]="{initialCountry: 'in'}"
+                                                />
+                                            </fieldset>
+                                        </div> 
+                                        
+                                    </div>                                       
+                                </div>  
+
+
+                                <div class="companydocumnets filters-details">
+                                    <div class="filters-details-title border-bottom  pl-3 pr-3 pt-2 pb-2 ">
+                                        <p class="text-color">Upload Documnets</p>
+                                    </div>
+                                    <div class="grid-2 form-grid-2 p-3">
+                                        <div class="form-grid-list grid-column1">
+                                            <fieldset class="form-group">
+                                                <label class="form-lbl">GST <span class="text-danger">*</span></label> 
+                                                <div class="headersearch custom-file"> 
+                                                    <input class="form-control custom-file-input" id="inputGroupFile04" type="file">
+                                                    <label class="custom-file-label" for="inputGroupFile04">Select Documents</label> 
+                                                </div>
+                                            </fieldset> 
+                                        </div>                                             
+                                    </div>                                       
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="col-md-12 text-center mt-3"> 
+                            <div class="d-flex justify-content-center align-items-center"> 
+                                <a class="button-style ml-2" routerLink="/import-planning">
+                                    <img src="assets/images/table-icons/add.svg" class="img-fluid icon-filter-white mr-2" width="14px" alt="">
+                                    Add Vendor
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,341 @@
+<!-- page data area start -->
+<div class="leftmargin">
+    <div  id="#top"></div>
+    <div class="pt-80">
+    <form #generatepoForm="ngForm" name="form" (ngSubmit)="onSubmit()">
+    <div class="container-fluid ">
+        <div class="page-navigation">  
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="d-flex align-items-center text-center  ">
+                        <div class="page-name">
+                            <h6>Generate PO</h6>
+                        </div>
+                        <div class="ms-auto box-breadcrumb"> 
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a href="" class="mr-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">
+                                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                                        </svg>     
+                                    </a> 
+                                </li>     
+                                
+                                <li class="breadcrumb-item">
+                                    <a href="" class="mr-2">
+                                        Import
+                                    </a>
+                                </li> 
+                                <li class="breadcrumb-item active">Generate PO</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Customer Planning  -->
+                <div class="pus-card ">
+                    <div class="pus-card-header d-flex align-items-center text-center justify-content-between">
+                        <div class="pus-card-title">
+                            <h6>Generate Vendor PO </h6>
+                        </div>
+                        <div class="pus-card-heading-elements">
+                            <ul class="list-inline mb-0"> 
+                                <li class="list-inline-item">
+                                    <a class="table-button-white-hover" data-bs-toggle="tooltip" data-bs-placement="top" title="Reset">
+                                        <img src="assets/images/table-icons/reset.svg" class="img-fluid" alt="">
+                                    </a>
+                                </li>
+                                <!-- <li class="list-inline-item">
+                                    <a href="javascript:void(0);" class="table-button-white-hover" data-bs-toggle="tooltip" data-bs-placement="top" title="Save">
+                                        <img src="assets/images/table-icons/save.svg" class="img-fluid" alt="">
+                                    </a>
+                                </li>  -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pus-card-content collapse show"> 
+                        <div class="row mb-1">  
+                            <div class="col-md-12">
+                                <div class="grid-4 form-grid-4">
+                                    <div class="form-grid-list">
+                                        <fieldset class="form-group">
+                                            <label class="form-lbl">Select Vendor  <span class="text-danger">*</span></label> 
+                                            <select [(ngModel)]="form.vendor" #vendor="ngModel"  name="vendor" class="form-control select-select2" required>
+                                                <option value="">Select Vendor</option>
+                                                <option value="Vendor Name One">Vendor Name One </option>
+                                                <option value="Vendor Name Two">Vendor Name Two</option>
+                                                <option value="Vendor Name Three">Vendor Name Three</option> 
+                                            </select>  
+                                            <div *ngIf="vendor.invalid && vendor.touched" class="alert-danger">Vendor type is required</div>  
+                                        </fieldset> 
+                                    </div> 
+                                    <div class="form-grid-list">
+                                        <div class="form-group">
+                                            <label class="form-lbl" for=""> Vendor Reference <span class="text-danger">*</span></label>
+                                            <input  [(ngModel)]="form.references" #references="ngModel"  name="references" type="text" class="form-control" placeholder="Vendor Reference" required>                                                        
+                                            <div *ngIf="references.invalid && references.touched" class="alert-danger">References is required</div>
+                                        </div>
+                                    </div>  
+                                    <div class="form-grid-list">
+                                        <div class="form-group">
+                                            <label class="form-lbl" for=""> Currency <span class="text-danger">*</span></label>
+                                            <select  [(ngModel)]="form.currency" #currency="ngModel" type="text" name="currency" class="form-control select-select2" required>
+                                                <option value="">Select Currency</option>
+                                                <option value="INR">INR </option>
+                                                <option value="Dollar">Dollar</option>
+                                                <option value="Pound">Pound</option> 
+                                            </select>
+                                            <div *ngIf="currency.invalid && currency.touched" class="alert-danger">Currency is required</div>
+                                        </div>
+                                    </div> 
+                                    <div class="form-grid-list">
+                                        <div class="form-group">
+                                            <label class="form-lbl" for=""> Quantity <span class="text-danger">*</span></label>
+                                            <input   [(ngModel)]="form.quantity" #quantity="ngModel" name="quantity" type="Number" class="form-control" placeholder="Quantity" required>
+                                            <div *ngIf="quantity.invalid && quantity.touched" class="alert-danger">Quantity is required</div>                                                        
+                                        </div>
+                                    </div>
+                                    <div class="form-grid-list">
+                                        <fieldset class="form-group">
+                                            <label class="form-lbl">Approx Order Deadline  <span class="text-danger">*</span></label>
+                                            <div class="headersearch">
+                                                <input  [(ngModel)]="form.deadline" #deadline="ngModel" name="deadline" type="date" id=" " value="01-12-2020" name="StartDate" class="form-control datepicker mr-2" data-bs-date-format="mm/dd/yyyy" required>
+                                                <!-- <i class="fa fa-calendar"></i> -->
+                                                <div *ngIf="deadline.invalid && deadline.touched" class="alert-danger">Deadline is required</div>
+                                            </div>
+                                        </fieldset> 
+                                    </div> 
+
+                                    <div class="form-grid-list">
+                                        <fieldset class="form-group">
+                                            <label class="form-lbl">Receipt Date  <span class="text-danger">*</span></label>
+                                            <select  [(ngModel)]="form.receipttype" #receipttype="ngModel" type="text" name="receipttype" class="form-control" required>
+                                                <option value="" selected="">Select Receipt Date</option>
+                                                <option value="Receipt Date one">Receipt Date one</option>
+                                                <option value="Receipt Date Tw">Receipt Date Two</option>
+                                                <option value="Receipt Date Thre">Receipt Date Three</option> 
+                                            </select> 
+                                            <div *ngIf="receipttype.invalid && receipttype.touched" class="alert-danger"> Receipt Date is required</div>
+                                        </fieldset> 
+                                    </div> 
+                                </div> 
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="box-po mt-3">
+                                    <div class="tabs-po">
+                                        <ul class="list-line box-po-tabs">
+                                            <li class="list-inline-item">
+                                                <a class="" data-bs-bind="products"
+                                                    (click)="toggleProduct()"
+                                                    [ngClass]="{
+                                                        'po-tabs-active' : isProduct
+                                                    }"
+                                                >
+                                                  Products
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a class="" data-bs-bind="otherinfo"
+                                                    (click)="toggleOtherInfo()"
+                                                    [ngClass]="{
+                                                        'po-tabs-active' : !isProduct
+                                                    }"
+                                                >
+                                                  Other Information
+                                                </a>
+                                            </li> 
+                                        </ul>
+                                    </div>
+                                    <div class="tabs-details-po">
+                                        <div id="products" class="details-po"
+                                            [ngClass]="{
+                                                'details-po-active' : isProduct
+                                            }"
+                                        >
+                                            <div class="">
+                                                <div class="table-responsive table-view">
+                                                    <table id="TableFeatures" class="table table-hovermb-0 table-bordered defaulttable m-0" style="width:100%">
+                                                        <thead>
+                                                            <tr> 
+                                                                <th>Product</th>
+                                                                <th>Description</th>
+                                                                <th>Scheduled Date</th>
+                                                                <th>Quantiy</th>
+                                                                <th>Product Unit of Measure</th>
+                                                                <th>Unit Price</th>
+                                                                <th>Taxes</th>
+                                                                <th>Subtotal</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr> 
+                                                                <td>
+                                                                    <fieldset class=""> 
+                                                                        <select name="" class="form-control">
+                                                                            <option value="">select Product</option>
+                                                                            <option value="" selected="">Grey Cement</option>
+                                                                            <option value="">Monthly</option>
+                                                                            <option value="">Weekly</option>
+                                                                            <option value="">Today</option> 
+                                                                        </select>
+                                                                    </fieldset> 
+                                                                </td>
+                                                                <td>
+                                                                    <fieldset class=""> 
+                                                                        <input type="text" class="form-control" placeholder="Grey Cement">
+                                                                    </fieldset> 
+                                                                </td>
+                                                                <td>
+                                                                    <div class="headersearch">
+                                                                        <input type="date" id=" " value="01-12-2020" name="StartDate" class="form-control datepicker mr-2" data-bs-date-format="mm/dd/yyyy">
+                                                                        
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <fieldset class=""> 
+                                                                        <input type="number" class="form-control" placeholder="1.0000">
+                                                                    </fieldset> 
+                                                                </td>
+                                                                <td>
+                                                                    <fieldset class=""> 
+                                                                        <input type="text" class="form-control" placeholder="Kg">
+                                                                    </fieldset> 
+                                                                </td>
+                                                                <td>
+                                                                    <fieldset class=""> 
+                                                                        <input type="text" class="form-control" placeholder="100.00">
+                                                                    </fieldset> 
+                                                                </td>
+                                                                <td>
+                                                                    <fieldset class=""> 
+                                                                        <input type="text" class="form-control" placeholder="SGST 12%">
+                                                                    </fieldset> 
+                                                                </td>
+                                                                <td>
+                                                                    <fieldset class=""> 
+                                                                        <input type="text" class="form-control" placeholder="100.00 ₹">
+                                                                    </fieldset> 
+                                                                </td>
+                                                            </tr> 
+                                                            <tr> 
+                                                                <td>
+                                                                    <fieldset class=""> 
+                                                                        <select name="" class="form-control">
+                                                                            <option value="">select Product</option>
+                                                                            <option value="" selected="">Grey Cement</option>
+                                                                            <option value="">Monthly</option>
+                                                                            <option value="">Weekly</option>
+                                                                            <option value="">Today</option> 
+                                                                        </select>
+                                                                    </fieldset> 
+                                                                </td>
+                                                                <td>
+                                                                    <fieldset class=""> 
+                                                                        <input type="text" class="form-control" placeholder="Grey Cement">
+                                                                    </fieldset> 
+                                                                </td>
+                                                                <td>
+                                                                    <div class="headersearch">
+                                                                        <input type="date" id=" " value="01-12-2020" name="StartDate" class="form-control datepicker mr-2" data-bs-date-format="mm/dd/yyyy">
+                                                                        
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <fieldset class=""> 
+                                                                        <input type="number" class="form-control" placeholder="1.0000">
+                                                                    </fieldset> 
+                                                                </td>   
+                                                                <td>
+                                                                    <fieldset class=""> 
+                                                                        <input type="text" class="form-control" placeholder="Kg">
+                                                                    </fieldset> 
+                                                                </td>
+                                                                <td>
+                                                                    <fieldset class=""> 
+                                                                        <input type="text" class="form-control" placeholder="100.00">
+                                                                    </fieldset> 
+                                                                </td>
+                                                                <td>
+                                                                    <fieldset class=""> 
+                                                                        <input type="text" class="form-control" placeholder="SGST 12%">
+                                                                    </fieldset> 
+                                                                </td>
+                                                                <td>
+                                                                    <fieldset class=""> 
+                                                                        <input type="text" class="form-control" placeholder="100.00 ₹">
+                                                                    </fieldset> 
+                                                                </td>
+                                                            </tr> 
+                                                        </tbody>
+                                                    </table> 
+                                                </div>
+                                                <div class="row justify-content-end mt-2">
+                                                        
+                                                    <div class="col-md-4">
+                                                        <div class="total">
+                                                            <table class="table table-bordered defaulttable m-0" style="width:100%">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td> Untaxed Amount</td>
+                                                                        <td>₹ 100.00</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Taxes</td>
+                                                                        <td>₹ 50.00</td>
+                                                                    </tr> 
+                                                                    <tr>
+                                                                        <td>
+                                                                            <h6 class="m-0 text-color">Total</h6>
+                                                                        </td>
+                                                                        <td>
+                                                                            <h6 class="m-0 text-color">₹ 150.00</h6>
+                                                                        </td>
+                                                                    </tr> 
+                                                                </tbody>
+                                                            </table>
+                                                        </div>    
+                                                    </div>                            
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="text-center mt-3">
+                                                            <button routerLink='/import-generatepo-generatepopayment' type="submit" class="button-style ">Send By Email</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="otherinfo" class="details-po"
+                                            [ngClass]="{
+                                                'details-po-active' : !isProduct
+                                            }"
+                                        >
+                                            No other Information
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>                                
+                        </div>
+                    </div>
+                </div>  
+            </div> 
+        </div>
+    </div>
+    </form>
+ </div>
+</div>
+    <!-- page data area End -->
+
+<!-- start back to top area -->
+<div id="back-to-top" class="back-to-top">
+    <a (click)="toTop()"> 
+        <span class="arrow topfirst"></span>
+        <span class="arrow topsecond"></span>
+    </a>
+</div> 
+<!-- end back to top area --> 

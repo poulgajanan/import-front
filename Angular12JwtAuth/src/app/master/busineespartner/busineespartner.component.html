@@ -1,5 +1,6 @@
 <!-- page data area start -->
-<div class="pt-80">
+<div class="leftmargin pt-80">
+    <form #businessForm="ngForm" name="form" (ngSubmit)="onSubmit()">
     <div class="container-fluid ">
         <div class="page-navigation">
             <div class="row">
@@ -8,7 +9,7 @@
                         <div class="page-name">
                             <h6>Business Partner</h6>
                         </div>
-                        <div class="ml-auto box-breadcrumb"> 
+                        <div class="ms-auto box-breadcrumb"> 
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">
                                     <a href="" class="mr-2">
@@ -60,15 +61,26 @@
                                     <div class="tabs-po">
                                         <ul class="list-line box-po-tabs">
                                             <li class="list-inline-item">
-                                                <a href="javascript:void(0); " class="po-tabs-active" data-bind="Customer">Customer</a>
+                                                <a class="po-tabs-active" data-bind="Customer"
+                                                  (click)="toggleCustomer()"
+                                                >
+                                                  Customer
+                                                </a>
                                             </li>
                                             <li class="list-inline-item">
-                                                <a href="javascript:void(0);" data-bind="Vendor"> Vendor</a>
+                                                <a class="" data-bind="Vendor"
+                                                  (click)="toggleVendor()"
+
+                                                >
+                                                  Vendor
+                                                </a>
                                             </li> 
                                         </ul>
                                     </div>
                                     <div class="tabs-details-po">
-                                        <div id="Customer" class="details-po details-po-active">
+                                        <div id="Customer" class="details-po details-po-active"
+                                            
+                                        >
                                             <div class="">
                                                 <div class="grid-4 form-grid-4"> 
                                                     <div class="form-grid-list">
@@ -90,7 +102,16 @@
                                                     <div class="form-grid-list"> 
                                                         <fieldset class="form-group">
                                                             <label class="form-lbl">Mobile Number <span class="text-danger">*</span></label>
-                                                            <input type="text" class="form-control phone-code" id="" >
+                                                            <input 
+                                                            type="text"
+                                                            class="form-control phone"
+                                                            [(ngModel)]="form.mobile"
+                                                            name="mobile"
+                                                            #mobile="ngModel"
+                                                            required                                            
+                                                            ng2TelInput
+                                                            [ng2TelInputOptions]="{initialCountry: 'in'}"
+                                                        />
                                                         </fieldset>
                                                     </div> 
                                                 </div> 
@@ -101,7 +122,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div id="Vendor" class="details-po">
+                                        <div id="Vendor" class="details-po details-po-active"
+                                            
+                                        >
                                             <div class="">
                                                 <div class="grid-4 form-grid-4">
                                                     <div class="form-grid-list">
@@ -196,8 +219,8 @@
                                                         <fieldset class="form-group">
                                                             <label class="form-lbl">Approx Date  <span class="text-danger">*</span></label>
                                                             <div class="headersearch">
-                                                                <input type="text" id=" " value="01-12-2020" name="StartDate" class="form-control datepicker mr-2" data-date-format="mm/dd/yyyy">
-                                                                <i class="far fa-calendar"></i>
+                                                                <input type="date" id=" " value="01-12-2020" name="StartDate" class="form-control datepicker mr-2" data-date-format="mm/dd/yyyy">
+                                                               
                                                             </div>
                                                         </fieldset> 
                                                     </div> 
@@ -218,6 +241,7 @@
             </div> 
         </div>
     </div>
+</form>
 </div>
 <!-- page data area End -->
 
@@ -361,8 +385,16 @@
                                     <div class="form-grid-list"> 
                                         <fieldset class="form-group">
                                             <label class="form-lbl">Mobile Number <span class="text-danger">*</span></label>
-                                            <input type="text" class="form-control phone-code" id="" >
-                                        </fieldset>
+                                            <input 
+                                                    type="text"
+                                                    class="form-control"
+                                                   
+                                                    name="mobile"
+                                                  
+                                                    required                                            
+                                                 
+                                                />
+                                        </fieldset> 
                                     </div> 
                                     
                                 </div>                                       

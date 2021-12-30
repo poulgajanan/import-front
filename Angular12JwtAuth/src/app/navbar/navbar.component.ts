@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { collapseTextChangeRangesAcrossMultipleVersions } from 'typescript';
+import { TokenStorageService } from '../_services/token-storage.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,28 +11,26 @@ import { Component, OnInit } from '@angular/core';
 
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  // public profile = false;
+
+  constructor(private tokenStorageService: TokenStorageService) { }
 
   ngOnInit(): void {
   }
-  
-  // openNav() {
-  //   const sidenav = document.getElementById("mySidenav") as HTMLDivElement;
-  //   sidenav.style.width = "250px";
-    
-  //   const main = document.getElementById("main") as HTMLDivElement;
-  //   main.style.marginLeft = "250px";
 
-  //   document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  logout(): void {
+    this.tokenStorageService.signOut();
+    window.location.href='/login';
+  }
+
+  // toggleProfile(){
+  //   this.profile = !this.profile;
+  //   console.log(this.profile);
+  // }
+
+  // closeDropdown(){
+  //   this.profile = false;
+  //   console.log(this.profile);
   // }
   
-  // closeNav() {
-  //   const sidenav = document.getElementById("mySidenav") as HTMLDivElement;
-  //   sidenav.style.width = "0px";
-
-  //   const main =document.getElementById("main") as HTMLDivElement;
-  //   main.style.marginLeft = "0px";
-
-  //   document.body.style.backgroundColor = "white";
-  // }
 }

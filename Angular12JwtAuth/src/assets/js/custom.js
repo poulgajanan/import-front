@@ -68,8 +68,6 @@ NOTE: This file contains all scripts for the actual Template.
         $(".mob-header").click(function(){
             $(".header-left").addClass("hover-header-left");
         })
-
-
     };
 
     /*==========================================
@@ -115,12 +113,12 @@ NOTE: This file contains all scripts for the actual Template.
     /*==========================================
             :: Datatable
     ==========================================*/
-    // PUS.datatable = function () { 
-    //     $('.datatable').DataTable({
-            // "scrollX": true,
-            // "scrollCollapse": true
-    //     }); 
-    // }; 
+    PUS.datatable = function () { 
+        $('.datatable').DataTable({
+            "scrollX": true,
+            "scrollCollapse": true
+        }); 
+    }; 
 
 	/*==========================================
     		:: On Load 
@@ -161,30 +159,31 @@ NOTE: This file contains all scripts for the actual Template.
 
         
         // Collapsible Card
-        $('a[data-action="collapse"]').on('click', function (e) {
-            e.preventDefault();
-            $(this).closest('.pus-card').children('.pus-card-content').collapse('toggle');
-            $(this).closest('.pus-card').find('[data-action="collapse"] i').toggleClass('fa-plus fa-minus');
-        }); 
+        // $('a[data-action="collapse"]').on('click', function (e) {
+        //     e.preventDefault();
+        //     $(this).closest('.pus-card').children('.pus-card-content').collapse('toggle');
+        //     $(this).closest('.pus-card').find('[data-action="collapse"] i').toggleClass('fa-plus fa-minus');
+        // }); 
 
         // Close Card
         $('a[data-action="close"]').on('click', function () {
           $(this).closest('.pus-card').removeClass().slideUp('fast');
         }); 
 
-        $('.select-select2').select2({
+        // $('.select-select2').select2({
 
-        });
-        $.fn.datepicker.defaults.format = "mm/dd/yyyy";
-        $('.datepicker').datepicker({
-            startDate: '-3d'
-        });
+        // });
 
-        $.fn.datepicker.defaults.format = "mm/dd/yyyy";
-        $('.rangpicker').daterangepicker({
-            autoUpdateInput: true, 
-            opens: 'left'
-        });
+        // $.fn.datepicker.defaults.format = "mm/dd/yyyy";
+        // $('.datepicker').datepicker({
+        //     startDate: '-3d'
+        // });
+
+        // $.fn.datepicker.defaults.format = "mm/dd/yyyy";
+        // $('.rangpicker').daterangepicker({
+        //     autoUpdateInput: true, 
+        //     opens: 'left'
+        // });
 
         // password show
         $('.view-password').find('.input-password').each(function(index, input) {
@@ -212,58 +211,65 @@ NOTE: This file contains all scripts for the actual Template.
         });
 
         // Mobile number
-        var telInput = $(".phone-code")
-            // initialise plugin
-            telInput.intlTelInput({
-            allowExtensions: true,
-            formatOnDisplay: true,
-            autoFormat: true,
-            autoHideDialCode: true,
-            autoPlaceholder: true,
-            defaultCountry: "auto",
-            ipinfoToken: "yolo",
-            nationalMode: false,
-            numberType: "MOBILE",
-            //onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
-            preferredCountries: ['sa', 'ae', 'qa','om','bh','kw','ma'],
-            preventInvalidNumbers: true,
-            separateDialCode: true,
-            initialCountry: "auto",
-            geoIpLookup: function(callback) {
-            $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
-                var countryCode = (resp && resp.country) ? resp.country : "";
-                callback(countryCode);
-            });
-        },
-           utilsScript: "js/mobilecode/utils.js"
-        });
+        // var telInput = $(".phone-code")
+        //     // initialise plugin
+        //     telInput.intlTelInput({
+        //     allowExtensions: true,
+        //     formatOnDisplay: true,
+        //     autoFormat: true,
+        //     autoHideDialCode: true,
+        //     autoPlaceholder: true,
+        //     defaultCountry: "auto",
+        //     ipinfoToken: "yolo",
+        //     nationalMode: false,
+        //     numberType: "MOBILE",
+        //     //onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+        //     preferredCountries: ['sa', 'ae', 'qa','om','bh','kw','ma'],
+        //     preventInvalidNumbers: true,
+        //     separateDialCode: true,
+        //     initialCountry: "auto",
+        //     geoIpLookup: function(callback) {
+        //     $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+        //         var countryCode = (resp && resp.country) ? resp.country : "";
+        //         callback(countryCode);
+        //     });
+        // },
+        //    utilsScript: "js/mobilecode/utils.js"
+        // });
         var reset = function() {
           telInput.removeClass("error");
           // errorMsg.addClass("hide");
           // validMsg.addClass("hide");
         };
         // on blur: validate
-        telInput.blur(function() {
-          reset();
-          if ($.trim(telInput.val())) {
-            if (telInput.intlTelInput("isValidNumber")) {
-              validMsg.removeClass("hide");
-            } else {
-              telInput.addClass("error");
-              errorMsg.removeClass("hide");
-            }
-          }
-        });
+        // telInput.blur(function() {
+        //   reset();
+        //   if ($.trim(telInput.val())) {
+        //     if (telInput.intlTelInput("isValidNumber")) {
+        //       validMsg.removeClass("hide");
+        //     } else {
+        //       telInput.addClass("error");
+        //       errorMsg.removeClass("hide");
+        //     }
+        //   }
+        // });
         // on keyup / change flag: reset
-        telInput.on("keyup change", reset);  
+        // telInput.on("keyup change", reset);  
 
-        $('.box-po-tabs li a').on('click', function() {        
-            var dashboard_menu_type = $(this).attr('data-bind');
-            $('.details-po').hide();
-            $('.box-po-tabs li a').removeClass('po-tabs-active');
-            $('#' + dashboard_menu_type).show();
-            $(this).addClass('po-tabs-active');
-        });
+        // $('.box-po-tabs li a').on('click', function() {        
+        //     var dashboard_menu_type = $(this).attr('data-bind');
+        //     $('.details-po').hide();
+        //     $('.box-po-tabs li a').removeClass('po-tabs-active');
+        //     $('#' + dashboard_menu_type).show();
+        //     $(this).addClass('po-tabs-active');
+        // });
+        // $('.box-application-tabs li a').on('click', function() {        
+        //     var dashboard_menu_type = $(this).attr('data-bind');
+        //     $('.details-application').hide();
+        //     $('.box-application-tabs li a').removeClass('application-tabs-active');
+        //     $('#' + dashboard_menu_type).show();
+        //     $(this).addClass('application-tabs-active');
+        // });
 
 	}); 
 })(jQuery);

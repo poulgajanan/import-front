@@ -1,0 +1,882 @@
+<div class="leftmargin">
+<!-- page data area start -->
+<div class="pt-80">
+    <div class="container-fluid ">
+        <div class="page-navigation">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="d-flex align-items-center text-center  ">
+                        <div class="page-name">
+                            <h6>Letter of Credit</h6>
+                        </div>
+                        <div class="ms-auto box-breadcrumb"> 
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a href="" class="mr-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">
+                                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                                        </svg>
+                                    </a>
+                                </li> 
+                                <li class="breadcrumb-item">
+                                    <a href="" class="mr-2">
+                                        Import
+                                    </a>
+                                </li> 
+                                <li class="breadcrumb-item active">Letter of Credit</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Customer Planning  -->
+                <div class="pus-card ">
+                    <div class="pus-card-header d-flex align-items-center text-center justify-content-between">
+                        <div class="pus-card-title">
+                            <h6>Application forms</h6>
+                        </div>
+                        <div class="pus-card-heading-elements">
+                            <ul class="list-inline mb-0"> 
+                                <li class="list-inline-item">
+                                    <select class="form-select">
+                                        <option value="" selected="">Select Bank</option>
+                                        <option value="" >ICICI</option>
+                                        <option value="">SBI</option>
+                                        <option value="">Other</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pus-card-content collapse show"> 
+                        <div class="row mb-1">  
+                            <div class="col-md-12"> 
+                                <div class="Application-area">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="Application-po d-flex justify-content-between">
+                                                <div class="">
+                                                    <ul class="list-line box-application-tabs">
+                                                        <li class="list-inline-item">
+                                                            <a class="" data-bs-bind="FormA1"
+                                                                (click)="changeTab(1)"
+                                                                [ngClass]="{
+                                                                    'application-tabs-active' : (tab == 1)
+                                                                }"
+                                                            >
+                                                                Form A1
+                                                            </a>
+                                                        </li>
+                                                        <li class="list-inline-item">
+                                                            <a data-bs-bind="FEMADecleration"
+                                                                (click)="changeTab(2)"
+                                                                [ngClass]="{
+                                                                    'application-tabs-active' : (tab == 2)
+                                                                }"
+                                                            >
+                                                                FEMA Decleration & NNL Form
+                                                            </a>
+                                                        </li> 
+                                                        <li class="list-inline-item">
+                                                            <a data-bs-bind="MEMO"
+                                                                (click)="changeTab(3)"
+                                                                [ngClass]="{
+                                                                    'application-tabs-active' : (tab == 3)
+                                                                }"
+                                                            >
+                                                                Limit Set up MEMO
+                                                            </a>
+                                                        </li> 
+                                                        <li class="list-inline-item">
+                                                            <a data-bs-bind="AppraisalNote"
+                                                                (click)="changeTab(4)"
+                                                                [ngClass]="{
+                                                                    'application-tabs-active' : (tab == 4)
+                                                                }"
+                                                            >                                                            
+                                                                Letter of Credit Appraisal Note
+                                                            </a>
+                                                        </li> 
+                                                        <li class="list-inline-item">
+                                                            <a data-bs-bind="Executed"
+                                                                (click)="changeTab(5)"
+                                                                [ngClass]="{
+                                                                    'application-tabs-active' : (tab == 5)
+                                                                }"
+                                                            >
+                                                                Customer Request Letter for Import LC MFA Executed
+                                                            </a>
+                                                        </li> 
+                                                        <li class="list-inline-item">
+                                                            <a data-bs-bind="NotExecuted"
+                                                                (click)="changeTab(6)"
+                                                                [ngClass]="{
+                                                                    'application-tabs-active' : (tab == 6)
+                                                                }"
+                                                            >
+                                                                Customer Request Letter for Import LC MFA Not Executed
+                                                            </a>
+                                                        </li> 
+                                                    </ul>
+                                                </div>                                                            
+                                            </div>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <div class="Application-details-po form doc-form">
+                                                <div class="tabs-details-po mt-lg-0  mt-3">
+                                                    <div id="FormA1" class="details-application "
+                                                        [ngClass]="{
+                                                            'details-application-active' : (tab == 1)
+                                                        }"
+                                                    >
+                                                        <div class="">
+                                                            <div class="text-center">
+                                                                <p>(To be printed on White paper)</p>
+                                                                
+                                                            </div>
+                                                            <div class="d-flex justify-content-center justify-content-between align-items-center">
+                                                                <div class="text-center">
+                                                                    <p>Form A1 <br> (For Import Payments only)</p>
+                                                                    <p>Application for Remittance <br> in Foreign Currency</p>
+                                                                </div>
+                                                                <div class="w-40">
+                                                                    <p>
+                                                                        Decode Number 
+                                                                        <input type="text" placeholder="Name of currency" style="width: 66%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"> 
+                                                                    </p>
+                                                                    <p>
+                                                                        Form Number 
+                                                                        <input type="text" placeholder="Name of currency" style="width: 71%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"> 
+                                                                    </p>
+                                                                    <p>
+                                                                        <small>(To be filled by authorised dealer)</small>
+                                                                    </p>
+                                                                    <p>
+                                                                        Serial Number
+                                                                        <input type="text" placeholder="Name of currency" style="width: 70%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"> 
+                                                                    </p>
+                                                                    <p><small>(for use of Reserve Bank of India)</small></p>
+                                                                    <p>
+                                                                        Amount 
+                                                                        <input type="text" placeholder="Currency" style="width: 39%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;">  
+                                                                        <input type="text" placeholder="Amount" style="width: 39%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"> 
+                                                                    </p>
+                                                                    <p>Equivalent to Rupees  <input type="text" placeholder="Amount" style="width: 57%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"></p>
+                                                                    <p><small>(To be completed by authorised dealer)</small></p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="">
+                                                                <p class="bg-dark">________________</p>
+                                                                <br>
+                                                                <p>
+                                                                    I/We wish to purchase 
+                                                                    <input type="text" placeholder="Name of currency" style="width: 15%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"> 
+                                                                    <input type="text" placeholder="(Amount in words)" style="width: 15%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;">through 
+                                                                    <input type="text" placeholder="Name and address of the authorised dealer" style="width: 33%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;">
+                                                                    for payment to 
+                                                                    <input type="text" placeholder="Name and address of the beneficiary of the remittanceName and address of the beneficiary of the remittance" style="width: 84%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"> 
+                                                                    in payment of imports into India, detailed below:
+                                                                </p>
+                                                            </div>
+
+                                                            <div class="text-center mt-20 mb-20">
+                                                                <p><strong>Details of goods imported or to be imported into India</strong></p>
+                                                                <p class="mt-20"><strong>Section A:</strong> Import Licence particulars</p>
+                                                            </div>
+
+                                                            <div class="">
+                                                                <table class="table table-responsive table-bordered text-center">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th colspan="8">Import Licence</th>
+                                                                            <th colspan="3">Date of Issue </th>
+                                                                            <th colspan="3">Date of expiry</th> 
+                                                                            <th rowspan="3">Face value of licence</th>
+                                                                            <th rowspan="3">Amount to be endorsed (in Rs.) @</th>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th colspan="2">Prefix</th>
+                                                                            <th rowspan="2">Licence Number</th>
+                                                                            <th colspan="5">Suffixes</th> 
+                                                                            <th rowspan="2">Date</th>
+                                                                            <th rowspan="2">Month</th>
+                                                                            <th rowspan="2">Year</th>
+                                                                            <th rowspan="2">Date</th>
+                                                                            <th rowspan="2">Month</th>
+                                                                            <th rowspan="2">Year</th> 
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>1</th>
+                                                                            <th>2</th> 
+                                                                            <th>1</th>
+                                                                            <th>2</th>
+                                                                            <th>3</th>
+                                                                            <th>4</th>
+                                                                            <th>5</th>    
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+
+                                                            <div class="">
+                                                                <p>@ Actual amount endorsed in rupees against each licence involved, should be stated under this column.</p>
+                                                                <p>Note: If more than one licence is involved, particulars of all licences should be furnished. If the space is inadequate, separate statement may be attached. The amount utilised against each licence should invariably be indicated.</p>
+                                                            </div>
+
+
+                                                            <div class="text-center mtb-20">
+                                                                <p><strong>Section B: Import particulars</strong></p>
+                                                            </div>
+
+                                                            <div class="">
+                                                                <table class="table table-responsive table-bordered text-center" overflow-x="auto">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th colspan="4">Invoice Details</th>
+                                                                            <th rowspan="2">Quantity of goods</th>
+                                                                            <th rowspan="2">Descripti on of goods</th>
+                                                                            <th rowspan="2">Harmonised System of Classificati on</th>
+                                                                            <th rowspan="2">Country of origin of goods</th>
+                                                                            <th rowspan="2">Country from which goods areconsigned</th>
+                                                                            <th rowspan="2">Mode of shipment(air, seapost, railriver, transport port, etc.)</th>
+                                                                            <th rowspan="2">Date of shipment (if not known approximate date) </th>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Number and date</th>
+                                                                            <th>Terms(c.i.f., f.o.b., c.and.f. etc.)</th> 
+                                                                            <th>Currency</th>
+                                                                            <th>Amount</th> 
+                                                                        </tr> 
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                        </tr> 
+                                                                        <tr>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                        </tr> 
+                                                                        <tr>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                        </tr> 
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+
+                                                            <div class="text-center mtb-20">
+                                                                <p><strong>Section C: Other particulars</strong></p>
+                                                            </div>
+                                                            <div class="">
+                                                                <p>Details of forward purchase contract if any, booked against the import</p>
+                                                                <input type="text" placeholder="Number and date of Contract" style="width: 30%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;">
+                                                                <input type="text" placeholder="Currency and  Amount of Contract" style="width: 30%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;">
+                                                                <input type="text" placeholder="Balance under the contract" style="width: 30%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;">
+                                                            </div>
+
+                                                            <div class="mt-20">
+                                                                <p>If remittance to be made is less than invoice value, reasons therefore (i.e. part remittance,instalment etc.) </p>
+                                                                <input type="text" placeholder="Number and date of Contract" style="width: 100%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"> 
+                                                            </div>
+
+                                                            <hr>
+
+                                                            <div class="">
+                                                                <p>I/We hereby declare that the statements made by me/us on this form are true and that I/we have not applied for an authorisation through any other bank</p>
+                                                                <p> I/We declare and also understand that the foreign exchange to be acquired by me/us pursuant to this application shall be used by me/us only for the purpose for which it is acquired and that the conditions subject to which the exchange is granted will be complied with.</p>
+                                                            </div>
+
+                                                            <div class="d-flex justify-content-center justify-content-between align-items-center">
+                                                                <div class="text-center w-60">
+                                                                    <br>
+                                                                    <br>
+                                                                    <p>Stamp</p>
+                                                                    <br>
+                                                                    <br>
+                                                                    <p>Date  <input type="text" placeholder=" " style="width: 30%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;">  </p> 
+                                                                </div>
+                                                                <div class="w-40">
+                                                                    <p> 
+                                                                        <input type="text" placeholder="Signature of Applicant/Authorised Official" style="width: 100%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"> 
+                                                                    </p>
+                                                                    <p>
+                                                                        @ Name and Address of Applicant
+                                                                        <input type="text" placeholder="Importer's Code Number" style="width: 100%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"> 
+                                                                    </p> 
+                                                                    <p>
+                                                                        @ Nationality.
+                                                                        <input type="text" placeholder="" style="width: 70%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"> 
+                                                                    </p>
+                                                                    <p>@ To be filled in capital letters</p> 
+                                                                </div>
+                                                            </div>
+
+                                                            <hr>
+
+                                                            <div class="text-center">
+                                                                <p><strong>NOTE: For remittances covering intermediary trade, form A2 should be used. Declaration to be furnished by Applicant</strong></p>
+                                                            </div>
+
+                                                            <div class="">
+                                                                <p>I/We declare that</p>
+                                                                <p>(α)  the import licence/s against which the remittance is sought is/are valid and has/have not been cancelled by DGFT.</p>
+                                                                <p>(β)  the goods to which this application relates have been* / will be* imported into India on my/our own account*</p>
+                                                                <p>(χ) the import is on behalf of @ <input type="text" placeholder="" style="width: 50%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"> * and</p>
+                                                                <p>(δ) the invoice value of the goods which is declared on this form is the real value of the goods imported* / to be imported* into in India.</p>
+                                                            </div>
+
+                                                            <div class="">
+                                                                <p>If the Import has been made</p>
+                                                                <p>I/We attach the relative Customs-stamped Exchange Control copy of Bill of Entry * Post parcel wrapper (for imports by post)*/Courier Wrapper (for imports through courier)*</p>
+                                                            </div>
+                                                            <div class="text-center">
+                                                                <p>OR</p>
+                                                            </div>
+                                                            <div class="">
+                                                                <p>If the import is to be made</p>
+                                                                <p>I/we undertake to produce within three months to the asthorised dealer the relative Customs-stamped Exchange Control copy of Bill of Entry * Post parcel wrapper (for imports by post)*/Courier wrapper (for imports through Courier)*</p>
+                                                            </div>
+
+                                                            <div class="">
+                                                                <p>* Strike out item not applicable</p>
+                                                                <p>@ Where the import is on behalf of Central/State Government Department or a company owned by Central/State Government/Statutory Corporation, Local Body, etc. the name of the Government Department, Corporation etc. should be stated.</p>
+                                                            </div>
+                                                            
+
+                                                            <div class="d-flex justify-content-between mt-50">
+                                                                <div class="">
+                                                                    <p>Date  <input type="text" placeholder=" " style="width: 30%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;">  </p>
+                                                                </div>
+                                                                <div class="">
+                                                                    <p><input type="text" placeholder=" " style="width: 100%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;">  </p>
+                                                                    <p><small>(Signature of Applicant/Authorised Official)</small></p>
+                                                                </div>
+                                                            </div>
+
+                                                            <hr>
+
+                                                            <div class="text-center">
+                                                                <p><strong>Space for comments of the authorised dealer</strong></p>
+                                                            </div>
+                                                            <div class="">
+                                                                <p>(While forwarding the application to Reserve Bank for approval, reference to Exchange Control Manual paragraph/ A.D.Circular in terms of which the reference is made should invariably be cited. If any remittance application on account of the same import was referred to Reserve Bank earlier, reference to the last correspondence/approval should also be cited). </p>
+                                                            </div>
+
+                                                            <div class="d-flex justify-content-center justify-content-between ">
+                                                                <div class="w-60">
+                                                                    <br>
+                                                                    <br>
+                                                                    <p>Stamp</p>
+                                                                    <br>
+                                                                    <br>
+                                                                    <p>Date  <input type="text" placeholder=" " style="width: 30%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;">  </p> 
+                                                                </div>
+                                                                <div class="w-40">
+                                                                    <p> 
+                                                                        <input type="text" placeholder="Signature of Applicant/Authorised Official" style="width: 100%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"> 
+                                                                    </p>
+                                                                    <p>
+                                                                        Name
+                                                                        <input type="text" placeholder="" style="width: 85%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"> 
+                                                                    </p> 
+                                                                    <p>
+                                                                        Designation
+                                                                        <input type="text" placeholder="" style="width: 73%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"> 
+                                                                    </p> 
+                                                                    <p>
+                                                                        Name and Address of
+                                                                        <input type="text" placeholder="" style="width: 55%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"> 
+                                                                    </p> 
+                                                                    <p>
+                                                                        Authorised dealer
+                                                                        <input type="text" placeholder="" style="width: 62%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"> 
+                                                                    </p> 
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="">
+                                                                <p><strong>Certificate to be Furnished by Authorised Dealer (Importer's Banker)</strong></p>
+                                                                <p>We hereby certify that:</p>
+                                                                <p><small>Put a tick in the relevant block</small></p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <p>(a) This payment is</p>
+                                                                        <ul class="pl-5">
+                                                                            <li>
+                                                                                <p>(i)  <input type="checkbox"> An advance remittance</p>
+                                                                            </li>
+                                                                            <li>
+                                                                                <p>(ii) <input type="checkbox">  In retirement of bills under Letter of Credit opened through us </p>
+                                                                            </li>
+                                                                            <li>
+                                                                                <p>(iii) <input type="checkbox"> Against documents received through our medium for collection</p>
+                                                                            </li>
+                                                                            <li>
+                                                                                <p>(iv) <input type="checkbox"> On account of documents received direct by the applicant/s against undertaking furnished by the latter to submit Customs-stamped Exchange Control copy of Bill of Entry of Post Parcel/courier wrapper within three months</p>
+                                                                            </li>
+                                                                            <li>
+                                                                                <p>(v) <input type="checkbox"> On account of documents received direct by the applicant/s against Customs-stamped Exchange Control copy of Bill of Entry/post parcel/courier wrapper (attached) submitted by the latter </p>
+                                                                            </li>
+                                                                            <li>
+                                                                                <p>(vi)  <input type="checkbox"> <input type="text" placeholder="(any other case, to be explained)" style="width: 92%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"> </p>
+                                                                            </li>
+                                                                            <li>
+                                                                                <p></p>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>(b) All the Exchange Control regulations applicable to the remittance have been complied with</p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>(χ) The payment to the supplier of the goods has been* / will be* made through <input type="text" placeholder="(Name and Address of the foreign bank)" style="width: 35%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"> </p>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <br>
+                                                            <br>
+                                                            <hr>
+                                                            <br>
+                                                            <br>
+
+                                                            <div class="">
+                                                                <p>We also certify/undertake that the relevant Customs-stamped Exchange Control copy of Bill of Entry or post parcel/courier wrapper</p> 
+                                                                <p>∗ Shall be verified by us within three months [vide certificate (a)(ii) and (iii) above].</p>
+                                                                <p>∗ Has been verified [vide certificate (a) (v) above].</p>
+                                                                <p>∗ Shall be obtained from the applicant/s within three months [vide certificate (a) (i) and (iv) above].</p>
+                                                            </div>
+
+                                                            <div class="d-flex justify-content-center justify-content-between ">
+                                                                <div class="w-60">
+                                                                    <br>
+                                                                    <br>
+                                                                    <p>Stamp</p>
+                                                                    <br>
+                                                                    <br>
+                                                                    <p>Date  <input type="text" placeholder=" " style="width: 30%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;">  </p> 
+                                                                    <p>Strike out item not applicable</p>
+                                                                </div>
+                                                                <div class="w-40">
+                                                                    <p> 
+                                                                        <input type="text" placeholder="(Signature of Authorised Official)" style="width: 100%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"> 
+                                                                    </p>
+                                                                    <p>
+                                                                        Name
+                                                                        <input type="text" placeholder="" style="width: 85%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"> 
+                                                                    </p> 
+                                                                    <p>
+                                                                        Designation
+                                                                        <input type="text" placeholder="" style="width: 73%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"> 
+                                                                    </p> 
+                                                                    <p>
+                                                                        Name and Address of
+                                                                        <input type="text" placeholder="" style="width: 55%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"> 
+                                                                    </p> 
+                                                                    <p>
+                                                                        Authorised dealer
+                                                                        <input type="text" placeholder="" style="width: 62%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"> 
+                                                                    </p> 
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="text-center mt-50">
+                                                                <p><strong>DECLARATION-CUM UNDERTAKING</strong></p>
+                                                                <p>(Under Section10 (5), Chapter III of The Foreign Exchange Management Act, 1999)</p>
+                                                            </div>
+
+                                                            <div class="">
+                                                                <p>I / We hereby declare that the transaction the details of which are specifically mentioned in the schedule hereunder does not involve, and is not designed for the purpose of any contravention or evasion of the provisions of the aforesaid act of any rule, regulation, notification, direction or order made thereunder.</p>
+                                                                <p>I/ We also hereby agree and undertake to give such information/ documents as will reasonably satisfy you about this transaction in terms of the above declaration.</p>                                                                       
+                                                                <p>I/ We also undertake that if I/ We refuse to comply with any such requirements or make only unsatisfactory compliance therewith, the bank shall refuse in writing to undertake the transaction and shall if it has reason to believe that any contravention /evasion is contemplated by me /us report the matter to Reserve Bank Of India.</p>
+                                                                <p>*I / We further declare that the undersigned has/have the authority to give this declaration and undertaking on behalf of the firm/company.</p>
+                                                            </div>
+
+                                                            <div class="d-flex justify-content-end">
+                                                                
+                                                                <p class="mt-100">Signature of the Applicant</p>
+                                                            </div>
+                                                            <div class="">
+                                                                <p>*Applicable when the declaration /undertaking is signed on behalf of the firm / company</p>
+                                                            </div>
+
+                                                            <div class="mt-50">
+                                                                <p>SCHEDULE</p>
+                                                                <p>Nature /Purpose of Foreign Exchange transaction: <input type="text" placeholder="" style="width: 35%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"></p>
+                                                                <p><strong>Interval approvals-</strong></p>
+                                                                <p>*CM II Approval, prop/part firm for value < USD 3 LAKH</p>
+                                                                <p>The declaration should be in the following format: </p>
+                                                                <p>“With reference to Instructions given by RBI vide RBI/2008-09/ 149 A. P. (DIR Series) Circular Number 13 dated September 01, 2008, we hereby confirm, to the best of our knowledge: </p>
+                                                                <p>A. That we have carried out an analysis of the account relationship / past dealings* with the client and the track record of the client is satisfactory. </p>
+                                                                <p>B. That we have carried out appropriate due diligence on the client and financial standing and the status of the client is satisfactory. </p>
+                                                                <p>C. That as per our discussion with the client/ analysis of the industry practice/ business model of the customer* it is customary in importer's trade to receive import documents directly from the overseas exporter.</p>
+                                                            </div>
+
+                                                            <div class="d-flex justify-content-between mt-100">
+                                                                <div class="">
+                                                                    <p>The Branch Manager</p>
+                                                                    <p>ICICI Bank Ltd.</p>
+                                                                    <p><input type="text" placeholder="" style="width: 30%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"> Branch</p>
+                                                                </div>
+                                                                <div class="">
+                                                                    <p>Place: <input type="text" placeholder="" style="width: 30%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"></p>
+                                                                    <p>Date <input type="text" placeholder="" style="width: 30%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"></p> 
+                                                                </div>
+                                                            </div>
+                                                            <div class="">
+                                                                <p>Dear Sir,</p>
+                                                            </div>
+                                                            <div class="text-center">
+                                                                <p>Import under Export Import Policy for the Period</p>
+                                                                <p>August 27, 2009 to March 31, 2014</p>
+                                                            </div>
+
+                                                            <div class="">
+                                                                <p>Your Bill/ Letter of Credit ref.: <input type="text" placeholder="" style="width: 30%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"></p>
+                                                                <p>Description of goods : <input type="text" placeholder="" style="width: 30%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"></p>
+                                                                <p>HS Code No of the item : <input type="text" placeholder="" style="width: 30%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"></p>
+                                                                <p>Our Export- Import Code Number : <input type="text" placeholder="" style="width: 30%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"></p>
+                                                                <p>We hereby confirm and certify that: <input type="text" placeholder="" style="width: 30%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"></p>
+                                                            </div>
+
+                                                            <div class="">
+                                                                <p>a) The goods imported/ being imported by us are not covered under Negative list of imports as mentioned in Chapter X</p>
+                                                                <p>b) We are eligible to import the above mentioned goods under the current Export and Import Policy in place.</p>
+                                                                <p>c) The said goods imported/being imported by us are not restricted for import through specific licensing under the above mentioned policy and amendments thereto till date.</p>
+                                                                <p>We also undertake to submit the relative Exchange Control Copy of the Bill of Entry/ Postal Wrappers to you immediately after clearance of the goods, in any case within 3 months from the date of remittance/payment. Further, we declare that the items will be used/disposed of as per the provision ontained in the policy/procedure.</p>
+
+                                                                <br><br><br> 
+                                                                <input type="text" placeholder="" style="width: 30%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;">
+                                                            </div> 
+
+
+
+                                                            <div class="mt-100">
+                                                                <p><strong>REQUEST LETTER FOR DIRECT IMPORT BILLS</strong></p>
+                                                                <p>To <br> The Branch Manager,<br> ICICI Bank Ltd., <br><input type="text" placeholder="" style="width: 20%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"> Branch</p>
+                                                            </div>
+                                                            <div class="">
+                                                                <p>We have imported following commodities / Goods:</p>
+                                                                <p>1 Commodity : <input type="text" placeholder="" style="width: 20%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"></p>
+                                                                <p>2 H.S.Code: <input type="text" placeholder="" style="width: 20%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"></p>
+                                                                <p>3 IE Code Number : <input type="text" placeholder="" style="width: 20%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"></p>
+
+                                                                <br>
+                                                                <br>
+                                                                <p>We hereby request you to remit the amount as per the details given below: -</p>
+                                                                <br>
+                                                                <br>
+                                                                <p>1 Amount to be remitted (in foreign currency) <input type="text" placeholder="" style="width: 20%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"></p>
+                                                                <p>2 Value Date <input type="text" placeholder="" style="width: 20%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"></p>
+                                                                <p>3 Remitter’s Name and Address <input type="text" placeholder="" style="width: 20%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"></p>
+                                                                <p>4 Beneficiary’s Name and Address  <input type="text" placeholder="" style="width: 20%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"></p>
+                                                                <p>5 Beneficiary’s Bank Account Number, Banker’s Name and Address and Swift code <input type="text" placeholder="" style="width: 20%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"></p>
+                                                                <p>6 Beneficiary’s Bank’s Correspondent Bank Name, Address and Swift code <input type="text" placeholder="" style="width: 20%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"></p>
+                                                                <p> 7 Purpose of remittance (the details to be mentioned in Swift Msg for Beneficiary’s information) <input type="text" placeholder="" style="width: 20%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"></p>
+                                                                <p>
+                                                                    8 Type of Goods 
+                                                                    <label><input type="checkbox">CAPITAL</label>
+                                                                    <label><input type="checkbox">NON CAPITAL</label>
+                                                                </p>
+                                                                <p> 9 Foreign Bank Charges (strike off whichever is NOT applicable) 
+                                                                    <span>To our Account / </span>
+                                                                    <input type="text" placeholder="" style="width: 20%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;">
+                                                                    <br>
+                                                                    <span>Beneficiary’s Account</span>
+                                                                    <input type="text" placeholder="" style="width: 20%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;">
+                                                                </p>
+                                                                <p>
+                                                                    10 a. Is the remittance made for merchanting trade transaction 
+                                                                    <input type="text" placeholder="" style="width: 20%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;">
+                                                                    <br>
+                                                                    <p>b. Are both the legs (import and export) being routed through ICICI Bank. If yes – mention the reference number of the export leg</p>
+                                                                
+                                                            </div>
+
+                                                            <div class="mt-50">
+                                                                <p><strong>Debit Authorisation:</strong></p>
+                                                                <p>We request you to debit our EEFC Account Number <input type="text" placeholder="" style="width: 20%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"> for an amount of<input type="text" placeholder="" style="width: 20%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"> and the balance amount to our Cash Credit Account / Current Account Number <input type="text" placeholder="" style="width: 20%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;">along with your charges</p>
+                                                                <p>We undertake to produce within three months to ICICI Bank Ltd the custom stamped Exchange Control copy of Bill of Entry.</p>
+                                                                <p>The details of Forward Contract(s), if any, booked against this payment is/are as follows –</p>
+                                                            </div>
+
+
+                                                            <div class="">
+                                                                <table class="table table-bordered">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Forward Contract Number and Date</th>
+                                                                            <th>Forward Contract Amount</th>
+                                                                            <th>Amount to be Utilised for this remittance</th>
+                                                                            <th>Due Date of the Contract</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>&nbsp;</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <p>Reasons for the delayed import payment (applicable if payment is being made beyond 180 days from the date of shipment)</p>
+                                                            </div>
+
+                                                            <div class="">
+                                                                <p><strong>Documents enclosed: </strong></p>
+                                                                <p>1. Form A1</p>
+                                                                <p>2. Copy of Invoice and Transport Document</p>
+                                                                <p>3. Exchange Control copy of Bill of Entry</p>
+                                                                <p>4. Other documents if any (please specify)</p>
+                                                            </div>
+
+                                                            <div class="">
+                                                                <p><strong>DECLARATION – CUM – UNDERTAKING: </strong></p>
+                                                                <p>We confirm that the goods imported/being imported by us are not covered under </p>
+                                                                <p>Negative list of imports as mentioned in Chapter <input type="text" placeholder="" style="width: 20%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;">of latest Exim Policy in vogue and amendments there to till date.</p>
+                                                                <p>We are eligible to import the above mentioned goods under the current Export and Import Policy in place.</p>
+                                                                <p>We confirm that said goods imported/being imported by us are not restricted for import through specific licensing under the above mentioned policy and amendments.</p>
+                                                                <p>I/We hereby declare that the transaction the details of which are specifically mentioned in this request letter does not involve, and is not designed for the purpose of any contravention or evasion of the provisions of the Foreign Exchange Management Act or of any rules, regulation, notification, direction or order made there under. I /We also hereby agree and undertake to give such information/documents as will reasonably satisfy you about this transaction in terms of the above declaration. I/We also understand that if I/We refuse to comply with any such requirement or make only unsatisfactory compliance therewith, the Bank shall refuse in writing to undertake the transaction and shall if it has reason to believe that any contravention/evasion is contemplated by me/us report the matter to Reserve Bank of India.. I/We further declare that the undersigned has/have the authority to give this declaration and undertaking on behalf of the company.</p>
+                                                                <br>
+                                                                <p>Yours faithfully</p>
+                                                                <p>For<input type="text" placeholder="" style="width: 20%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"></p>
+                                                            </div>
+
+                                                            <div class="">
+                                                                <p>AUTHORISED SIGNATORY/IES</p>
+                                                                <p><strong>INDICATIVE GUIDELINES /CHECKLIST FOR THE APPLICANT FOR ENSURING SPEEDY AND ERROR FREE REMITTANCE – REQUEST LETTER FOR DIRECT IMPORT BILLS</strong></p>
+                                                                <p>1. Request letter to be signed by authorised signatory of the applicant</p>
+                                                                <p>2. Ensure that all columns are filled in the request letter</p>
+                                                                <p>3. Form A1 to be duly filled in and signed by the authorised signatory of the applicant</p>
+                                                                <p>4. Exchange control copy of the bill of entry should be signed on the reverse by the authorised signatory of the applicant</p>
+                                                                <p>5. Under FEMA 1999, import payment has to be made within 180 days from the date of shipment</p>
+                                                                <p>6. On submission of duly completed request letter along with enclosures, please obtain the tracking reference number from the branch which should be quoted for any further query / correspondence on this remittance</p>
+                                                            </div>
+
+
+                                                        </div>
+                                                    </div>
+                                                    <div id="FEMADecleration" class="details-application"
+                                                        [ngClass]="{
+                                                            'details-application-active' : (tab == 2)
+                                                        }"
+                                                    >
+                                                        <div class="">
+                                                            <div class="bank-lc-list">
+                                                                <div class="text-center">
+                                                                    <h6>DECLARATION-CUM UNDERTAKING</h6>
+                                                                    <p>(Under Section10 (5), Chapter III of The Foreign Exchange Management Act, 1999)</p>
+                                                                </div>
+                                                                <div class="mt-30">
+                                                                    <p>I/We hereby declare that the transaction the details of which are specifically mentioned in the schedule hereunder does not involve, and is not designed for the purpose of any contravention or evasion of the provisions of the aforesaid act of any rule, regulation, notification, direction or order made thereunder.</p>
+                                                                    <p class="mt-20">I/We also hereby agree and undertake to give such information/documents as will reasonably satisfy you about this transaction in terms of the above declaration.</p>
+                                                                    <p class="mt-20">I/We also undertake that if I/ We refuse to comply with any such requirements or make only unsatisfactory compliance therewith. The Bank shall refuse in writing to undertake the transaction andshall if it has reason to believe that any contravention/evasion is contemplated by me /us report the matter to Reserve Bank Of India.</p>
+                                                                    <p class="mt-20">*I/We further declare that the undersigned has/have the authority to give this declaration and undertaking on behalf of the firm/company.</p>
+                                                                </div>
+                                                                <div class="text-right">
+                                                                    <br><br><br><br>
+                                                                    <p>Signature of the Applicant</p> 
+                                                                </div>
+                                                                <div class="text-left mt-30">
+                                                                    <p>*Applicable when the declaration /undertaking is signed on behalf of the firm /  company</p>
+                                                                    <p class="mt-20 text-break">
+                                                                        <input type="text" placeholder="" style="width: 100%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;">
+                                                                    </p> 
+                                                                    <p class="mt-30">SCHEDULE</p>
+                                                                    <p class="text-break">Nature /Purpose of Foreign Exchange transaction <input type="text" placeholder="" style="width: 30%; border: none; border-bottom: 2px dotted #202020;padding: 0 0;"></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div> 
+                                                    <div id="MEMO" class="details-application"
+                                                        [ngClass]="{
+                                                            'details-application-active' : (tab == 3)
+                                                        }"
+                                                    >
+                                                        Limit Set up MEMO
+                                                    </div> 
+                                                    <div id="AppraisalNote" class="details-application"
+                                                        [ngClass]="{
+                                                            'details-application-active' : (tab == 4)
+                                                        }"
+                                                    >
+                                                        Letter of Credit Appraisal Note
+                                                    </div> 
+                                                    <div id="Executed" class="details-application"
+                                                        [ngClass]="{
+                                                            'details-application-active' : (tab == 5)
+                                                        }"
+                                                    >
+                                                        Customer Request Letter for Import LC MFA Executed
+                                                    </div> 
+                                                    <div id="NotExecuted" class="details-application"
+                                                        [ngClass]="{
+                                                            'details-application-active' : (tab == 6)
+                                                        }"
+                                                    >
+                                                        Customer Request Letter for Import LC MFA Not Executed
+                                                    </div>                                                                  
+                                                </div>
+                                            </div>                                                        
+                                        </div>
+                                    </div>
+                                </div>                                     
+                            </div> 
+                        </div>
+                    </div>
+                </div>   
+            </div> 
+        </div>
+    </div>
+</div>
+<!-- page data area End -->
+
+
+<!-- start back to top area -->
+<div id="back-to-top" class="back-to-top">
+<a href="#"> 
+    <span class="arrow topfirst"></span>
+    <span class="arrow topsecond"></span>
+</a>
+</div> 
+<!-- end back to top area --> 
+
+<!-- Select Bank Model-->
+<!-- <div class="modal fade" tabindex="-1" role="dialog" id="selectbank">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Please select Bank</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="form">
+                    <div class="">
+                        <fieldset class="form-group ">
+                            <label class="form-lbl">Select Bank  <span class="text-danger">*</span></label>
+                            <select name="" class="form-control">
+                                <option value="" selected="">Select Bank</option>
+                                <option value="">ICICI</option>
+                                <option value="">SBI</option>
+                                <option value="">Other</option> 
+                            </select> 
+                        </fieldset>
+                    </div>
+                    <div class="text-right">
+                        <a href="" class="button-style" data-bs-dismiss="modal">Select</a>
+                    </div>
+                </form>
+            </div> 
+        </div>
+    </div>
+</div>  -->
+
+</div>

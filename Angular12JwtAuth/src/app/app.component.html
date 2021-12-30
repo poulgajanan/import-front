@@ -1,44 +1,90 @@
-<!-- <div> -->
-  
-  <div id="app">
-    <app-navbar></app-navbar>  
-    <div class="container-fluid">
-      <router-outlet class=""></router-outlet>
-      <nav class="navbar navbar-expand navbar-dark bg-dark leftmargin">
-        <a routerLink="index" class="navbar-brand">Import-Export</a>
-        <ul class="navbar-nav mr-auto" routerLinkActive="active">
-          <li class="nav-item">
-            <a class="nav-link" routerLink="index">Home </a>
-          </li>
-          <li class="nav-item" *ngIf="showAdminBoard">
-            <a class="nav-link" routerLink="admin">Admin Board</a>
-          </li>
-          <li class="nav-item" *ngIf="showModeratorBoard">
-            <a class="nav-link" routerLink="mod">Moderator Board</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>
-          </li>
-        </ul>
-  
-        <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
-          <li class="nav-item">
-            <a href="/register" class="nav-link" routerLink="register">Sign Up</a>
-          </li>
-          <li class="nav-item">
-            <a href="/login" class="nav-link" routerLink="login">Login</a>
-          </li>
-        </ul>
-  
-        <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
-          <li class="nav-item">
-            <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
-          </li>
-          <li class="nav-item">
-            <a href class="nav-link" (click)="logout()">LogOut</a>
-          </li>
-        </ul>
-      </nav>
+<div id="app">
+    <div *ngIf="isLoggedIn">
+      <app-navbar></app-navbar>
     </div>
-  </div>
-<!-- </div> -->
+
+    <router-outlet class=""></router-outlet>
+    
+    <!-- <div class="btn-group">
+      <a class=" dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+        drop down menu
+      </a>
+      <ul class="dropdown-menu dropdown-menu-start">
+        <li><button class="dropdown-item" type="button">Action</button></li>
+        <li><button class="dropdown-item" type="button">Another action</button></li>
+        <li><button class="dropdown-item" type="button">Something else here</button></li>
+      </ul>
+    </div> -->
+
+    <!-- <li class="list-inline-item dropdown user-menu ">
+      <a class="dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static"  aria-expanded="false">
+          <span class="login-name fw_6">Ashish Gujarati</span>
+          <img src="assets/images/avtara.png" class="user-image ml-2" alt="User Image">
+      </a>
+      <ul class="dropdown-menu dropdown-menu-right p-0">                                     
+          <li class="dropdown-item">
+              <a class="d-flex">
+                  <span>
+                      <img src="assets/images/icons/user.svg" class="img-fluid" alt="">
+                  </span>
+                  <span class="ml-2">Profile </span>
+              </a>
+          </li>
+          <li class="dropdown-item">
+              <a class="d-flex">
+                  <span>
+                      <img src="assets/images/icons/change_password.svg" class="img-fluid" alt="">
+                  </span>
+                  <span class="ml-2">Change Password </span>
+              </a>
+          </li>
+          <li class="dropdown-item">
+              <a class="d-flex">
+                  <span>
+                      <img src="assets/images/icons/logout.svg" class="img-fluid" alt="">
+                  </span>
+                  <span class="ml-2">Log Out</span>
+              </a>
+          </li>
+      </ul>
+  </li> -->
+
+
+
+
+    <!-- <nav class="navbar navbar-expand navbar-dark bg-dark leftmargin">
+      <a routerLink="index" class="navbar-brand">Import-Export</a>
+      <ul class="navbar-nav mr-auto" routerLinkActive="active">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="index">Home </a>
+        </li>
+        <li class="nav-item" *ngIf="showAdminBoard">
+          <a class="nav-link" routerLink="admin">Admin Board</a>
+        </li>
+        <li class="nav-item" *ngIf="showModeratorBoard">
+          <a class="nav-link" routerLink="mod">Moderator Board</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+        <li class="nav-item">
+          <a href="/register" class="nav-link" routerLink="register">Sign Up</a>
+        </li>
+        <li class="nav-item">
+          <a href="/login" class="nav-link" routerLink="login">Login</a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+        <li class="nav-item">
+          <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
+        </li>
+        <li class="nav-item">
+          <a href class="nav-link" (click)="logout()">LogOut</a>
+        </li>
+      </ul>
+    </nav>  -->
+</div>

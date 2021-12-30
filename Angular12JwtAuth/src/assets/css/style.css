@@ -226,6 +226,37 @@ label.form-lbl {margin: 0; font-size: 14px; opacity: 0.8; width: 100%;}
 }
 
 /*================================================
+:: scoll bar css Style
+==================================================*/ 
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #959da3;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #656b70;
+}
+
+
+/*---------------------------------
+    scorll bar End
+---------------------------------*/
+
+
+
+/*================================================
 :: home css Style
 ==================================================*/ 
 /*Left area Start*/
@@ -299,10 +330,10 @@ header.mobile-active:after {content: ""; position: fixed; background: rgb(0 0 0 
 .navbar .dropdown-menu > li a {display: block; padding: 10px 15px;}
 .header-notification .dropdown-toggle img {-webkit-animation: tada 1.5s ease infinite; animation: tada 1.5s ease infinite; }
 
-.sub-Catagorys .sub-drop[data-toggle]:not(.collapsed):after {content: "-"; font-size: 22px; position: absolute; top: -2px; bottom: 0; margin: auto; right: 15px; color: #fff; }
-.sub-Catagorys .sub-drop[data-toggle].collapsed:after {content: "+"; font-size: 22px; position: absolute; top: 0px; bottom: 0; margin: auto; right: 15px; color: #fff; }
-.header-left .sub-Catagorys .sub-drop[data-toggle]:not(.collapsed):after, .header-left .sub-Catagorys .sub-drop[data-toggle].collapsed:after{display: none;}
-.hover-header-left .sub-Catagorys .sub-drop[data-toggle]:not(.collapsed):after, .hover-header-left .sub-Catagorys .sub-drop[data-toggle].collapsed:after{display: block;}
+.sub-Catagorys .sub-drop:not(.collapsed):after {content: "-"; font-size: 22px; position: absolute; top: -2px; bottom: 0; margin: auto; right: 15px; color: #fff; }
+.sub-Catagorys .sub-drop.collapsed:after {content: "+"; font-size: 22px; position: absolute; top: 0px; bottom: 0; margin: auto; right: 15px; color: #fff; }
+.header-left .sub-Catagorys .sub-drop:not(.collapsed):after, .header-left .sub-Catagorys .sub-drop.collapsed:after{display: none;}
+.hover-header-left .sub-Catagorys .sub-drop:not(.collapsed):after, .hover-header-left .sub-Catagorys .sub-drop.collapsed:after{display: block;}
 
 /*---------------------------------
     header-main End
@@ -509,10 +540,46 @@ table.dataTable>thead .sorting:before, table.dataTable>thead .sorting:after, tab
 .details-po{display: none;}
 .details-po-active{display: block;}
 
-.box-po-tabs li a {position: relative; background: #edf0f7; display: inline-block; padding: 8px 15px; border-radius: 5px; color: rgb(32 32 32 / 80%); }
+.box-po-tabs li a {margin: 3px; position: relative; background: #edf0f7; display: inline-block; padding: 8px 15px; border-radius: 5px; color: rgb(32 32 32 / 80%); }
 .box-po-tabs li a.po-tabs-active {background: #0561d9; color: #ffffff;}
 .tabs-details-po {position: relative; border: 1px solid rgb(206 212 218); padding: 15px; border-radius: 5px;  margin-top: 8px; }
 
 /*------------------------
     Planning End
 ------------------------*/
+
+/*------------------------
+    notification Start
+------------------------*/
+.notification-list > .media {margin-bottom: 15px; border-bottom: 1px solid #d3d3d3; padding-bottom: 15px; }
+.notification-list > .media:nth-last-child(1){border-bottom: none; margin-bottom: 0px; padding-bottom: 0px;}
+/*------------------------
+    notification End
+------------------------*/
+
+/*------------------------
+    Application forms Start
+------------------------*/
+.details-application{display: none;}
+.details-application-active{display: block;}
+.box-application-tabs li{display: inline-block;width: 100%;}
+.box-application-tabs li a {width: 100%; display: inline-block; margin: 0px 0; border: 1px solid #d3d3d3; padding: 10px; font-size: 14px; }
+.box-application-tabs li a.application-tabs-active {background: #0461d9; color: #fff; }
+
+/*------------------------
+    Application forms End
+------------------------*/
+
+
+.tox-notifications-container{display: none;}
+.bottom-alert {position: fixed; z-index: 999; right: 16px; bottom: 0; width: 30%; display: none;}
+
+.doc-form input{margin: 0 5px;}
+.doc-form input:focus{outline: none;}
+
+.doc-form .table td, 
+.doc-form .table th {padding: 5px 10px; vertical-align: middle; align-items: center; font-size: 12px;}
+.doc-form p {margin-bottom: 15px;}
+
+.status-approved {background: green; padding: 3px 10px; color: #fff; border-radius: 15px; font-size: 12px; }
+    .status-pending {background: yellow; padding: 3px 10px; color: #202020; border-radius: 15px; font-size: 12px; }
